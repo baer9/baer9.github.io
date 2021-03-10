@@ -12,7 +12,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.lovefive.club/post/C&#43;&#43;%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5/</guid>
-      <description>QHQ-It was day full of memories C++字符串分割 C++没有split分割的函数！！！！ C++没有c语言的那样方便的格式化输入，像c语言你如果想一次性输入1#2，而分别把1和2赋值给x和y，你可以这样： scanf(&amp;quot;%d#%d&amp;quot;,&amp;amp;x,&amp;amp;y); 当然你也可以自己定义一个方法来实现这个想法。 ``` #include &amp;lt;iostream&amp;gt; #include &amp;lt;string&amp;gt; #include &amp;lt;cstddef&amp;gt; #include &amp;lt;vector&amp;gt; using namespace std; namespace strg { //函数模板 template&amp;lt;typename Container&amp;gt; inline std::size_t strtok(std::string&amp;amp; str,</description>
+      <description>QHQ-It was day full of memories C++字符串分割 C++没有split分割的函数！！！！ C++没有c语言的那样方便的格式化输入，像c语言你如果想一次性输入1#2，</description>
     </item>
     
   </channel>

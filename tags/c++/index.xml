@@ -12,7 +12,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.lovefive.club/post/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/</guid>
-      <description>QHQ-【问题描述】给定含有S个元素的多重集合S，每个元素在S中出现的次数称为该元素的重数。多重集S中重数最大的元素称为众数。例如，S={1,2,2,2,3,5}。多重数S的众数是2，其重数为3 。 ``` 【问题描述】给定含有S个元素的多重集合S，每个元素在S中出现的次数称为该元素的重数</description>
+      <description>QHQ-【问题描述】给定含有S个元素的多重集合S，每个元素在S中出现的次数称为该元素的重数。多重集S中重数最大的元素称为众数。例如，S={1</description>
     </item>
     
     <item>
@@ -21,7 +21,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.lovefive.club/post/C&#43;&#43;%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5/</guid>
-      <description>QHQ-It was day full of memories C++字符串分割 C++没有split分割的函数！！！！ C++没有c语言的那样方便的格式化输入，像c语言你如果想一次性输入1#2，而分别把1和2赋值给x和y，你可以这样： scanf(&amp;quot;%d#%d&amp;quot;,&amp;amp;x,&amp;amp;y); 当然你也可以自己定义一个方法来实现这个想法。 ``` #include &amp;lt;iostream&amp;gt; #include &amp;lt;string&amp;gt; #include &amp;lt;cstddef&amp;gt; #include &amp;lt;vector&amp;gt; using namespace std; namespace strg { //函数模板 template&amp;lt;typename Container&amp;gt; inline std::size_t strtok(std::string&amp;amp; str,</description>
+      <description>QHQ-It was day full of memories C++字符串分割 C++没有split分割的函数！！！！ C++没有c语言的那样方便的格式化输入，像c语言你如果想一次性输入1#2，</description>
     </item>
     
     <item>
@@ -30,7 +30,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.lovefive.club/post/%E5%8D%8A%E6%95%B0%E9%9B%86/</guid>
-      <description>QHQ-【问题描述】给定一个自然数n，由n开始可以依次产生半数集set(n)中的数如下： （1）n∈set(n); （2）在n的左边加上一个自然数，但该自然数不能超过最近添加的数的一半； （3）按此规则进行处理，直到不能再添加自然数为止。 【问题描述】给定一个自然数n，由n开始可以依次产</description>
+      <description>QHQ-【问题描述】给定一个自然数n，由n开始可以依次产生半数集set(n)中的数如下： （1）n∈set(n); （2）在n的左边加上一个自然</description>
     </item>
     
     <item>
@@ -39,7 +39,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.lovefive.club/post/%E6%9C%80%E5%A4%A7%E9%97%B4%E9%9A%99/</guid>
-      <description>QHQ-【问题描述】给定n个实数x1,x2,&amp;hellip;,xn, 求着n个数在实轴上相邻两个数之间的最大差值。假设对任何实数的下取整函数好事O(1), 设计解最大间隙问题的线性时间算法。 【问题描述】给定n个实数x1,x2,...,xn, 求着n个数在实轴上相邻两个数之间的最大差值。</description>
+      <description>QHQ-【问题描述】给定n个实数x1,x2,&amp;hellip;,xn, 求着n个数在实轴上相邻两个数之间的最大差值。假设对任何实数的下取整函数好</description>
     </item>
     
     <item>
@@ -48,7 +48,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.lovefive.club/post/%E9%87%91%E5%B8%81%E9%98%B5%E5%88%97/</guid>
-      <description>QHQ-【问题描述】有m*n(m&amp;lt;=100, n&amp;lt;=100)枚金币在桌面上排成一个m行n列的金币矩阵。每枚金币或正面朝上或背面朝上。用数字表示金币状态，0表示金币正面朝上，1表示金币背面朝上。 金币矩阵游戏的规则是：1.每次可将任一行金币翻转过来放在原来的位置上；2.每次</description>
+      <description>QHQ-【问题描述】有m*n(m&amp;lt;=100, n&amp;lt;=100)枚金币在桌面上排成一个m行n列的金币矩阵。每枚金币或正面朝上或背面朝上</description>
     </item>
     
   </channel>
