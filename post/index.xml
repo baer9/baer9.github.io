@@ -8,11 +8,11 @@
     <language>zh-CN</language>
     <lastBuildDate>Wed, 10 Mar 2021 11:19:15 +0800</lastBuildDate><atom:link href="https://www.lovefive.club/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>git常见错误</title>
-      <link>https://www.lovefive.club/post/git%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/</link>
+      <title>Git常见错误</title>
+      <link>https://www.lovefive.club/post/Git%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/</link>
       <pubDate>Wed, 10 Mar 2021 11:19:15 +0800</pubDate>
       
-      <guid>https://www.lovefive.club/post/git%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/</guid>
+      <guid>https://www.lovefive.club/post/Git%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/</guid>
       <description>一、fatal: unable to access &amp;lsquo;https://github.com/baer9/baer9.github.io.git/&#39;: OpenSSL SSL_read: Connection was reset, errno 10054 解除ssl验证 解决：关闭验证 git config &amp;ndash;global http.sslVerify &amp;ldquo;false&amp;rdquo; 二、fatal: unable to access &amp;lsquo;https://github.com/baer9/baer9.github.io.git/&#39;: Failed to connect to github.com port 443: Timed out 文件可能太大 解决：gi</description>
     </item>
     
@@ -45,10 +45,10 @@
     
     <item>
       <title>Bat批量修改文件名</title>
-      <link>https://www.lovefive.club/post/bat%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%90%8D/</link>
+      <link>https://www.lovefive.club/post/Bat%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%90%8D/</link>
       <pubDate>Mon, 14 Dec 2020 16:56:32 +0000</pubDate>
       
-      <guid>https://www.lovefive.club/post/bat%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%90%8D/</guid>
+      <guid>https://www.lovefive.club/post/Bat%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%90%8D/</guid>
       <description>1、新建文本文档 写入dir*.*/b &amp;gt;file.csv 保存并更改为bat文件。 2、打开 file.csv 表格 复制第一列文件名到第二列，选择第二列全部内容，CTRL+F替换想</description>
     </item>
     
@@ -62,11 +62,11 @@
     </item>
     
     <item>
-      <title>【转载】malloc Free与new Delete</title>
-      <link>https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BDmalloc-free%E4%B8%8Enew-delete/</link>
+      <title>【转载】Malloc Free与New Delete</title>
+      <link>https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BDMalloc-Free%E4%B8%8ENew-Delete/</link>
       <pubDate>Mon, 19 Oct 2020 13:53:21 +0000</pubDate>
       
-      <guid>https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BDmalloc-free%E4%B8%8Enew-delete/</guid>
+      <guid>https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BDMalloc-Free%E4%B8%8ENew-Delete/</guid>
       <description>在C语言中，我们已经熟悉利用malloc/free来管理动态内存，而在C++中，我们又有了新的工具：new/delete。你不禁会产生疑问—</description>
     </item>
     
@@ -116,11 +116,11 @@
     </item>
     
     <item>
-      <title>nginx超详细配置及中文解释</title>
-      <link>https://www.lovefive.club/post/nginx%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/</link>
+      <title>Nginx超详细配置及中文解释</title>
+      <link>https://www.lovefive.club/post/Nginx%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Sat, 15 Feb 2020 20:58:23 +0000</pubDate>
       
-      <guid>https://www.lovefive.club/post/nginx%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://www.lovefive.club/post/Nginx%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/</guid>
       <description>QHQ-【问题描述】 Nginx的配置文件详解（超详细） 1、安装Nginx 在安装Nginx之前，需确保系统已经安装了gcc、 openssl-d</description>
     </item>
     
@@ -161,20 +161,20 @@
     </item>
     
     <item>
-      <title>apache和nginx简单区分</title>
-      <link>https://www.lovefive.club/post/apache%E5%92%8Cnginx%E7%AE%80%E5%8D%95%E5%8C%BA%E5%88%86/</link>
+      <title>Apache和Nginx简单区分</title>
+      <link>https://www.lovefive.club/post/Apache%E5%92%8CNginx%E7%AE%80%E5%8D%95%E5%8C%BA%E5%88%86/</link>
       <pubDate>Tue, 14 Jan 2020 18:44:12 +0000</pubDate>
       
-      <guid>https://www.lovefive.club/post/apache%E5%92%8Cnginx%E7%AE%80%E5%8D%95%E5%8C%BA%E5%88%86/</guid>
+      <guid>https://www.lovefive.club/post/Apache%E5%92%8CNginx%E7%AE%80%E5%8D%95%E5%8C%BA%E5%88%86/</guid>
       <description>QHQ-【问题描述】web服务器该选择apache还是nginx *一、apache与nginx的区别：* ​ 1、二者最核心的区别在于apach</description>
     </item>
     
     <item>
       <title>md短代码怎么写</title>
-      <link>https://www.lovefive.club/post/md%E7%9F%AD%E4%BB%A3%E7%A0%81%E6%80%8E%E4%B9%88%E5%86%99/</link>
+      <link>https://www.lovefive.club/post/Md%E7%9F%AD%E4%BB%A3%E7%A0%81%E6%80%8E%E4%B9%88%E5%86%99/</link>
       <pubDate>Thu, 19 Dec 2019 17:15:15 +0000</pubDate>
       
-      <guid>https://www.lovefive.club/post/md%E7%9F%AD%E4%BB%A3%E7%A0%81%E6%80%8E%E4%B9%88%E5%86%99/</guid>
+      <guid>https://www.lovefive.club/post/Md%E7%9F%AD%E4%BB%A3%E7%A0%81%E6%80%8E%E4%B9%88%E5%86%99/</guid>
       <description>QHQ-【问题描述】 刚写了一篇博客，然后发现一个小bug，写的&amp;lt;input&amp;gt;&amp;lt;/input&amp;gt;字段发表出来是个文本输入</description>
     </item>
     
@@ -242,11 +242,11 @@
     </item>
     
     <item>
-      <title>bat批修改文件后缀名</title>
-      <link>https://www.lovefive.club/post/bat%E7%AE%80%E5%8D%95%E6%89%B9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</link>
+      <title>Bat批修改文件后缀名</title>
+      <link>https://www.lovefive.club/post/Bat%E7%AE%80%E5%8D%95%E6%89%B9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</link>
       <pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.lovefive.club/post/bat%E7%AE%80%E5%8D%95%E6%89%B9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</guid>
+      <guid>https://www.lovefive.club/post/Bat%E7%AE%80%E5%8D%95%E6%89%B9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</guid>
       <description>今天先说说bat最简单的操作 ren *.jpg *.txt 此语句可以把当前文件夹的所有jpg照片转换为txt格式，（有利于隐藏照片哦）。 接下来就简单来说一下怎么具体</description>
     </item>
     

@@ -8,11 +8,11 @@
     <language>zh-CN</language>
     <lastBuildDate>Mon, 11 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.lovefive.club/tags/%E6%98%BE%E7%A4%BA%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80%E5%90%8D/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>bat批修改文件后缀名</title>
-      <link>https://www.lovefive.club/post/bat%E7%AE%80%E5%8D%95%E6%89%B9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</link>
+      <title>Bat批修改文件后缀名</title>
+      <link>https://www.lovefive.club/post/Bat%E7%AE%80%E5%8D%95%E6%89%B9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</link>
       <pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.lovefive.club/post/bat%E7%AE%80%E5%8D%95%E6%89%B9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</guid>
+      <guid>https://www.lovefive.club/post/Bat%E7%AE%80%E5%8D%95%E6%89%B9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</guid>
       <description>今天先说说bat最简单的操作 ren *.jpg *.txt 此语句可以把当前文件夹的所有jpg照片转换为txt格式，（有利于隐藏照片哦）。 接下来就简单来说一下怎么具体</description>
     </item>
     

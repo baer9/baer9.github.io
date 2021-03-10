@@ -17,11 +17,11 @@
     </item>
     
     <item>
-      <title>【转载】malloc Free与new Delete</title>
-      <link>https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BDmalloc-free%E4%B8%8Enew-delete/</link>
+      <title>【转载】Malloc Free与New Delete</title>
+      <link>https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BDMalloc-Free%E4%B8%8ENew-Delete/</link>
       <pubDate>Mon, 19 Oct 2020 13:53:21 +0000</pubDate>
       
-      <guid>https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BDmalloc-free%E4%B8%8Enew-delete/</guid>
+      <guid>https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BDMalloc-Free%E4%B8%8ENew-Delete/</guid>
       <description>在C语言中，我们已经熟悉利用malloc/free来管理动态内存，而在C++中，我们又有了新的工具：new/delete。你不禁会产生疑问—</description>
     </item>
     
