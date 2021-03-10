@@ -1,313 +1,140 @@
 <!DOCTYPE html>
-<html lang="zn-Hans">
-  <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
-  <meta name="author" content="Orianna">
-  <meta name="description" content="QHQ-【问题描述】今天做Java web项目的时候，里面一个功能让我form表单里面套表单了，但是里面的form 提交action中参数无效。直接action外层form，所以就记录下form表单的一些问题。 Form表单提交数据（Java web） java web 两个表单form怎么设置两个提交？也可以是一表单form，多提交。Acton只能有一个submit提交，在设置一个submit还是action外层for">
-  
-  <meta property="og:title" content="Java web 的form表单问题" />
-<meta property="og:description" content="QHQ-【问题描述】今天做Java web项目的时候，里面一个功能让我form表单里面套表单了，但是里面的form 提交action中参数无效。直接action外层form，所以就记录下form表单的一些问题。 Form表单提交数据（Java web） java web 两个表单form怎么设置两个提交？也可以是一表单form，多提交。Acton只能有一个submit提交，在设置一个submit还是action外层for" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://lovefive.club/post/java-web%E7%9A%84form%E8%A1%A8%E5%8D%95%E9%97%AE%E9%A2%98/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2019-12-19T16:29:36&#43;00:00" />
-<meta property="article:modified_time" content="2019-12-19T16:29:36&#43;00:00" />
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Creative portfolio</title>
+<meta name="description" content="Describe your website">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://example.org/css/bootstrap.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
+<link rel="stylesheet" href="https://example.org/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://example.org/css/owl.carousel.css">
+<link rel="stylesheet" href="https://example.org/css/owl.theme.css">
 
 
+  <link href="https://example.org/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
 
-  <title>
-  
-       Java web 的form表单问题 | QHQ 
-  
-  </title>
-
-  <link rel="canonical" href="https://lovefive.club/post/java-web%E7%9A%84form%E8%A1%A8%E5%8D%95%E9%97%AE%E9%A2%98/">
+ 
 
   
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   
 
-  
-  <link href="https://lovefive.club/css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
 
-  
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
-  <link href="https://lovefive.club/css/font.css" rel="stylesheet"> 
-    
-  
-  <link href="https://lovefive.club/css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
-  <link href="https://lovefive.club/css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
-  <link href="https://lovefive.club/css/vendors/mdb/style.min.css" rel="stylesheet"> 
-  <link href="https://lovefive.club/css/main.css" rel="stylesheet">
+<link href="https://example.org/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://example.org/img/favicon.png">
 
-
-  
-  <link rel="shortcut icon"
-  
-      href="https://lovefive.club/img/zheng.png"
-  
-  >
-
-
-  
-  
-
-  <style type="text/css">
-      @media (min-width: 800px) and (max-width: 850px) {
-              .navbar:not(.top-nav-collapse) {
-                  background: #1C2331!important;
-              }
-          }
-  </style>
-
-
-  
-    
-    <link rel="stylesheet" href="https://lovefive.club/js/vendors/katex/katex.min.css">
-  
-  
-
-  
-    
-    <link rel="stylesheet" href="https://lovefive.club/css/vendors/highlight/github-gist.css">
-  
 
 </head>
-
-  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+<body>
+  <div id="all">
+      <div class="container-fluid">
+          <div class="row row-offcanvas row-offcanvas-left">
+              <div id="sidebar" class="col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
+  <div class="sidebar-content">
+    <h1 class="sidebar-heading"><a href="https://example.org/">Creative portfolio</a></h1>
+    
+      <p class="sidebar-p">I am a creative illustrator and graphic designer with more than 10 years of experience.</p>
+    
+      <p class="sidebar-p">Originally from Toronto, currently based in London.</p>
+    
+    <ul class="sidebar-menu">
+      
+        <li><a href="https://example.org/portfolio/">Home</a></li>
+      
+        <li><a href="https://example.org/about/">About</a></li>
+      
+        <li><a href="https://example.org/contact/">Get in touch</a></li>
+      
+    </ul>
+    <p class="social">
   
-    
-    
+  <a href="full%20page%20or%20profile%20url%20in%20facebook" data-animate-hover="pulse" class="external facebook">
+    <i class="fa fa-facebook"></i>
+  </a>
+  
+  
+  <a href="full%20profile%20url%20in%20googleplus" data-animate-hover="pulse" class="external gplus">
+    <i class="fa fa-google-plus"></i>
+  </a>
+  
+  
+  <a href="full%20profile%20url%20in%20twitter" data-animate-hover="pulse" class="external twitter">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="full%20profile%20url%20in%20instagram" title="" class="external instagram">
+    <i class="fa fa-instagram"></i>
+  </a>
+  
+  
+  <a href="mailto:email@example.com" data-animate-hover="pulse" class="email">
+    <i class="fa fa-envelope"></i>
+  </a>
+  
+  
+  <a href="full%20profile%20url%20in%20linkedin" data-animate-hover="pulse" class="external">
+    <i class="fa fa-linkedin"></i>
+  </a>
+  
+  
+  <a href="full%20profile%20url%20in%20stackoverflow" data-animate-hover="pulse" class="external">
+    <i class="fa fa-stack-overflow"></i>
+  </a>
+  
+  
+  <a href="full%20profile%20url%20in%20github" data-animate-hover="pulse" class="external">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a href="full%20profile%20url%20in%20gitlab" data-animate-hover="pulse" class="external">
+    <i class="fa fa-gitlab"></i>
+  </a>
+  
+  
+  <a href="full%20profile%20url%20in%20youtube" data-animate-hover="pulse" class="external">
+    <i class="fa fa-youtube"></i>
+  </a>
+  
+  
+  <a href="wa.me%20service%20link" data-animate-hover="pulse" class="external">
+    <i class="fa fa-whatsapp"></i>
+  </a>
+  
+</p>
 
-    
-      
 
-
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
-    <div class="container">
-
-      
-      <a class="navbar-brand" href="https://lovefive.club">
-          
-        <img class="avatar" src="https://lovefive.club/img/zheng.png" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+    <div class="copyright">
+      <p class="credit">
         
-        <strong> Orianna</strong>
-      </a>
-
-      
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
+          &copy;2016 Your name or company |
         
-        <ul class="navbar-nav mr-auto ">
-          <li class="nav-item ">
-            <a class="nav-link" href="https://lovefive.club">Home</a>
-          </li>
-             
-            <li class="nav-item ">
-              <a class="nav-link" href="https://lovefive.club/blog/" >Blog  </a>
-            </li>
-          
-             
-            <li class="nav-item ">
-              <a class="nav-link" href="https://lovefive.club/moment/" >Moment  </a>
-            </li>
-          
-             
-            <li class="nav-item ">
-              <a class="nav-link" href="https://lovefive.club/about/" >About  </a>
-            </li>
-          
-          
-        </ul>
+        Template by <a href="https://bootstrapious.com/free-templates" class="external">Bootstrapious.com</a>
 
-      </div>
+&amp; ported to Hugo by <a href="https://github.com/kishaningithub">Kishan B</a>
 
-    </div>
-  </nav>
-  
- 
-      
- 
-
-
-
-
-
-
-<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
-
-  
-  
-  
-
-  
-  <div class="carousel-inner" role="listbox">
-    
-      
-
-        
-        <div class="carousel-item active">
-          <div class="view" style="background-image: url('https://lovefive.club/img/header-slides/raw_1515691746.jpg'); background-repeat: no-repeat; background-size: cover;">
-
-            
-            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
-
-              
-              
-              
-
-            </div>
-            
-
-          </div>
-        </div>
-        
-      
-    
-      
-
-        
-        <div class="carousel-item">
-          <div class="view" style="background-image: url('https://lovefive.club/img/header-slides//raw_1515847341.jpg'); background-repeat: no-repeat; background-size: cover;">
-
-            
-            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
-
-            
-
-            </div>
-            
-
-          </div>
-        </div>
-        
-      
-    
-
-  
-  </div>
-  
-
-  
-  <div class="carousel-content text-center white-text wow fadeIn">
-    <div class="row mx-0 headfont mt-3 pt-4">
-      
-      <div class="col-12 col-sm-5 align-middle">
-        <a href="https://lovefive.club">
-          
-            <img class="pull-right avatar avatar-md" src="https://lovefive.club/img/profile.jpg" alt="" >
-          
-        </a>
-      </div>
-      
-      <div class="col-12 col-sm-7 text-left pl-2">
-        <a href="https://lovefive.club">
-          <h1 class="mb-2 h1" style="font-weight: 300;" >
-            <strong>QHQ</strong>
-          </h1>
-        </a>
-        
-
-             
-        <div class="mt-2" style="font-size: 1rem; color: white;">
-            
-              <a href="//github.com/baer9" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>    
-            
-            
-              <a href="//linkedin.com/in/you" target="_blank" rel="noopener"><i class="fab fa-linkedin pr-1" aria-hidden="true"></i></a>
-            
-
-            
-              <a href="//facebook.com/you" target="_blank" rel="noopener"><i class="fab fa-facebook pr-1" aria-hidden="true"></i></a>
-            
-
-            
-            <a href="//google.com/you" target="_blank" rel="noopener"><i class="fab fa-google-plus pr-1" aria-hidden="true"></i></a>
-            
-
-            
-                <a href="//twitter.com/you" target="_blank" rel="noopener"><i class="fab fa-twitter pr-1" aria-hidden="true"></i></a>
-            
-
-            
-                <a href="//instagram.com/you" target="_blank" rel="noopener"><i class="fab fa-instagram pr-1" aria-hidden="true"></i></a>
-            
-    
-            
-                <a href="//px500" target="_blank" rel="noopener"><i class="fab fa-500px pr-1" aria-hidden="true"></i></a>
-            
-    
-        
-            
-                <a href="mailto:pybaer@163.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
-            
-    
-            
-
-            
-        </div>
-      </div>
+      </p>
     </div>
   </div>
-  
-
-  
-  
-  
-
-</div>
-  
-    
-
-    
-  
-  <main class="post-main-wrapper">
-    
-    
-    <div class="row">
-
-      
-
-      
-      <div class="container pr-5">
-      
-
-        
-        <div class="z-depth-1  post-wrapper white-bg single-post">
-
-          <div class="post-header text-center" >
-  <ul class="post-meta li-x">
-    
-    
-  </ul>
-
-  <div class="px-4 post-heading">Java web 的form表单问题</div>
-
-  <ul class="post-meta li-x mt-1">
-    
-      <li>Dec 19, 2019</li>
-    
-
-    
-      <li class="middot"></li>
-      <li>4 minutes read</li>
-    
-  </ul>
-  
-
 </div>
 
+              
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
+  <div class="small-navbar visible-xs">
+  <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
+  <h1 class="small-navbar-heading"><a href="https://example.org/">Creative portfolio</a></h1>
+</div>
 
-          <div class="post-content markdown">
-            <p>QHQ-【问题描述】今天做Java web项目的时候，里面一个功能让我form表单里面套表单了，但是里面的form 提交action中参数无效。直接action外层form，所以就记录下form表单的一些问题。</p>
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="content-column-content">
+         <h1>Java web 的form表单问题</h1>
+         <p>QHQ-【问题描述】今天做Java web项目的时候，里面一个功能让我form表单里面套表单了，但是里面的form 提交action中参数无效。直接action外层form，所以就记录下form表单的一些问题。</p>
 <!-- raw HTML omitted -->
 <hr>
 <h1 id="form表单提交数据java-web">Form表单提交数据（Java web）</h1>
@@ -315,49 +142,49 @@
 <p>所以怎么来用两个submit来指向不同的响应呢？</p>
 <h2 id="一使用formmethod和formaction属性">一、使用formmethod和formaction属性</h2>
 <p>在使用<!-- raw HTML omitted --><!-- raw HTML omitted -->里面使用type=&ldquo;submit&rdquo; formmethod=&ldquo;get&rdquo; formaction=&ldquo;&ldquo;即可。具体如下：</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="o">&lt;</span><span class="n">form</span> <span class="n">action</span><span class="o">=</span><span class="s">&#34;query.do&#34;</span> <span class="n">method</span><span class="o">=</span><span class="s">&#34;post&#34;</span> <span class="n">align</span><span class="o">=</span><span class="s">&#34;center&#34;</span><span class="o">&gt;</span>
-		<span class="o">&lt;</span><span class="n">table</span> <span class="n">border</span><span class="o">=</span><span class="s">&#34;1&#34;</span> <span class="n">align</span><span class="o">=</span><span class="s">&#34;center&#34;</span> <span class="n">text</span><span class="o">-</span><span class="n">align</span><span class="o">:</span><span class="n">center</span><span class="s">&#34;&gt;
-</span><span class="s">			&lt;tr&gt;
-</span><span class="s">				&lt;td&gt;&lt;%=book.getBookName()%&gt;&lt;/td&gt;
-</span><span class="s">				&lt;td&gt;&lt;%=book.getPrice()%&gt;&lt;/td&gt;
-</span><span class="s">				&lt;td&gt;&lt;%=book.getAuthor()%&gt;&lt;/td&gt;
-</span><span class="s">				&lt;td&gt;&lt;%=book.getBr()%&gt;&lt;/td&gt;
-</span><span class="s">				&lt;td&gt;&lt;%=book.getCounts()%&gt;&lt;/td&gt;
-</span><span class="s">				&lt;td&gt;
-</span><span class="s">					&lt;form action=&#34;</span><span class="n">edit</span><span class="o">.</span><span class="na">do</span><span class="o">?</span><span class="n">Id</span><span class="o">=&lt;%=</span><span class="n">book</span><span class="o">.</span><span class="na">getId</span><span class="o">()%&gt;</span><span class="s">&#34; method=&#34;</span><span class="n">get</span><span class="s">&#34;&gt;
-</span><span class="s">						&lt;input type=&#34;</span><span class="n">text</span><span class="s">&#34; id=&#34;</span><span class="n">counts</span><span class="s">&#34; name=&#34;</span><span class="n">counts</span><span class="s">&#34;width:50px&#34;</span> <span class="o">&gt;</span>
-						<span class="o">&lt;</span><span class="n">input</span> <span class="n">type</span><span class="o">=</span><span class="s">&#34;hidden&#34;</span> <span class="n">id</span><span class="o">=</span><span class="s">&#34;Id&#34;</span> <span class="n">name</span><span class="o">=</span><span class="s">&#34;Id&#34;</span> <span class="n">value</span><span class="o">=</span><span class="s">&#34;&lt;%=book.getId()%&gt;&#34;</span>
-							<span class="n">style</span><span class="o">=</span><span class="s">&#34;width: 0px&#34;</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">input</span> <span class="n">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span>
-							<span class="n">formmethod</span><span class="o">=</span><span class="s">&#34;get&#34;</span> <span class="n">formaction</span><span class="o">=</span><span class="s">&#34;edit.do?Id=&lt;%=book.getId()%&gt;&#34;</span>
-							<span class="n">value</span><span class="o">=</span><span class="s">&#34;修改&#34;</span><span class="o">&gt;</span><span class="c1">//调用edit方法，方式为get，（也可以修改为post，看自己需要）
-</span><span class="c1"></span>					<span class="o">&lt;/</span><span class="n">form</span><span class="o">&gt;</span>
-					<span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
-				<span class="o">&lt;</span><span class="n">td</span> <span class="n">colspan</span><span class="o">=</span><span class="s">&#34;7&#34;</span><span class="o">&gt;&lt;</span><span class="n">input</span> <span class="n">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="n">value</span><span class="o">=</span><span class="s">&#34;查询&#34;</span> <span class="o">/&gt;&lt;/</span><span class="n">td</span><span class="o">&gt;</span><span class="c1">//调用qurry方法，方式为GET
-</span><span class="c1"></span>			<span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
-		<span class="o">&lt;/</span><span class="n">table</span><span class="o">&gt;</span>
-	<span class="o">&lt;/</span><span class="n">form</span><span class="o">&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">&lt;</span>form action<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;query.do&#34;</span> method<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post&#34;</span> align<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;center&#34;</span><span style="color:#f92672">&gt;</span>
+		<span style="color:#f92672">&lt;</span>table border<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span> align<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;center&#34;</span> text<span style="color:#f92672">-</span>align<span style="color:#f92672">:</span>center<span style="color:#e6db74">&#34;&gt;
+</span><span style="color:#e6db74">			&lt;tr&gt;
+</span><span style="color:#e6db74">				&lt;td&gt;&lt;%=book.getBookName()%&gt;&lt;/td&gt;
+</span><span style="color:#e6db74">				&lt;td&gt;&lt;%=book.getPrice()%&gt;&lt;/td&gt;
+</span><span style="color:#e6db74">				&lt;td&gt;&lt;%=book.getAuthor()%&gt;&lt;/td&gt;
+</span><span style="color:#e6db74">				&lt;td&gt;&lt;%=book.getBr()%&gt;&lt;/td&gt;
+</span><span style="color:#e6db74">				&lt;td&gt;&lt;%=book.getCounts()%&gt;&lt;/td&gt;
+</span><span style="color:#e6db74">				&lt;td&gt;
+</span><span style="color:#e6db74">					&lt;form action=&#34;</span>edit<span style="color:#f92672">.</span><span style="color:#a6e22e">do</span><span style="color:#f92672">?</span>Id<span style="color:#f92672">=&lt;%=</span>book<span style="color:#f92672">.</span><span style="color:#a6e22e">getId</span><span style="color:#f92672">()%&gt;</span><span style="color:#e6db74">&#34; method=&#34;</span>get<span style="color:#e6db74">&#34;&gt;
+</span><span style="color:#e6db74">						&lt;input type=&#34;</span>text<span style="color:#e6db74">&#34; id=&#34;</span>counts<span style="color:#e6db74">&#34; name=&#34;</span>counts<span style="color:#e6db74">&#34;width:50px&#34;</span> <span style="color:#f92672">&gt;</span>
+						<span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden&#34;</span> id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Id&#34;</span> name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Id&#34;</span> value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;%=book.getId()%&gt;&#34;</span>
+							style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width: 0px&#34;</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span>
+							formmethod<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;get&#34;</span> formaction<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;edit.do?Id=&lt;%=book.getId()%&gt;&#34;</span>
+							value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;修改&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#75715e">//调用edit方法，方式为get，（也可以修改为post，看自己需要）
+</span><span style="color:#75715e"></span>					<span style="color:#f92672">&lt;/</span>form<span style="color:#f92672">&gt;</span>
+					<span style="color:#f92672">&lt;</span>tr<span style="color:#f92672">&gt;</span>
+				<span style="color:#f92672">&lt;</span>td colspan<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;7&#34;</span><span style="color:#f92672">&gt;&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;查询&#34;</span> <span style="color:#f92672">/&gt;&lt;/</span>td<span style="color:#f92672">&gt;</span><span style="color:#75715e">//调用qurry方法，方式为GET
+</span><span style="color:#75715e"></span>			<span style="color:#f92672">&lt;/</span>tr<span style="color:#f92672">&gt;</span>
+		<span style="color:#f92672">&lt;/</span>table<span style="color:#f92672">&gt;</span>
+	<span style="color:#f92672">&lt;/</span>form<span style="color:#f92672">&gt;</span>
 </code></pre></div><h2 id="二设置不同函数使用onclick属性">二、设置不同函数，使用onclick属性</h2>
 <h3 id="1表单中设置两个提交按钮加密解密点击后分别调用不同的方法">1、表单中设置两个提交按钮：加密、解密；点击后分别调用不同的方法</h3>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="o">&lt;</span><span class="n">s</span><span class="o">:</span><span class="n">form</span> <span class="n">id</span><span class="o">=</span><span class="s">&#34;Form&#34;</span> <span class="n">action</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="n">namespace</span><span class="o">=</span><span class="s">&#34;/&#34;</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="n">button</span> <span class="n">onclick</span><span class="o">=</span><span class="s">&#34;encrypt()&#34;</span><span class="o">&gt;</span><span class="n">加密</span><span class="o">&lt;</span><span class="n">button</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="n">button</span> <span class="n">onclick</span><span class="o">=</span><span class="s">&#34;decrypt()&#34;</span><span class="o">&gt;</span><span class="n">解密</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">s</span><span class="o">:</span><span class="n">form</span><span class="o">&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">&lt;</span>s<span style="color:#f92672">:</span>form id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Form&#34;</span> action<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> namespace<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;</span>button onclick<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;encrypt()&#34;</span><span style="color:#f92672">&gt;</span>加密<span style="color:#f92672">&lt;</span>button<span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;</span>button onclick<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;decrypt()&#34;</span><span style="color:#f92672">&gt;</span>解密<span style="color:#f92672">&lt;/</span>button<span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&lt;</span>s<span style="color:#f92672">:</span>form<span style="color:#f92672">&gt;</span>
 </code></pre></div><h3 id="2在不同的函数中设置要提交的地址">2、在不同的函数中设置要提交的地址</h3>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="c1">//点击加密按钮调用此方法
-</span><span class="c1"></span><span class="kd">function</span> <span class="nx">encrypt</span><span class="p">(){</span>
-  <span class="c1">//跳转到encrypt.aciton
-</span><span class="c1"></span>  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;Form&#34;</span><span class="p">)</span>
- <span class="p">.</span><span class="nx">action</span><span class="o">=</span><span class="s2">&#34;${pageContext.request.contextPath}/enAndDeAction_encrypt.action?&#34;</span><span class="p">;</span>
-  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;Form&#34;</span><span class="p">).</span><span class="nx">submit</span><span class="p">;</span>
- <span class="p">}</span>
-  <span class="c1">//点击加密按钮调用此方法
-</span><span class="c1"></span><span class="kd">function</span> <span class="nx">decrypt</span><span class="p">(){</span>
-<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;Form&#34;</span><span class="p">)</span>
-<span class="p">.</span><span class="nx">action</span><span class="o">=</span><span class="s2">&#34;${pageContext.request.contextPath}/enAndDeAction_decrypt.action?&#34;</span><span class="p">;</span>
-<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;Form&#34;</span><span class="p">).</span><span class="nx">submit</span><span class="p">;</span>
- <span class="p">}</span>
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span>&gt;
+<span style="color:#75715e">//点击加密按钮调用此方法
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">encrypt</span>(){
+  <span style="color:#75715e">//跳转到encrypt.aciton
+</span><span style="color:#75715e"></span>  document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;Form&#34;</span>)
+ .<span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;${pageContext.request.contextPath}/enAndDeAction_encrypt.action?&#34;</span>;
+  document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;Form&#34;</span>).<span style="color:#a6e22e">submit</span>;
+ }
+  <span style="color:#75715e">//点击加密按钮调用此方法
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">decrypt</span>(){
+document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;Form&#34;</span>)
+.<span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;${pageContext.request.contextPath}/enAndDeAction_decrypt.action?&#34;</span>;
+document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;Form&#34;</span>).<span style="color:#a6e22e">submit</span>;
+ }
+&lt;/<span style="color:#f92672">script</span>&gt;
 </code></pre></div><h2 id="三form的action路径问题">三、Form的Action路径问题</h2>
 <blockquote>
 <p>页面通过表单（form）想服务器提交数据的时候有两种形式，一个是POST,另一个是GET。两种的一个区别是GET会直接把数据附加在url的后面，而POST发送的数据放置在http包中。form的action属性就是提交数据的url地址，method属性可以指定是GET或POST。</p>
@@ -366,34 +193,34 @@
 <p>需要注意的是如果采用GET方式，那么action url中参数都会被丢弃，提交时候只会把form中的数据拼接在url向服务器提交；但是POST的方式则不会这样，它会按照action指定的url进行提交数据，包含url后面跟着的参数和参数值</p>
 </blockquote>
 <p>我遇到的是Form表单提交到servelet处理时遇到的问题：</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="err">（</span><span class="n">1</span><span class="err">）</span><span class="o">&lt;</span><span class="n">form</span> <span class="n">action</span><span class="o">=</span><span class="s">&#34;①？&#34;</span> <span class="n">method</span><span class="o">=</span><span class="s">&#34;②？&#34;</span><span class="o">&gt;</span> 
-      <span class="c1">//表单的内容 
-</span><span class="c1"></span>     <span class="o">&lt;/</span><span class="n">form</span><span class="o">&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#960050;background-color:#1e0010">（</span>1<span style="color:#960050;background-color:#1e0010">）</span><span style="color:#f92672">&lt;</span>form action<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;①？&#34;</span> method<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;②？&#34;</span><span style="color:#f92672">&gt;</span> 
+      <span style="color:#75715e">//表单的内容 
+</span><span style="color:#75715e"></span>     <span style="color:#f92672">&lt;/</span>form<span style="color:#f92672">&gt;</span>
 </code></pre></div><p>（2）对应的处理用户请求的servlet类为Servlet.java，其中查询方法如下：</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kt">void</span> <span class="nf">query</span><span class="o">(</span><span class="n">HttpServletRequest</span> <span class="n">req</span><span class="o">,</span> <span class="n">HttpServletResponse</span> <span class="n">resp</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">ServletException</span><span class="o">,</span> <span class="n">IOException</span> <span class="o">{</span>
-		<span class="c1">// TODO 自动生成的方法存根
-</span><span class="c1"></span>		<span class="n">req</span><span class="o">.</span><span class="na">setCharacterEncoding</span><span class="o">(</span><span class="s">&#34;UTF-8&#34;</span><span class="o">);</span><span class="c1">// 解决POST方法的中文乱码问题
-</span><span class="c1"></span>		<span class="n">t</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">&#34;counts&#34;</span><span class="o">);</span>
-		<span class="c1">// 1.调用CustomerDAO的getAll()方法
-</span><span class="c1"></span>		<span class="n">List</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span> <span class="n">books</span> <span class="o">=</span> <span class="n">bd</span><span class="o">.</span><span class="na">findAll</span><span class="o">();</span>
-		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">books</span><span class="o">);</span>
-		<span class="c1">// 2.将Customer的集合放入request中
-</span><span class="c1"></span>		<span class="n">req</span><span class="o">.</span><span class="na">setAttribute</span><span class="o">(</span><span class="s">&#34;books&#34;</span><span class="o">,</span> <span class="n">books</span><span class="o">);</span>
-		<span class="c1">// 3.转发页面到index.jsp(不能使用重定向)
-</span><span class="c1"></span>		<span class="n">req</span><span class="o">.</span><span class="na">getRequestDispatcher</span><span class="o">(</span><span class="s">&#34;/book.jsp&#34;</span><span class="o">).</span><span class="na">forward</span><span class="o">(</span><span class="n">req</span><span class="o">,</span> <span class="n">resp</span><span class="o">);</span>
-	<span class="o">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">query</span><span style="color:#f92672">(</span>HttpServletRequest req<span style="color:#f92672">,</span> HttpServletResponse resp<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
+		<span style="color:#75715e">// TODO 自动生成的方法存根
+</span><span style="color:#75715e"></span>		req<span style="color:#f92672">.</span><span style="color:#a6e22e">setCharacterEncoding</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;UTF-8&#34;</span><span style="color:#f92672">);</span><span style="color:#75715e">// 解决POST方法的中文乱码问题
+</span><span style="color:#75715e"></span>		t <span style="color:#f92672">=</span> req<span style="color:#f92672">.</span><span style="color:#a6e22e">getParameter</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;counts&#34;</span><span style="color:#f92672">);</span>
+		<span style="color:#75715e">// 1.调用CustomerDAO的getAll()方法
+</span><span style="color:#75715e"></span>		List<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> books <span style="color:#f92672">=</span> bd<span style="color:#f92672">.</span><span style="color:#a6e22e">findAll</span><span style="color:#f92672">();</span>
+		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>books<span style="color:#f92672">);</span>
+		<span style="color:#75715e">// 2.将Customer的集合放入request中
+</span><span style="color:#75715e"></span>		req<span style="color:#f92672">.</span><span style="color:#a6e22e">setAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;books&#34;</span><span style="color:#f92672">,</span> books<span style="color:#f92672">);</span>
+		<span style="color:#75715e">// 3.转发页面到index.jsp(不能使用重定向)
+</span><span style="color:#75715e"></span>		req<span style="color:#f92672">.</span><span style="color:#a6e22e">getRequestDispatcher</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/book.jsp&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">forward</span><span style="color:#f92672">(</span>req<span style="color:#f92672">,</span> resp<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
 </code></pre></div><p>（3）配置web.xml文件：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">servlet</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">display-name</span><span class="p">&gt;</span>③Servlet<span class="p">&lt;/</span><span class="nt">display-name</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">servlet-name</span><span class="p">&gt;</span>Servlet<span class="p">&lt;/</span><span class="nt">servlet-name</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">servlet-class</span><span class="p">&gt;</span>com.qhq.servlet.Servlet<span class="p">&lt;/</span><span class="nt">servlet-class</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">servlet</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">servlet-mapping</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">servlet-name</span><span class="p">&gt;</span>③Servlet<span class="p">&lt;/</span><span class="nt">servlet-name</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">url-pattern</span><span class="p">&gt;</span>①*.do<span class="p">&lt;/</span><span class="nt">url-pattern</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">servlet-mapping</span><span class="p">&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">servlet</span>&gt;
+		&lt;<span style="color:#f92672">display-name</span>&gt;③Servlet&lt;/<span style="color:#f92672">display-name</span>&gt;
+		&lt;<span style="color:#f92672">servlet-name</span>&gt;Servlet&lt;/<span style="color:#f92672">servlet-name</span>&gt;
+		&lt;<span style="color:#f92672">servlet-class</span>&gt;com.qhq.servlet.Servlet&lt;/<span style="color:#f92672">servlet-class</span>&gt;
+&lt;/<span style="color:#f92672">servlet</span>&gt;
+&lt;<span style="color:#f92672">servlet-mapping</span>&gt;
+	&lt;<span style="color:#f92672">servlet-name</span>&gt;③Servlet&lt;/<span style="color:#f92672">servlet-name</span>&gt;
+	&lt;<span style="color:#f92672">url-pattern</span>&gt;①*.do&lt;/<span style="color:#f92672">url-pattern</span>&gt;
+&lt;/<span style="color:#f92672">servlet-mapping</span>&gt;
 </code></pre></div><p>然后在query.jsp中应该是：</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="o">&lt;</span><span class="n">form</span> <span class="n">action</span><span class="o">=</span><span class="s">&#34;①query.do&#34;</span> <span class="n">method</span><span class="o">=</span><span class="s">&#34;②Post&#34;</span><span class="o">&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">&lt;</span>form action<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;①query.do&#34;</span> method<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;②Post&#34;</span><span style="color:#f92672">&gt;</span>
 </code></pre></div><p>这样的话query.jsp的url是http://localhost:8080/jsp/query.do</p>
 <p>而Servlet.java的url是http://localhost:8080/jsp/Servlet</p>
 <p>注:web.xml中③对应的两个servlet-name要一致；①中的url-pattern要与form表单中的action属性值一致。</p>
@@ -405,170 +232,26 @@
 <p><a href="https://www.jb51.net/article/67279.htm">参考1</a></p>
 <p><a href="https://blog.csdn.net/qq_40774600/article/details/88888215">参考2</a></p>
 
-          </div>
-
-          
-          <div class="row">
-            <div class="col-md-8">
-            
-            </div>
-            
-          </div>
-          
-
-          
-          <div class="row pt-3">
-            <div class="col-md-6">
-              
-                <a href=https://lovefive.club/post/win10%E6%97%A0%E9%99%90%E5%88%B7%E6%96%B0/ class="post-meta">Previous
-                  <div class="pt-2 pb-5 d-flex">
-                    <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
-                    <span>Win10无限刷新</span>
-                  </div>
-                </a>
-              
-            </div>
-            
-            <div class="col-md-6 text-right" >
-              
-                <a href=https://lovefive.club/post/md%E7%9F%AD%E4%BB%A3%E7%A0%81%E6%80%8E%E4%B9%88%E5%86%99/ class="post-meta">Next
-                  <div class="pt-2 pb-5 flex-reverse">
-                    <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
-                    <span>md短代码怎么写</span>
-                  </div>
-                </a>
-              
-            </div>
-          </div>
-
-          
-
-        </div>
-        
-
+         
       </div>
-      
-
-      
-
     </div>
-    
-
-
-  </main>
-  
-
-
-    
-    
-
-<footer class="page-footer text-center font-small mt-4 wow fadeIn">
-
-
-  
-  <div class="pb-2 mt-5 pt-5">
-    
-      <a href="//github.com/baer9 " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>    
-    
-    
-      <a href="//linkedin.com/in/you" target="_blank" rel="noopener"><i class="fab fa-linkedin-in mr-3" aria-hidden="true"></i></a>
-    
-
-    
-      <a href="//facebook.com/you" target="_blank" rel="noopener"><i class="fab fa-facebook-f mr-3" aria-hidden="true"></i></a>
-    
-
-    
-    <a href="//google.com/you" target="_blank" rel="noopener"><i class="fab fa-google-plus-g mr-3" aria-hidden="true"></i></a>
-    
-
-    
-        <a href="//twitter.com/you" target="_blank" rel="noopener"><i class="fab fa-twitter mr-3" aria-hidden="true"></i></a>
-    
-
-    
-        <a href="//instagram.com/you" target="_blank" rel="noopener"><i class="fab fa-instagram mr-3" aria-hidden="true"></i></a>
-    
-
-    
-        <a href="//px500" target="_blank" rel="noopener"><i class="fab fa-500px mr-3" aria-hidden="true"></i></a>
-    
-
-
-    
-        <a href="mailto:pybaer@163.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
-    
-
-    
-
-    
-
   </div>
-  
+</div>
 
-  
-  <div class="copyright py-4">
-    
-    <span>  2016 - 2021 &copy; | Theme <a href='https://github.com/orianna-zzo/AllinOne' target="_blank">AllinOne</a> by <a href='https://github.com/orianna-zzo' target="_blank">Orianna</a>  </span>
+          </div>
+      </div>
   </div>
-  
-
-</footer>
-
-
-    
-
-
-
-
-
-
-<script type="text/javascript" src="https://lovefive.club/js/vendors/jquery/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="https://lovefive.club/js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+  <script src="https://example.org/js/jquery.min.js"></script>
+<script src="https://example.org/js/bootstrap.min.js"></script>
+<script src="https://example.org/js/jquery.cookie.js"> </script>
+<script src="https://example.org/js/ekko-lightbox.js"></script>
+<script src="https://example.org/js/jquery.scrollTo.min.js"></script>
+<script src="https://example.org/js/masonry.pkgd.min.js"></script>
+<script src="https://example.org/js/imagesloaded.pkgd.min.js"></script>
+<script src="https://example.org/js/owl.carousel.min.js"></script>
+<script src="https://example.org/js/front.js"></script>
 
 
 
-<script type="text/javascript" src="https://lovefive.club/js/vendors/popper.min.js"></script>
-<script type="text/javascript" src="https://lovefive.club/js/vendors/holder.min.js"></script>
-<script type="text/javascript" src="https://lovefive.club/js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
-
-<script type="text/javascript" src="https://lovefive.club/js/vendors/mdb/mdb.min.js"></script>
-
-<script type="text/javascript" src="https://lovefive.club/js/main.js"></script>
-
-
-
-  
-  <script src="https://lovefive.club/js/vendors/highlight.pack.js"> </script>
-  <script>hljs.initHighlightingOnLoad();</script>
-
-
-
-
- 
-  <script src="https://lovefive.club/js/vendors/katex/katex.min.js"> </script>
-  <script src="https://lovefive.club/js/vendors/katex/contrib/auto-render.min.js"></script>
-
-  <script>
-      document.addEventListener("DOMContentLoaded", function () {
-          renderMathInElement(document.body);
-      });
-  </script>
-
-
-
-
-
-
-
-
-<script type="text/javascript">
-  
-  new WOW().init();
-</script>
-
-
-
-
-  </body>
+</body>
 </html>

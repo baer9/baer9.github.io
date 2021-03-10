@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>半数集问题 on Creative portfolio</title>
+    <link>https://example.org/tags/%E5%8D%8A%E6%95%B0%E9%9B%86%E9%97%AE%E9%A2%98/</link>
+    <description>Recent content in 半数集问题 on Creative portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://example.org/tags/%E5%8D%8A%E6%95%B0%E9%9B%86%E9%97%AE%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#43;&#43;半数集问题</title>
+      <link>https://example.org/post/%E5%8D%8A%E6%95%B0%E9%9B%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/post/%E5%8D%8A%E6%95%B0%E9%9B%86/</guid>
+      <description>QHQ-【问题描述】给定一个自然数n，由n开始可以依次产生半数集set(n)中的数如下：
+（1）n∈set(n);
+（2）在n的左边加上一个自然数，但该自然数不能超过最近添加的数的一半；
+（3）按此规则进行处理，直到不能再添加自然数为止。
+  【问题描述】给定一个自然数n，由n开始可以依次产生半数集set(n)中的数如下： （1）n∈set(n); （2）在n的左边加上一个自然数，但该自然数不能超过最近添加的数的一半； （3）按此规则进行处理，直到不能再添加自然数为止。 例如，set(6)={6,16,26,126,36,136}。半数集set（6）中有6个元素。注意，该半数集是多重集。 【算法设计】对于给定的自然数n，计算半数集set(n)中的元素个数。 【输入形式】只有1行，给出整数n（0&amp;lt;n&amp;lt;1000）。 【输出形式】只有1行，给出半数集set(n)中的元素个数。 【样例输入】 6 【样例输出】 6   #include&amp;lt;iostream&amp;gt; using namespace std; int my_set(int n) { int set_count = 1; if (n == 1) return 1; else { int i = 1; while (i &amp;lt;= (n / 2)) { set_count = set_count + my_set(i); i++; } return set_count; } } int main() { int n = 0; cin &amp;gt;&amp;gt; n; cout &amp;lt;&amp;lt; my_set(n); } </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>注册表 on Creative portfolio</title>
+    <link>https://example.org/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/</link>
+    <description>Recent content in 注册表 on Creative portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Dec 2019 19:58:15 +0000</lastBuildDate><atom:link href="https://example.org/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Win10无限刷新</title>
+      <link>https://example.org/post/win10%E6%97%A0%E9%99%90%E5%88%B7%E6%96%B0/</link>
+      <pubDate>Mon, 16 Dec 2019 19:58:15 +0000</pubDate>
+      
+      <guid>https://example.org/post/win10%E6%97%A0%E9%99%90%E5%88%B7%E6%96%B0/</guid>
+      <description>QHQ-【问题描述】
+​	怎么样修复Win10系统 ，win10在选择默认应用就是更改不了，重置也没有反应，打开一个包含html文件的文件夹，桌面就无限刷新
+ win10无限刷新  我在使用电脑的时候，忽然发现我打开一个文件夹，桌面在无限刷新，于是就检查一下，发现是包含.html的文件夹都会造成这个无限刷新的bug。于是寻找解决办法。有以下两种：
+ 方法一：利用文件检查工具修复 右击开始图标（电脑左下角的小图标），出现下面界面，点击管理员的Windows powerShell：
+然后输入sfc /scannow ，回车运行。
+方法二：即设置注册页来设置回到原始设置。 先Win+R 打开运行界面，输入regedit，确定运行。
+接着按着箭头所指一步步走。
+都是左击，然后确定。
+选择完全控制，然后点击确定。
+之后就是确定，确定。。。（可能会反应一下，看自己电脑反应速度，我的是反应了两秒就好了），然后重启，即可。
+ 补充： 如果第二点还没有反应，可以从控制面板→程序→默认程序→设置默认程序，自己再调整一下默认应用，也可以根据文件后缀名调整默认打开程序。</description>
+    </item>
+    
+  </channel>
+</rss>

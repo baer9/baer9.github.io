@@ -1,10 +1,56 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Orianna</title>
-    <link>https://baer9.github.io/categories/</link>
-    <description>Recent content in Categories on Orianna</description>
+    <title>Categories on Creative portfolio</title>
+    <link>https://example.org/categories/</link>
+    <description>Recent content in Categories on Creative portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zn-Hans</language><atom:link href="https://baer9.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Dec 2019 14:53:21 +0000</lastBuildDate><atom:link href="https://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在人间凑数的日子</title>
+      <link>https://example.org/categories/%E5%9C%A8%E4%BA%BA%E9%97%B4%E5%87%91%E6%95%B0%E7%9A%84%E6%97%A5%E5%AD%90/</link>
+      <pubDate>Fri, 06 Dec 2019 14:53:21 +0000</pubDate>
+      
+      <guid>https://example.org/categories/%E5%9C%A8%E4%BA%BA%E9%97%B4%E5%87%91%E6%95%B0%E7%9A%84%E6%97%A5%E5%AD%90/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bat</title>
+      <link>https://example.org/categories/bat/</link>
+      <pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/categories/bat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>https://example.org/categories/c&#43;&#43;/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/categories/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>First</title>
+      <link>https://example.org/categories/first/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/categories/first/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hexo</title>
+      <link>https://example.org/categories/hexo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/categories/hexo/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

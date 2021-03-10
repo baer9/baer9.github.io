@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>众数问题 on Creative portfolio</title>
+    <link>https://example.org/tags/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/</link>
+    <description>Recent content in 众数问题 on Creative portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://example.org/tags/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#43;&#43;众数问题</title>
+      <link>https://example.org/post/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/post/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/</guid>
+      <description>QHQ-【问题描述】给定含有S个元素的多重集合S，每个元素在S中出现的次数称为该元素的重数。多重集S中重数最大的元素称为众数。例如，S={1,2,2,2,3,5}。多重数S的众数是2，其重数为3 。
+ ``` 【问题描述】给定含有S个元素的多重集合S，每个元素在S中出现的次数称为该元素的重数。多重集S中重数最大的元素称为众数。例如，S={1,2,2,2,3,5}。多重数S的众数是2，其重数为3 。 【算法设计】对于给定的由n个自然数组成的多重集S，计算S的众数及其重数。 【输入形式】第1行为多重数集S中元素个数n；接下来的n行中，每行有一个自然数。 【输出形式】输出文件有2行，第1行是众数，第2行是重数。 【样例输入】 6 1 2 2 2 3 5 【样例输出】 2 3 ```   ``` #include&amp;lt;iostream&amp;gt; #include&amp;lt;algorithm&amp;gt; using namespace std; #define MAXINT 10000 int main() { int n = 0; cin &amp;gt;&amp;gt; n; int a[MAXINT] = { 0 }; for (int i = 0; i &amp;lt; n; i++) { cin &amp;gt;&amp;gt; a[i]; } sort(a, a + n); int maxcount = 0; int maxcount_index = 0; int temp = 1; int b[MAXINT] = { 0 }; b[0] = a[0]; int b_index = 1; bool flag = false; for (int i = 0; i &amp;lt; (n - 1); i++) { if (a[i] !</description>
+    </item>
+    
+  </channel>
+</rss>

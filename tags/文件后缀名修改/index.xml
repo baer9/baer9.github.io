@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>文件后缀名修改 on Creative portfolio</title>
+    <link>https://example.org/tags/%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80%E5%90%8D%E4%BF%AE%E6%94%B9/</link>
+    <description>Recent content in 文件后缀名修改 on Creative portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/tags/%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80%E5%90%8D%E4%BF%AE%E6%94%B9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>bat批修改文件后缀名</title>
+      <link>https://example.org/post/bat%E7%AE%80%E5%8D%95%E6%89%B9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/post/bat%E7%AE%80%E5%8D%95%E6%89%B9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</guid>
+      <description>今天先说说bat最简单的操作 ren *.jpg *.txt  此语句可以把当前文件夹的所有jpg照片转换为txt格式，（有利于隐藏照片哦）。
+ 接下来就简单来说一下怎么具体操作吧  新建txt文本 在里面填写上面语句 修改txt后缀名为bat   提示：.jpg 意思是任意文件名的jpg格式，当然也可以.* ，表示任意文件文件格式，第二个*.txt意思是任意任意文件名的最终格式。就是原文件名不变，只修改后缀名。（后缀名可以根据自己的要求自己更改）。
+   未完待续。。。  </description>
+    </item>
+    
+  </channel>
+</rss>
