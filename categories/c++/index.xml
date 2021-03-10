@@ -5,29 +5,30 @@
     <link>https://www.lovefive.club/categories/C&#43;&#43;/</link>
     <description>Recent content in C&#43;&#43; on QHQ‘s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language><atom:link href="https://www.lovefive.club/categories/C++/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>C&#43;&#43;众数问题</title>
-      <link>https://www.lovefive.club/post/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.lovefive.club/post/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/</guid>
-      <description>QHQ-【问题描述】给定含有S个元素的多重集合S，每个元素在S中出现的次数称为该元素的重数。多重集S中重数最大的元素称为众数。例如，S={1</description>
-    </item>
-    
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 25 Oct 2019 13:53:21 +0000</lastBuildDate><atom:link href="https://www.lovefive.club/categories/C++/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>C&#43;&#43;半数集问题</title>
       <link>https://www.lovefive.club/post/%E5%8D%8A%E6%95%B0%E9%9B%86/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 25 Oct 2019 13:53:21 +0000</pubDate>
       
       <guid>https://www.lovefive.club/post/%E5%8D%8A%E6%95%B0%E9%9B%86/</guid>
       <description>QHQ-【问题描述】给定一个自然数n，由n开始可以依次产生半数集set(n)中的数如下： （1）n∈set(n); （2）在n的左边加上一个自然</description>
     </item>
     
     <item>
+      <title>C&#43;&#43;众数问题</title>
+      <link>https://www.lovefive.club/post/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Mon, 21 Oct 2019 20:12:12 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/</guid>
+      <description>QHQ-【问题描述】给定含有S个元素的多重集合S，每个元素在S中出现的次数称为该元素的重数。多重集S中重数最大的元素称为众数。例如，S={1</description>
+    </item>
+    
+    <item>
       <title>C&#43;&#43;最大间隙</title>
       <link>https://www.lovefive.club/post/%E6%9C%80%E5%A4%A7%E9%97%B4%E9%9A%99/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 21 Oct 2019 13:53:21 +0000</pubDate>
       
       <guid>https://www.lovefive.club/post/%E6%9C%80%E5%A4%A7%E9%97%B4%E9%9A%99/</guid>
       <description>QHQ-【问题描述】给定n个实数x1,x2,&amp;hellip;,xn, 求着n个数在实轴上相邻两个数之间的最大差值。假设对任何实数的下取整函数好</description>
@@ -36,7 +37,7 @@
     <item>
       <title>C&#43;&#43;金币阵列</title>
       <link>https://www.lovefive.club/post/%E9%87%91%E5%B8%81%E9%98%B5%E5%88%97/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 21 Oct 2019 13:53:21 +0000</pubDate>
       
       <guid>https://www.lovefive.club/post/%E9%87%91%E5%B8%81%E9%98%B5%E5%88%97/</guid>
       <description>QHQ-【问题描述】有m*n(m&amp;lt;=100, n&amp;lt;=100)枚金币在桌面上排成一个m行n列的金币矩阵。每枚金币或正面朝上或背面朝上</description>

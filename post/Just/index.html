@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+
+    <title>Just as they say | QHQ‘s Blog</title>
+    <meta property="og:title" content="Just as they say - QHQ‘s Blog">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2020-10-05T23:48:22&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2020-10-05T23:48:22&#43;08:00'>
+        
+    <meta name="Keywords" content="java,android,博客,python,baer,lovefive">
+    <meta name="description" content="Just as they say">
+        
+    <meta name="author" content="QHQ‘s">
+    <meta property="og:url" content="https://www.lovefive.club/post/Just/">
+    <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    
+    
+    
+    
+    
+        <link rel="stylesheet" href='/css/douban.css'>
+    
+        <link rel="stylesheet" href='/css/other.css'>
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://www.lovefive.club">
+                        QHQ‘s Blog
+                    </a>
+                
+                <p class="description">专注于Android、Java、移动互联网、LPC、GOA</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://www.lovefive.club">首页</a>
+                    
+                    <a  href="https://www.lovefive.club/tools/" title="工具">工具</a>
+                    
+                    <a  href="https://www.lovefive.club/archives/" title="归档">归档</a>
+                    
+                    <a  href="https://www.lovefive.club/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#want-to-updatebut-time-is-running-out">Want to update，but time is running out!!!</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">Just as they say</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年10月5日
+        </date>
+        
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        
+        
+        <div class="post-content">
+            <h4 id="16921">16/9/21</h4>
+<ul>
+<li>Many hands make light work.</li>
+<li>foster 培养，促进，助长。</li>
+<li>pursuit 追求，职业</li>
+<li>productivity 生产力</li>
+<li>maintain 维护，保持，坚持</li>
+<li>giant 巨人，（tech giant 科技巨头）</li>
+<li>···always give top priority to ···  ···总把···放在首位</li>
+<li>emphasizes 强调</li>
+<li>cohesive 凝聚的，团结的</li>
+<li>mutual 相互的（mutual respect 相互尊重）</li>
+<li>Outstanding leader always give top priority to team building.they know a cohesive team composed of great communicatiors plays an irreplaceable in enhancing the operational efficiency and productivity of an enterprise.Just as they say,many hands make light work.</li>
+</ul>
+<hr>
+<h4 id="17921">17/9/21</h4>
+<ul>
+<li>apprehensive 忧虑的，不安的，只晓的</li>
+<li>unrealistic 不起实际的，不实在的</li>
+<li>misinterpreted 曲解，误解</li>
+<li>deputy 副的，代表</li>
+<li>by doing so 如此一来</li>
+<li>self-evident 不言而喻的</li>
+<li>To sum up 总之</li>
+<li>principle 原则，本质，道义，根源</li>
+<li>prestige 声望，威望</li>
+</ul>
+<hr>
+<h4 id="18921">18/9/21</h4>
+<ul>
+<li><strong>myth/legend</strong> 神话/传说</li>
+<li><strong>a remarkable achievement</strong> 一项了不起的成就；显著成就；显著的成就</li>
+<li><strong>ethnic minority</strong> n. 少数民族</li>
+<li><strong>originate in/from</strong> 起源于</li>
+<li><strong>be traced back to</strong> 追溯到；可追溯到；起源于</li>
+<li><strong>birthplace</strong> n. 出生地；发源地；发祥地</li>
+<li><strong>ancient times</strong> 古代</li>
+<li><strong>modern times</strong> 现代</li>
+<li><strong>a unique element</strong> 独特元素</li>
+<li><strong>industrial revolution</strong> 工业革命</li>
+<li><strong>prosperity</strong> n. 繁荣；兴旺；昌盛</li>
+</ul>
+<hr>
+<h4 id="19921">19/9/21</h4>
+<ul>
+<li><strong>evidence</strong> n. 证据，证明；迹象；明显vt. 证明</li>
+<li><strong>confirming</strong> adj. 确定的；确认检验的 vt. 确定；证实（confirm的ing形式）</li>
+<li><strong>encounter</strong> v. 遭遇；邂逅；遇到 n. 遭遇；偶然碰见</li>
+<li><strong>pervasive</strong> adj. 普遍的；到处渗透的；流行的</li>
+<li><strong>alternate</strong> v. （使）交替，（使）轮流adj. 交替的，轮流的；间隔的，每隔（……天等）的；（一或多个事物）另外的，可供选择的；（两者）互不相容的；另类的，非传统的；（叶、芽）互生的 n. 替换物，代理人</li>
+</ul>
+<hr>
+<h4 id="20921">20/9/21</h4>
+<ul>
+<li><strong>resident</strong> n. 居民；住户；（旅馆的）住宿者；（美国的）高级专科住院实习医生 adj. （在某地）居住的</li>
+<li><strong>penny</strong> n. （美）分；便士</li>
+<li><strong>revenue</strong> n. 税收收入；财政收入；收益</li>
+<li><strong>current</strong> adj. 现在的；流通的，通用的；最近的；草写的 n. （水，气，电）流；趋势；涌流</li>
+<li><strong>penalty</strong> n. 罚款，罚金；处罚</li>
+<li><strong>legal</strong> adj. 法律的；合法的；法定的；依照法律的</li>
+</ul>
+<hr>
+<hr>
+<h4 id="26921">26/9/21</h4>
+<ul>
+<li><strong>convincing</strong>  adj. 令人信服的；有说服力的  v. 使相信；使明白（convince的现在分词）</li>
+<li><strong>vocation</strong> n. 职业；天职；天命；神召</li>
+<li><strong>exclusion</strong> n. 排除；排斥；驱逐；被排除在外的事物</li>
+<li><strong>negligible</strong> adj. 微不足道的，可以忽略的</li>
+<li><strong>appreciate</strong>  vt. 欣赏；感激；领会；鉴别 | vi. 增值；涨价</li>
+</ul>
+<hr>
+<h4 id="27921">27/9/21</h4>
+<ul>
+<li><strong>off the hook</strong> 摆脱困境；脱身</li>
+<li><strong>ashore</strong> adv. 在岸上；向岸 adj. 在岸上的；在陆上的</li>
+<li><strong>instinctive</strong> adj. 本能的；直觉的；天生的</li>
+<li><strong>infrared</strong> adj. 本能的；直觉的；天生的</li>
+<li><strong>dismiss</strong> vt. 解散；解雇；开除；让&hellip;离开；不予理会、不予考虑 vi. 解散</li>
+</ul>
+<hr>
+<h4 id="28921">28/9/21</h4>
+<ul>
+<li><strong>divisive</strong> adj. 分裂的；区分的；造成不和的 分歧</li>
+<li><strong>disputes</strong> n. 争端；争论；争吵；抗辩 v. 争论；争吵；对…提出质疑；反抗</li>
+<li><strong>religion</strong> n. 宗教；宗教信仰；教派；特别的兴趣</li>
+<li><strong>inject</strong> vt. 注入；注射；加入</li>
+<li><strong>fall</strong> v. 下降；跌倒；落下；跌落 n. 落下；跌落；下落；掉落 adj. 〈美〉秋天的；秋天成熟的；(衣服等)秋天用的</li>
+<li><strong>hardline</strong> n. 强硬路线；强硬派</li>
+</ul>
+<hr>
+<h4 id="29921">29/9/21</h4>
+<ul>
+<li><strong>constantly</strong> adv. 不断地；时常地</li>
+<li><strong>pop up</strong> v. 突然出现;冒出来</li>
+<li><strong>enviably</strong> adv. 羡慕地；妒忌地</li>
+<li><strong>jealousy</strong> n. 嫉妒；猜忌；戒备</li>
+<li><strong>priorities</strong> 优先事项</li>
+<li><strong>self-assured</strong> adj. 自信的；胸有成竹的</li>
+</ul>
+<hr>
+<h4 id="30921">30/9/21</h4>
+<ul>
+<li><strong>seize upon</strong> 抓住，利用，把握</li>
+<li><strong>grow demand</strong> 增长需求</li>
+<li><strong>price out of sth.</strong> 买不起</li>
+<li><strong>vibrant</strong> adj.生气勃勃的；鲜艳的；醒目的；洪亮的；强劲的；颤抖的，震动的</li>
+<li><strong>chain</strong> n. 链条；链子；锁链；一系列 v. 用锁链拴住（或束缚、固定）</li>
+<li><strong>franchises</strong> n. 选举权；参政权；加盟分店；</li>
+</ul>
+<hr>
+<h4 id="011021">01/10/21</h4>
+<ul>
+<li><strong>splash</strong> n.落水声；溅泼声；溅上的液体；溅洒后留下的污渍</li>
+<li><strong>windfall</strong> n. 意外之财；被风吹落的果子；意外的收获</li>
+<li><strong>centralization</strong> n. 集中化；中央集权管理</li>
+<li><strong>fuel</strong> n. 燃料；刺激因素；（为身体提供能量的）食物 vt. 给……提供燃料；刺激，煽动；推动</li>
+<li><strong>urban</strong> adj. 城市的；住在都市的</li>
+<li><strong>property</strong> n. 性质，性能；财产；所有权</li>
+<li><strong>erode</strong> vt. 腐蚀，侵蚀 vi. 侵蚀；受腐蚀</li>
+<li><strong>diversity</strong> n. 多样性；多样化；差异（性）；不同（点）</li>
+</ul>
+<hr>
+<h4 id="021021">02/10/21</h4>
+<ul>
+<li><strong>period</strong> n. 期间；时期；经期；课时；句点，句号 adj. 某一时代的</li>
+<li><strong>infant</strong> n. 婴儿；幼儿；未成年人 adj. 婴儿的；幼稚的；初期的；未成年的</li>
+<li><strong>accurate</strong> adj. 精确的</li>
+<li><strong>accumulate</strong> vi. 累积；积聚  vt. 积攒</li>
+<li><strong>courteous</strong>  adj. 有礼貌的；谦恭的;文明的</li>
+<li><strong>ill-mannered</strong>  adj. 举止粗鲁的；不礼貌的</li>
+<li><strong>deserve</strong> v. 值得；应得；应受</li>
+</ul>
+<hr>
+<h4 id="031021">03/10/21</h4>
+<ul>
+<li><strong>evoke</strong> vt. 引起，唤起；博得</li>
+<li><strong>severe</strong> adj. 严峻的；严厉的；剧烈的；苛刻的</li>
+<li><strong>insensitive</strong> adj. （对他人的感受）未意识到的，漠不关心的；（对变化）懵然不知的，麻木不仁的；（对某事物）无感觉，无反应</li>
+<li><strong>backward</strong>   adj. 向后的；倒退的；（人）智力迟钝的；落后的；（场地位置）线后的       adv. 向后地；往回地；回溯（过去）；每况愈下地；前后反过来（等于 backwards）</li>
+<li><strong>signal</strong> n. 信号；暗号；导火线  vt. 标志；用信号通知；表示  adj. 显著的；作为信号的</li>
+</ul>
+<hr>
+<h4 id="041021">04/10/21</h4>
+<ul>
+<li><strong>criticize</strong> vt. 批评；评论；非难 vi. 批评；评论；苛求</li>
+<li><strong>corporate</strong> adj. 公司的；组成公司（或团体）的；法人的；社团的</li>
+<li><strong>opt for</strong> 选取；赞成；选择</li>
+<li><strong>thrill</strong> n. 兴奋；激动；震颤感；兴奋感 v. 使非常兴奋；使非常激动</li>
+<li><strong>outrage</strong> n. 愤怒，愤慨；暴行；侮辱 vt. 凌辱，强奸；对…施暴行；激起愤怒</li>
+<li><strong>liberal opponents</strong> 自由派反对者</li>
+</ul>
+<hr>
+<h4 id="051021">05/10/21</h4>
+<ul>
+<li><strong>bi-partisan</strong> adj. 两党连立的；代表两党的</li>
+<li><strong>consciousness</strong> n. 意识；知觉；觉悟；感觉</li>
+<li><strong>essential</strong>  adj. 基本的；必要的；本质的；精华的
+n. 本质；要素；要点；必需品</li>
+<li><strong>interaction</strong> n. 相互作用，相互影响；交流；[数] 交互作用；互动</li>
+<li><strong>hanging out</strong>  闲逛；开心玩；外出玩耍</li>
+</ul>
+<hr>
+<h4 id="061021">06/10/21</h4>
+<ul>
+<li><strong>unique</strong> adj. 独特的，稀罕的；[数] 唯一的，独一无二的 n. 独一无二的人或物</li>
+<li><strong>emission</strong> n. （光、热等的）发射，散发；喷射；发行</li>
+<li><strong>estimate</strong> n. 估计，估价；判断，看法 v. 估计，估量；判断，评价</li>
+<li><strong>spank</strong> 批评</li>
+<li><strong>prestigious</strong> adj. 享有声望的，受尊敬的，地位显赫的</li>
+<li><strong>canceled out</strong> 取消；抵销</li>
+</ul>
+<hr>
+<h4 id="071021">07/10/21</h4>
+<ul>
+<li><strong>gulf</strong> n. 海湾；深渊；分歧；漩涡 vt. 吞没</li>
+<li><strong>feeble</strong> adj. 微弱的，无力的；虚弱的；薄弱的</li>
+<li><strong>controversy</strong> n. 争论；论战；辩论</li>
+<li><strong>logic</strong> n. 逻辑；逻辑学；逻辑性</li>
+<li><strong>recruit</strong> v. 征募；聘用；通过招募组建；补充；（非正式）说服；（使）恢复健康 n. 招聘；新兵；新成员</li>
+<li><strong>formidable</strong> adj. 强大的；可怕的；令人敬畏的；艰难的</li>
+</ul>
+<hr>
+<h4 id="081021">08/10/21</h4>
+<ul>
+<li><strong>collision</strong> n. 碰撞；冲突；（意见，看法）的抵触；（政党等的）倾轧</li>
+<li><strong>moderate</strong> adj. 稳健的，温和的；适度的，中等的；有节制的 vi. 变缓和，变弱 vt. 节制；减轻</li>
+<li><strong>virgin</strong> . 处女，童男；新手；孤雌生殖的雌虫 n. (Virgin) 圣母马利亚；室女宫 adj. 处女的；原始状态的，未经利用的；（黏土）未烧制的；（羊毛）未纺过的；（橄榄油）初榨的；（金属）原生的</li>
+<li><strong>assume</strong> vi. 设想；承担；采取 vt. 假定；僭取；篡夺；夺取；擅用；侵占</li>
+<li><strong>rearing</strong> n. 饲养；养育；抚养 v. 抚养；建立（rear的ing形式）；竖起</li>
+</ul>
+<hr>
+<h4 id="091021">09/10/21</h4>
+<ul>
+<li><strong>breach</strong> n. 违背，违反；缺口vt. 违反，破坏；打破</li>
+<li><strong>guarantee</strong> n. 保证；担保；保证人；保证书；抵押品 vt. 保证；担保</li>
+<li><strong>amuse</strong> vt. 娱乐；消遣；使发笑；使愉快</li>
+<li><strong>obligation</strong> n. 义务；职责；债务</li>
+<li><strong>faith</strong> n. 信仰；信念；信任；忠实</li>
+<li><strong>previous</strong> n. 信仰；信念；信任；忠实</li>
+</ul>
+<hr>
+<h4 id="101021">10/10/21</h4>
+<ul>
+<li><strong>season</strong> n. 时期；季节；赛季vt. 给…调味；使适应</li>
+<li><strong>seasoned</strong> adj. 富有经验的；老于此道的；调好味的；加了作料的</li>
+<li><strong>addiction</strong> n. 上瘾，沉溺；癖嗜</li>
+<li><strong>institutes</strong> n. 学院；学会；(学院附设的)研究所；原则 v. 实行；设；任命；【宗】授…以圣职</li>
+<li><strong>grand</strong> adj. 宏伟的；豪华的；极重要的</li>
+<li><strong>ambition</strong> n. 野心，雄心；抱负，志向 vt. 追求；有…野心</li>
+</ul>
+<hr>
+<h4 id="111021">11/10/21</h4>
+<ul>
+<li><strong>manipulate</strong> vt. 操纵；操作；巧妙地处理；篡改</li>
+<li><strong>laboratory</strong> n. 实验室，研究室</li>
+<li><strong>pinpoint</strong> vt. 查明；精确地找到；准确描述 adj. 精确的；详尽的 n. 针尖；精确位置；极小之物</li>
+<li><strong>region</strong> n. 地区；范围；部位</li>
+<li><strong>crucial</strong> adj. 重要的；决定性的；定局的；决断的</li>
+<li>**curtail ** vt. 缩减；剪短；剥夺…特权等</li>
+</ul>
+<hr>
+<hr>
+<h4 id="131021">13/10/21</h4>
+<ul>
+<li>
+        <img class="mx-auto" alt="4" src="//tvax4.sinaimg.cn/large/006WrmUrly1gjolobdmgnj30ud1fqjzf.jpg" />   
+    </li>
+<li>
+        <img class="mx-auto" alt="3" src="//tva4.sinaimg.cn/large/006WrmUrly1gjolqyvcfsj30pb1fq0zu.jpg" />   
+    </li>
+</ul>
+<hr>
+<h4 id="141021">14/10/21</h4>
+<ul>
+<li>
+        <img class="mx-auto" alt="2" src="//tvax2.sinaimg.cn/large/006WrmUrly1gjolpyvdklj30vq1he10s.jpg" />   
+    </li>
+<li>
+        <img class="mx-auto" alt="1" src="//tva2.sinaimg.cn/large/006WrmUrly1gjolqs3apfj30mm1h8gsi.jpg" />   
+    </li>
+<li>
+        <img class="mx-auto" alt="5" src="//tvax2.sinaimg.cn/large/006WrmUrly1gjolpp4ez7j30oj1h2tfc.jpg" />   
+    </li>
+</ul>
+<hr>
+<h4 id="151021">15/10/21</h4>
+<ul>
+<li>
+        <img class="mx-auto" alt="image" src="//tvax3.sinaimg.cn/large/006WrmUrly1gjprzb9rm4j30ot1gqwl2.jpg" />   
+    </li>
+<li>
+        <img class="mx-auto" alt="image" src="//tva3.sinaimg.cn/large/006WrmUrly1gjprzzc8u2j30ul1g2qa6.jpg" />   
+    </li>
+<li>
+        <img class="mx-auto" alt="image" src="//tvax4.sinaimg.cn/large/006WrmUrly1gjps0xpjubj30oc1h0wkf.jpg" />   
+    </li>
+</ul>
+<hr>
+<h2 id="want-to-updatebut-time-is-running-out">Want to update，but time is running out!!!</h2>
+
+        </div>
+
+        
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="https://www.lovefive.club">QHQ‘s</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://www.lovefive.club/post/Just/">https://www.lovefive.club/post/Just/</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。</li>
+    </ul>
+</div>
+<br/>
+
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/%E8%BD%AC%E8%BD%BD%E5%8D%81%E5%A4%A7%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%8A%A8%E5%9B%BE%E6%BC%94%E7%A4%BA/">【转载】十大经典排序算法（动图演示）</a></li>
+        
+        <li><a href="/post/v2rayN%E7%9A%84Pac%E8%87%AA%E5%8A%A8%E6%A8%A1%E5%BC%8F%E6%97%A0%E6%B3%95%E7%99%BB%E5%BD%95Telegram%E9%97%AE%E9%A2%98/">V2rayN的Pac自动模式无法登录Telegram问题！</a></li>
+        
+        <li><a href="/post/3D%E5%9C%B0%E7%90%83%E7%BB%9F%E8%AE%A1/">3D地球统计</a></li>
+        
+        <li><a href="/post/Living/">Living</a></li>
+        
+        <li><a href="/post/nginx%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/">nginx超详细配置及中文解释</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            没有标签
+            
+        </div>
+    </article>
+    
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "yourdiscussshortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+    
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "baer9/baer9.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+    
+</div>
+
+                    <footer id="footer">
+    <div>
+        &copy; 2021 <a href="https://www.lovefive.club">QHQ‘s Blog By QHQ‘s</a>
+        
+    </div>
+    <br />
+    <div>
+        <div class="github-badge">
+            <a href="https://gohugo.io/" target="_black" rel="nofollow"><span class="badge-subject">Powered by</span><span class="badge-value bg-blue">Hugo</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://www.flysnow.org/" target="_black"><span class="badge-subject">Design by</span><span class="badge-value bg-brightgreen">飞雪无情</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://github.com/flysnow-org/maupassant-hugo" target="_black"><span class="badge-subject">Theme</span><span class="badge-value bg-yellowgreen">Maupassant</span></a>
+        </div>
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+
+
+    <script src='/js/douban.js'></script>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='https://www.lovefive.club/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://www.lovefive.club">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://www.lovefive.club/post/git%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/" title="git常见错误">git常见错误</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/%E5%B9%B8%E4%BC%9A-1988/" title="幸会-1988">幸会-1988</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/%E7%BD%91%E9%A1%B5%E7%89%88Github%E6%9B%B4%E6%94%B9%E6%96%87%E4%BB%B6%E5%A4%B9%E5%90%8D/" title="网页版Github更改文件夹名">网页版Github更改文件夹名</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BD%E5%85%B3%E4%BA%8E%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/" title="【转载】关于三次握手，四次挥手！">【转载】关于三次握手，四次挥手！</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/bat%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%90%8D/" title="Bat批量修改文件名">Bat批量修改文件名</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BD%E8%A1%A5%E5%85%8548%E4%B8%AA%E5%AE%9E%E7%94%A8%E7%9A%84HTML%E7%89%B9%E6%95%88%E4%BB%A3%E7%A0%81%E6%8E%A8%E8%8D%90%E5%88%9D%E5%AD%A6%E8%80%85%E4%BD%BF%E7%94%A8/" title="【转载补充】48个实用的HTML特效代码！！！（推荐初学者使用）">【转载补充】48个实用的HTML特效代码！！！（推荐初学者使用）</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BDmalloc-free%E4%B8%8Enew-delete/" title="【转载】malloc Free与new Delete">【转载】malloc Free与new Delete</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/Just/" title="Just as they say">Just as they say</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BD%E5%8D%81%E5%A4%A7%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%8A%A8%E5%9B%BE%E6%BC%94%E7%A4%BA/" title="【转载】十大经典排序算法（动图演示）">【转载】十大经典排序算法（动图演示）</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/v2rayN%E7%9A%84Pac%E8%87%AA%E5%8A%A8%E6%A8%A1%E5%BC%8F%E6%97%A0%E6%B3%95%E7%99%BB%E5%BD%95Telegram%E9%97%AE%E9%A2%98/" title="V2rayN的Pac自动模式无法登录Telegram问题！">V2rayN的Pac自动模式无法登录Telegram问题！</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title" style="color:red">福利派送</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="https://cloud.tencent.com/act/cps/redirect?redirect=1048&amp;cps_key=14ff722692ac784fa8c3301c8c28d924&amp;from=console" title="助力产业智慧升级，云服务器首年88元起，更有千元代金券礼包免费领！" target="_blank" style="color:red">
+                
+                    <img src="https://upload-dianshi-1255598498.file.myqcloud.com/345-7c71532bd4935fbdd9a67c1a71e577b1767b805c.200%E7%89%88%E6%9C%ACB.jpg">
+                
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/categories/'>分类</a></h3>
+<ul class="widget-list">
+    
+    <li><a href="https://www.lovefive.club/categories/C&#43;&#43;/">C&#43;&#43; (4)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/Git/">Git (1)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/Github/">Github (1)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/Javaweb/">Javaweb (1)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/Python/">Python (1)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/bat/">bat (2)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/hexo/">hexo (1)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/v2rayN/">v2rayN (1)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/%E5%9C%A8%E4%BA%BA%E9%97%B4%E5%87%91%E6%95%B0%E7%9A%84%E6%97%A5%E5%AD%90/">在人间凑数的日子 (3)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/%E5%A5%B6%E7%89%9B%E5%BF%AB%E4%BC%A0/">奶牛快传 (1)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/%E6%9D%82%E8%AE%B0/">杂记 (1)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/%E7%AE%97%E6%B3%95/">算法 (3)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/tags/'>标签</a></h3>
+<div class="tagcloud">
+    
+    <a href="https://www.lovefive.club/tags/Aria2/">Aria2</a>
+    
+    <a href="https://www.lovefive.club/tags/C&#43;&#43;/">C&#43;&#43;</a>
+    
+    <a href="https://www.lovefive.club/tags/C&#43;&#43;%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA/">C&#43;&#43;格式化输出</a>
+    
+    <a href="https://www.lovefive.club/tags/First/">First</a>
+    
+    <a href="https://www.lovefive.club/tags/IDM/">IDM</a>
+    
+    <a href="https://www.lovefive.club/tags/Negibox/">Negibox</a>
+    
+    <a href="https://www.lovefive.club/tags/Second/">Second</a>
+    
+    <a href="https://www.lovefive.club/tags/Win10/">Win10</a>
+    
+    <a href="https://www.lovefive.club/tags/bat/">bat</a>
+    
+    <a href="https://www.lovefive.club/tags/html/">html</a>
+    
+    <a href="https://www.lovefive.club/tags/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/">众数问题</a>
+    
+    <a href="https://www.lovefive.club/tags/%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/">分割字符串</a>
+    
+    <a href="https://www.lovefive.club/tags/%E5%8D%8A%E6%95%B0%E9%9B%86%E9%97%AE%E9%A2%98/">半数集问题</a>
+    
+    <a href="https://www.lovefive.club/tags/%E5%9C%A8%E4%BA%BA%E9%97%B4%E5%87%91%E6%95%B0%E7%9A%84%E6%97%A5%E5%AD%90/">在人间凑数的日子</a>
+    
+    <a href="https://www.lovefive.club/tags/%E5%A5%B6%E7%89%9B%E5%BF%AB%E4%BC%A0/">奶牛快传</a>
+    
+    <a href="https://www.lovefive.club/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/">实用工具</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80%E5%90%8D%E4%BF%AE%E6%94%B9/">文件后缀名修改</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%97%A0%E9%99%90%E5%88%B7%E6%96%B0/">无限刷新</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%98%BE%E7%A4%BA%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80%E5%90%8D/">显示文件后缀名</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%9C%80%E5%A4%A7%E9%97%B4%E9%9A%99/">最大间隙</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5/">格式化输入</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/">注册表</a>
+    
+    <a href="https://www.lovefive.club/tags/%E7%99%BE%E5%BA%A6%E4%BA%91/">百度云</a>
+    
+    <a href="https://www.lovefive.club/tags/%E7%BD%91%E7%AB%99/">网站</a>
+    
+    <a href="https://www.lovefive.club/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AE%97%E6%B3%95%E4%B8%8E%E8%AE%BE%E8%AE%A1/">计算机算法与设计</a>
+    
+    <a href="https://www.lovefive.club/tags/%E9%87%91%E5%B8%81%E9%98%B5%E5%88%97/">金币阵列</a>
+    
+    <a href="https://www.lovefive.club/tags/%E9%BB%98%E8%AE%A4%E5%BA%94%E7%94%A8/">默认应用</a>
+    
+</div>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="https://www.flysnow.org/" title="飞雪无情的博客">飞雪无情的博客</a>
+        </li>
+        
+        <li>
+            <a target="_blank" href="http://yuedu.baidu.com/ebook/14a722970740be1e640e9a3e" title="Android Gradle权威指南">Android Gradle权威指南</a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://www.lovefive.club/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

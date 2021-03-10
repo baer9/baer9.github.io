@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on QHQ‘s Blog</title>
+    <link>https://www.lovefive.club/categories/Git/</link>
+    <description>Recent content in Git on QHQ‘s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 10 Mar 2021 11:19:15 +0800</lastBuildDate><atom:link href="https://www.lovefive.club/categories/Git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git常见错误</title>
+      <link>https://www.lovefive.club/post/git%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/</link>
+      <pubDate>Wed, 10 Mar 2021 11:19:15 +0800</pubDate>
+      
+      <guid>https://www.lovefive.club/post/git%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/</guid>
+      <description>一、fatal: unable to access &amp;lsquo;https://github.com/baer9/baer9.github.io.git/&#39;: OpenSSL SSL_read: Connection was reset, errno 10054 解除ssl验证 解决：关闭验证 git config &amp;ndash;global http.sslVerify &amp;ldquo;false&amp;rdquo; 二、fatal: unable to access &amp;lsquo;https://github.com/baer9/baer9.github.io.git/&#39;: Failed to connect to github.com port 443: Timed out 文件可能太大 解决：gi</description>
+    </item>
+    
+  </channel>
+</rss>

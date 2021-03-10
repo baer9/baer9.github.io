@@ -5,11 +5,12 @@
     <link>https://www.lovefive.club/tags/%E5%8D%8A%E6%95%B0%E9%9B%86%E9%97%AE%E9%A2%98/</link>
     <description>Recent content in 半数集问题 on QHQ‘s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language><atom:link href="https://www.lovefive.club/tags/%E5%8D%8A%E6%95%B0%E9%9B%86%E9%97%AE%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 25 Oct 2019 13:53:21 +0000</lastBuildDate><atom:link href="https://www.lovefive.club/tags/%E5%8D%8A%E6%95%B0%E9%9B%86%E9%97%AE%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>C&#43;&#43;半数集问题</title>
       <link>https://www.lovefive.club/post/%E5%8D%8A%E6%95%B0%E9%9B%86/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 25 Oct 2019 13:53:21 +0000</pubDate>
       
       <guid>https://www.lovefive.club/post/%E5%8D%8A%E6%95%B0%E9%9B%86/</guid>
       <description>QHQ-【问题描述】给定一个自然数n，由n开始可以依次产生半数集set(n)中的数如下： （1）n∈set(n); （2）在n的左边加上一个自然</description>
