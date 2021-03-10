@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Orianna</title>
+    <link>https://baer9.github.io/post/</link>
+    <description>Recent content in Posts on Orianna</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    <lastBuildDate>Wed, 10 Mar 2021 09:46:48 +0800</lastBuildDate><atom:link href="https://baer9.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FirstHugo</title>
+      <link>https://baer9.github.io/post/firsthugo/</link>
+      <pubDate>Wed, 10 Mar 2021 09:46:48 +0800</pubDate>
+      
+      <guid>https://baer9.github.io/post/firsthugo/</guid>
+      <description>Hello World!</description>
+    </item>
+    
+  </channel>
+</rss>
