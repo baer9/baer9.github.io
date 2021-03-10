@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+
+    <title>【转载补充】48个实用的HTML特效代码！！！（推荐初学者使用） | QHQ‘s Blog</title>
+    <meta property="og:title" content="【转载补充】48个实用的HTML特效代码！！！（推荐初学者使用） - QHQ‘s Blog">
+    <meta property="og:type" content="article">
+        
+        
+    <meta name="Keywords" content="java,android,博客,python,baer,lovefive">
+    <meta name="description" content="【转载补充】48个实用的HTML特效代码！！！（推荐初学者使用）">
+        
+    <meta name="author" content="QHQ‘s">
+    <meta property="og:url" content="https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BD%E8%A1%A5%E5%85%8548%E4%B8%AA%E5%AE%9E%E7%94%A8%E7%9A%84HTML%E7%89%B9%E6%95%88%E4%BB%A3%E7%A0%81%E6%8E%A8%E8%8D%90%E5%88%9D%E5%AD%A6%E8%80%85%E4%BD%BF%E7%94%A8/">
+    <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    
+    
+    
+    
+    
+        <link rel="stylesheet" href='/css/douban.css'>
+    
+        <link rel="stylesheet" href='/css/other.css'>
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://www.lovefive.club">
+                        QHQ‘s Blog
+                    </a>
+                
+                <p class="description">专注于Android、Java、移动互联网、LPC、GOA</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://www.lovefive.club">首页</a>
+                    
+                    <a  href="https://www.lovefive.club/tools/" title="工具">工具</a>
+                    
+                    <a  href="https://www.lovefive.club/archives/" title="归档">归档</a>
+                    
+                    <a  href="https://www.lovefive.club/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents"></nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">【转载补充】48个实用的HTML特效代码！！！（推荐初学者使用）</h1>
+        </header>
+        <date class="post-meta meta-date">
+            1年1月1日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/Javaweb'>Javaweb</a></span>
+            
+        </div>
+        
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        
+        
+        <div class="post-content">
+            <p>1.忽视右键</p>
+<pre><code>&lt;body&gt;
+　 或
+&lt;body style=&quot;overflow-y:hidden&quot;&gt;
+</code></pre><p>2.加入背景音乐</p>
+<pre><code>　 IE:&lt;bgsound src=&quot;*.mid&quot; loop=infinite&gt;
+　 NS:&lt;embed src=&quot;*.mid&quot; autostart=true hidden=true loop=true&gt;
+　 &lt;/embed&gt;
+　 *.mid你的背景音乐的midi格式文件
+</code></pre><p>3.简单的window.open方法</p>
+<pre><code>　 &lt;a href=&quot;#&quot;&gt;文字或图片&lt;/a&gt;
+　 参数解释：
+　 &lt;SCRIPT LANGUAGE=&quot;javascript&quot;&gt; js脚本开始；
+　 window.open 弹出新窗口的命令；
+　 文件路径/文件名 弹出窗口的文件名；
+　 newwindow 弹出窗口的名字（不是文件名），非必须，可用空代替；
+　 width=400 窗口宽度；
+　 height=300 窗口高度；
+　 top=0 窗口距离屏幕上方的象素值；
+　 left=0 窗口距离屏幕左侧的象素值；
+　 toolbar=no 是否显示工具栏，yes为显示；
+　 menubar，scrollbars 表示菜单栏和滚动栏。
+　 resizable=no 是否允许改变窗口大小，yes为允许；
+　 location=no 是否显示地址栏，yes为允许；
+　 status=no 是否显示状态栏内的信息（通常是文件已经打开），yes为允许；
+　 &lt;/SCRIPT&gt; js脚本结束
+</code></pre><p>4.简单的页面加密</p>
+<pre><code>　 &lt;script LANGUAGE=&quot;javascript&quot;&gt;
+　 &lt;!--
+　 function loopy(){
+　　 var sWord =&quot;&quot;;
+　　 while(sWord!=&quot;login&quot;){sWord=prompt(&quot;请输入你的登陆密码&quot;);}
+　　 alert(&quot;登陆成功！&quot;);
+　 }
+　 loopy()
+　 //--&gt;
+　 &lt;/script&gt;
+</code></pre><p>5.拉动页面时背景图不动</p>
+<pre><code>　 &lt;style&gt;
+　 body{background-image:url(logo.gif);
+　 background-repeat:no-repeat;background-position:center}
+　 &lt;/style&gt;
+</code></pre><p>6.让浏览器在保存页面时保存失败</p>
+<pre><code>　 &lt;NOSCRIPT&gt;&lt;iframe src=&quot;*.html&quot;&gt;&lt;/iframe&gt;&lt;/NOSCRIPT&gt;
+</code></pre><p>7.随机替换图片</p>
+<pre><code>　 &lt;script&gt;
+　 document.write(&lt;img src=&quot;img/+parseInt(Math.random()*(5))
+　 +.gif&quot;height=&quot;40&quot; width=&quot;50&quot;&gt;
+　 &lt;/script&gt;
+　 图片文件名为0.gif 1.gif 2.gif 3.gif 4.gif
+</code></pre><p>8.窗口定时关闭</p>
+<pre><code>　 先将如下代码网页文件的区：
+　 &lt;script language=&quot;javascript&quot;&gt;
+　 function closeit() { setTimeout(&quot;self.close()&quot;,10000) //毫秒 }
+　 &lt;/script&gt;
+　 然后再在&lt;body&gt;标内加入如：&lt;body&gt;
+</code></pre><p>9.网页自动关闭</p>
+<pre><code>　 &lt;html&gt;
+　 &lt;head&gt;
+　 &lt;object id=closes type=&quot;application/x-oleobject&quot;
+　 classid=&quot;clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11&quot;&gt;
+　 &lt;param name=&quot;Command&quot; value=&quot;Close&quot;&gt;
+　 &lt;/object&gt;
+　 &lt;/head&gt;
+　 &lt;body&gt;
+　 这个窗口会在10秒过后自动关闭,而且不会出现提示.
+　 &lt;/body&gt;
+　 &lt;/html&gt;
+</code></pre><p>10.网页自动刷新</p>
+<pre><code>　 在head部记入
+　 &lt;META HTTP-EQUIV=&quot;Refresh&quot; content=&quot;20&quot;&gt;
+　 其中20为20秒后自动刷新，你可以更改为任意值。
+</code></pre><p>11.网页自动转页</p>
+<pre><code>　 &lt;META HTTP-EQUIV=&quot;Refresh&quot; CONTENT=&quot;时间(秒);URL=地址&quot;&gt;
+</code></pre><p>12.保持layer在最前面，而不被Iframe、Object所覆盖</p>
+<pre><code>　 在Layer中再插Iframe 或 Object 设z-Index值
+　 &lt;div z-Index:2&gt;&lt;object xxx&gt;&lt;/object&gt; ＃ 前面
+　 &lt;div z-Index:1&gt;&lt;object xxx&gt;&lt;/object&gt; ＃ 后面
+　 &lt;div id=&quot;Layer2&quot; style=&quot;position:absolute; top:40;width:400px;
+　 height:95px;z-index:2&quot;&gt; height=100% width=100%&gt;
+　 &lt;iframe width=0 height=0&gt;&lt;/iframe&gt;
+　 &lt;/div&gt;
+　 &lt;div id=&quot;Layer1&quot; style=&quot;position:absolute; top:50;width:200px;
+　 height:115px;z-index:1&quot;&gt;
+　 &lt;iframe height=100% width=100%&gt;&lt;/iframe&gt;
+　 &lt;/div&gt;
+</code></pre><p>13.返回上一页</p>
+<pre><code>　 &lt;a href=javascript:history.back(1)&gt;『返回上一页』&lt;/a&gt;
+</code></pre><p>14.关闭窗口</p>
+<pre><code>　 &lt;a href=javascript:self.close()&gt;『关闭窗口』&lt;/a&gt;
+</code></pre><p>15.关于iframe的透明背景</p>
+<pre><code>　 &lt;IFRAME ID=&quot;iFrame1&quot; SRC=&quot;iframe.htm&quot;
+　 allowTransparency=&quot;true&quot;
+　 style=&quot;background-color: green&quot;&gt;&lt;/IFRAME&gt;
+</code></pre><p>16.彻底屏蔽鼠标右键</p>
+<pre><code>oncontextmenu=&quot;window.event.returnValue=false&quot; 将彻底屏蔽鼠标右键
+&lt;table border oncontextmenu=return(false)&gt;&lt;td&gt;no&lt;/table&gt; 可用于Table
+</code></pre><p>17.取消选取、防止复制</p>
+<pre><code> &lt;body onselectstart=&quot;return false&quot;&gt; 
+</code></pre><p>18.不准粘贴</p>
+<pre><code>onpaste=&quot;return false&quot;
+</code></pre><ol start="19">
+<li>防止复制</li>
+</ol>
+<pre><code>oncopy=&quot;return false;&quot;
+</code></pre><ol start="20">
+<li>IE地址栏前换成自己的图标</li>
+</ol>
+<pre><code>&lt;link rel=&quot;Shortcut Icon&quot; href=&quot;favicon.ico&quot;&gt;
+</code></pre><ol start="21">
+<li>可以在收藏夹中显示出你的图标</li>
+</ol>
+<pre><code>&lt;link rel=&quot;Bookmark&quot; href=&quot;favicon.ico&quot;&gt;
+</code></pre><ol start="22">
+<li>关闭输入法</li>
+</ol>
+<pre><code>&lt;input style=&quot;ime-mode:disabled&quot;&gt;
+</code></pre><ol start="23">
+<li>永远都会带着框架</li>
+</ol>
+<pre><code>&lt;script language=&quot;JavaScript&quot;&gt;&lt;!--
+if (window == top)top.location.href = &quot;frames.htm&quot;; //frames.htm为框架网页
+// --&gt;&lt;/script&gt;
+</code></pre><ol start="24">
+<li>防止被人frame</li>
+</ol>
+<pre><code>&lt;SCRIPT LANGUAGE=JAVASCRIPT&gt;&lt;!--
+if (top.location != self.location)top.location=self.location;
+// --&gt;&lt;/SCRIPT&gt;
+</code></pre><ol start="25">
+<li>网页将不能被另存为</li>
+</ol>
+<pre><code>&lt;noscript&gt;&lt;iframe src=*.html&gt;&lt;/iframe&gt;&lt;/noscript&gt;
+</code></pre><ol start="26">
+<li>查看网页源代码</li>
+</ol>
+<pre><code>&lt;input type=button value=查看网页源代码view-source:&quot;+ &quot;http://www.pconline.com.cn&quot;&quot;&gt;
+</code></pre><p>27.删除时确认</p>
+<pre><code>&lt;a href=&quot;javascript:if(confirm(&quot;确实要删除吗?&quot;))location=&quot;boos.asp? &amp;areyou=删除&amp;page=1&quot;&quot;&gt;删除&lt;/a&gt;
+</code></pre><p>28.屏蔽功能键Shift,Alt,Ctrl</p>
+<pre><code>&lt;script&gt;
+function look(){
+if(event.shiftKey)
+alert(&quot;禁止按Shift键!&quot;); //可以换成ALT　CTRL
+}
+document.onkeydown=look;
+&lt;/script&gt;
+</code></pre><ol start="29">
+<li>网页不会被缓存</li>
+</ol>
+<pre><code>&lt;META HTTP-EQUIV=&quot;pragma&quot; CONTENT=&quot;no-cache&quot;&gt;
+&lt;META HTTP-EQUIV=&quot;Cache-Control&quot; CONTENT=&quot;no-cache, must-revalidate&quot;&gt;
+&lt;META HTTP-EQUIV=&quot;expires&quot; CONTENT=&quot;Wed, 26 Feb 1997 08:21:57 GMT&quot;&gt;
+或者&lt;META HTTP-EQUIV=&quot;expires&quot; CONTENT=&quot;0&quot;&gt;
+</code></pre><p>30.怎样让表单没有凹凸感？</p>
+<pre><code>&lt;input type=text style=&quot;border:1 solid #000000&quot;&gt;
+或 &lt;input type=text style=&quot;border-left:none; border-right:none; border -top:none; border-bottom: 1 solid #000000&quot;&gt;&lt;/textarea&gt;
+</code></pre><p>31.不要滚动条?</p>
+<pre><code>让竖条没有:
+&lt;body style=&quot;overflow:scroll;overflow-y:hidden&quot;&gt;
+&lt;/body&gt;
+让横条没有:
+&lt;body style=&quot;overflow:scroll;overflow-x:hidden&quot;&gt;
+&lt;/body&gt;
+两个都去掉？更简单了
+&lt;body scroll=&quot;no&quot;&gt;
+&lt;/body&gt;
+</code></pre><p>32.怎样去掉图片链接点击后，图片周围的虚线？</p>
+<pre><code>&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;logo.jpg&quot; border=0&gt;&lt;/a&gt;
+</code></pre><p>33.电子邮件处理提交表单</p>
+<pre><code>&lt;form name=&quot;form1&quot; method=&quot;post&quot; action=&quot;mailt****@***.com&quot; enctype=&quot;text/plain&quot;&gt;
+&lt;input type=submit&gt;
+&lt;/form&gt;
+</code></pre><p>34.在打开的子窗口刷新父窗口的代码里如何写？</p>
+<pre><code>window.opener.location.reload()
+
+35.如何设定打开页面的大小
+</code></pre><!-- raw HTML omitted -->
+<pre><code>if (/[^/x00-/xff]/g.test(s)) alert(&quot;含有汉字&quot;);
+else alert(&quot;全是字符&quot;);
+</code></pre><p>40.TEXTAREA自适应文字行数的多少</p>
+<pre><code>&lt;textarea rows=1 name=s1 cols=27&gt;
+&lt;/textarea&gt;
+</code></pre><ol start="41">
+<li>日期减去天数等于第二个日期</li>
+</ol>
+<pre><code>&lt;script language=Javascript&gt;
+function cc(dd,dadd)
+{
+//可以加上错误处理
+var a = new Date(dd)
+a = a.valueOf()
+a = a - dadd * 24 * 60 * 60 * 1000
+a = new Date(a)
+alert(a.getFullYear() + &quot;年&quot; + (a.getMonth() + 1) + &quot;月&quot; + a.getDate() + &quot;日&quot;)
+} cc(&quot;12/23/2002&quot;,2)
+&lt;/script&gt;
+</code></pre><ol start="42">
+<li>选择了哪一个Radio</li>
+</ol>
+<pre><code>&lt;HTML&gt;&lt;script language=&quot;vbscript&quot;&gt;
+function checkme()
+for each ob in radio1
+if ob.checked then window.alert ob.value
+next
+end function
+&lt;/script&gt;&lt;BODY&gt;
+&lt;INPUT name=&quot;radio1&quot; type=&quot;radio&quot; value=&quot;style&quot; checked&gt;Style
+&lt;INPUT name=&quot;radio1&quot; type=&quot;radio&quot; value=&quot;barcode&quot;&gt;Barcode
+&lt;INPUT type=&quot;button&quot; value=&quot;check&quot;&gt;
+&lt;/BODY&gt;&lt;/HTML&gt;
+</code></pre><p>43.脚本永不出错</p>
+<pre><code>&lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+&lt;!-- Hide function killErrors(){return true;} window.onerror = killErrors; // --&gt;
+&lt;/SCRIPT&gt;
+</code></pre><p>44.ENTER键可以让光标移到下一个输入框</p>
+<pre><code>    &lt;script type=&quot;text/javascript&quot;&gt;
+      function focusNextInput(thisInput){
+          var inputs = document.getElementsByTagName(&quot;input&quot;);
+          for(var i = 0;i&lt;inputs.length;i++){
+            // 如果是最后一个，则焦点回到第一个
+            if(i==(inputs.length-1)){
+              inputs[0].focus();
+              break;
+            }else if(thisInput == inputs[i]){
+              inputs[i+1].focus();
+              break;
+            }
+          }
+      }  
+    &lt;/script&gt;
+
+</code></pre><ol start="45">
+<li>检测某个网站的链接速度：</li>
+</ol>
+<pre><code>把如下代码加入&lt;body&gt;区域中:
+&lt;script language=Javascript&gt;
+tim=1
+setInterval(&quot;tim++&quot;,100)
+b=1
+var autourl=new Array()
+autourl[1]=&quot;www.njcatv.net&quot;
+autourl[2]=&quot;javacool.3322.net&quot;
+autourl[3]=&quot;www.sina.com.cn&quot;
+autourl[4]=&quot;www.nuaa.edu.cn&quot;
+autourl[5]=&quot;www.cctv.com&quot;
+function butt(){
+document.write(&quot;&lt;form name=autof&gt;&quot;)
+for(var i=1;i&lt;autourl.length;i++)
+document.write(&quot;&lt;input type=text name=txt&quot;+i+&quot; size=10 value=测试中
+
+……&gt; =》&lt;input type=text
+name=url&quot;+i+&quot; size=40&gt; =》&lt;input type=button value=GO
+
+onclick=window.open(this.form.url&quot;+i+&quot;.value)&gt;&lt;br&gt;&quot;)
+document.write(&quot;&lt;input type=submit value=刷新&gt;&lt;/form&gt;&quot;)
+}
+butt()
+function auto(url){
+document.forms[0][&quot;url&quot;+b].value=url
+if(tim&gt;200)
+{document.forms[0][&quot;txt&quot;+b].value=&quot;链接超时&quot;}
+else
+{document.forms[0][&quot;txt&quot;+b].value=&quot;时间&quot;+tim/10+&quot;秒&quot;} b++ }
+function run(){for(var i=1;i&lt;autourl.length;i++)document.write(&quot;&lt;img src=http://&quot;+autourl+&quot;/&quot;+Math.random()+&quot; width=1 height=1 nerror=auto(&quot;http://&quot;+autourl+&quot;&quot;)&gt;&quot;)}
+run()&lt;/script&gt;
+</code></pre><ol start="46">
+<li>各种样式的光标</li>
+</ol>
+<pre><code>move ：移动标
+auto：是系统自动的效果
+hand：是大家所熟悉的手型。
+crosshair：是十字型，就是小乌龟首页所用的样式。
+text：是平时鼠标移动到文本上的样式。
+wait：是等待的效果。
+no-drop ：不可拖动光标
+not-allowed ：无效光标
+all-scroll ：三角方向标
+default：是默认的那种效果。
+help：是带问号的鼠标样式。
+e-resize：是向右的箭头。
+ne-resize：是向右上方的箭头。
+n-resize：是向上的箭头。
+nw-resize：是向左上方的箭头。
+w-resize：是向左的箭关。
+sw-resize：是向左下的箭头。
+s-resize：是向下的箭头。
+se-resize：是向右下方的箭头。
+vertical-text ：水平I形光标
+</code></pre><p>47、禁止鼠标右键，把Demo的图片全都设为表格的背景，表格的大小与图片的大小一样。这样做看起来是一样的，主要是防止鼠标经过图片时会出现另存的按钮。禁止鼠标右键的代码很简单：</p>
+<pre><code>&lt;script LANGUAGE=&quot;JavaScript&quot;&gt;
+function click() { if (event.button==2)
+{alert(呵呵，不好意思，你甭想使用右键下载图片：）); } } document.onmousedown=click
+&lt;/script&gt;
+</code></pre><p>48、在网页的Head部分加入如下代码，这段代码的主要功能是屏蔽PrintScreen键，不断清空剪贴版，防止图片被用文件——另存为菜单另存。</p>
+<pre><code>&lt;script language=&quot;javascript&quot;&gt;
+&lt;!--
+function testclip(){
+try {
+if(clipboardData.getData(&quot;Text&quot;)||clipboardData.getData(&quot;HTML&quot;)||clipboardData.getData(&quot;URL&quot;))
+{
+null;
+}
+}
+catch(e){
+clipboardData.setData(&quot;Text&quot;,&quot;&quot;)
+}
+setTimeout(&quot;testclip()&quot;,500)
+}
+testclip();
+//--&gt;
+&lt;/script&gt;
+</code></pre><p><a href="https://www.cnblogs.com/qiuh/archive/2013/04/23/3038338.html">转载地址</a></p>
+<pre><code></code></pre>
+        </div>
+
+        
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="https://www.lovefive.club">QHQ‘s</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BD%E8%A1%A5%E5%85%8548%E4%B8%AA%E5%AE%9E%E7%94%A8%E7%9A%84HTML%E7%89%B9%E6%95%88%E4%BB%A3%E7%A0%81%E6%8E%A8%E8%8D%90%E5%88%9D%E5%AD%A6%E8%80%85%E4%BD%BF%E7%94%A8/">https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BD%E8%A1%A5%E5%85%8548%E4%B8%AA%E5%AE%9E%E7%94%A8%E7%9A%84HTML%E7%89%B9%E6%95%88%E4%BB%A3%E7%A0%81%E6%8E%A8%E8%8D%90%E5%88%9D%E5%AD%A6%E8%80%85%E4%BD%BF%E7%94%A8/</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。</li>
+    </ul>
+</div>
+<br/>
+
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/Python_%E5%88%86%E5%A8%A9%E6%95%B0%E6%8D%AE%E9%9B%86%E5%A4%84%E7%90%86/">Python_分娩数据集处理</a></li>
+        
+        <li><a href="/post/second/">Second</a></li>
+        
+        <li><a href="/post/FirstHugo/">FirstHugo</a></li>
+        
+        <li><a href="/post/3D%E5%9C%B0%E7%90%83%E7%BB%9F%E8%AE%A1/">3D地球统计</a></li>
+        
+        <li><a href="/post/Living/">Living</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            没有标签
+            
+        </div>
+    </article>
+    
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "yourdiscussshortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+    
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "your github repo"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+    
+</div>
+
+                    <footer id="footer">
+    <div>
+        &copy; 2021 <a href="https://www.lovefive.club">QHQ‘s Blog By QHQ‘s</a>
+        
+    </div>
+    <br />
+    <div>
+        <div class="github-badge">
+            <a href="https://gohugo.io/" target="_black" rel="nofollow"><span class="badge-subject">Powered by</span><span class="badge-value bg-blue">Hugo</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://www.flysnow.org/" target="_black"><span class="badge-subject">Design by</span><span class="badge-value bg-brightgreen">飞雪无情</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://github.com/flysnow-org/maupassant-hugo" target="_black"><span class="badge-subject">Theme</span><span class="badge-value bg-yellowgreen">Maupassant</span></a>
+        </div>
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+
+
+    <script src='/js/douban.js'></script>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='https://www.lovefive.club/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://www.lovefive.club">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://www.lovefive.club/post/Python_%E5%88%86%E5%A8%A9%E6%95%B0%E6%8D%AE%E9%9B%86%E5%A4%84%E7%90%86/" title="Python_分娩数据集处理">Python_分娩数据集处理</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/second/" title="Second">Second</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/FirstHugo/" title="FirstHugo">FirstHugo</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/3D%E5%9C%B0%E7%90%83%E7%BB%9F%E8%AE%A1/" title="3D地球统计">3D地球统计</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/Living/" title="Living">Living</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/nginx%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/" title="nginx超详细配置及中文解释">nginx超详细配置及中文解释</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/%E7%85%A7%E7%89%87%E8%A6%81%E5%90%AF%E5%8A%A8gzip%E5%90%97/" title="照片要启动gzip吗？">照片要启动gzip吗？</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/%E4%BB%80%E4%B9%88%E6%98%AF%E8%B4%9F%E8%BD%BD%E5%B9%B3%E8%A1%A1/" title="什么是负载平衡？">什么是负载平衡？</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/%E5%AE%9E%E7%94%A8%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/" title="实用网站推荐">实用网站推荐</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/Windows%E4%B8%8B%E4%BD%BF%E7%94%A8Everything%E6%90%9C%E7%B4%A2/" title="Windows下使用Everything搜索">Windows下使用Everything搜索</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title" style="color:red">福利派送</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="https://cloud.tencent.com/act/cps/redirect?redirect=1048&amp;cps_key=14ff722692ac784fa8c3301c8c28d924&amp;from=console" title="助力产业智慧升级，云服务器首年88元起，更有千元代金券礼包免费领！" target="_blank" style="color:red">
+                
+                    <img src="https://upload-dianshi-1255598498.file.myqcloud.com/345-7c71532bd4935fbdd9a67c1a71e577b1767b805c.200%E7%89%88%E6%9C%ACB.jpg">
+                
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/categories/'>分类</a></h3>
+<ul class="widget-list">
+    
+    <li><a href="https://www.lovefive.club/categories/C&#43;&#43;/">C&#43;&#43; (4)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/Github/">Github (1)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/Javaweb/">Javaweb (1)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/bat/">bat (2)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/hexo/">hexo (1)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/v2rayN/">v2rayN (1)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/%E5%9C%A8%E4%BA%BA%E9%97%B4%E5%87%91%E6%95%B0%E7%9A%84%E6%97%A5%E5%AD%90/">在人间凑数的日子 (3)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/%E7%AE%97%E6%B3%95/">算法 (3)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/tags/'>标签</a></h3>
+<div class="tagcloud">
+    
+    <a href="https://www.lovefive.club/tags/C&#43;&#43;/">C&#43;&#43;</a>
+    
+    <a href="https://www.lovefive.club/tags/C&#43;&#43;%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA/">C&#43;&#43;格式化输出</a>
+    
+    <a href="https://www.lovefive.club/tags/First/">First</a>
+    
+    <a href="https://www.lovefive.club/tags/Second/">Second</a>
+    
+    <a href="https://www.lovefive.club/tags/Win10/">Win10</a>
+    
+    <a href="https://www.lovefive.club/tags/bat/">bat</a>
+    
+    <a href="https://www.lovefive.club/tags/html/">html</a>
+    
+    <a href="https://www.lovefive.club/tags/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/">众数问题</a>
+    
+    <a href="https://www.lovefive.club/tags/%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/">分割字符串</a>
+    
+    <a href="https://www.lovefive.club/tags/%E5%8D%8A%E6%95%B0%E9%9B%86%E9%97%AE%E9%A2%98/">半数集问题</a>
+    
+    <a href="https://www.lovefive.club/tags/%E5%9C%A8%E4%BA%BA%E9%97%B4%E5%87%91%E6%95%B0%E7%9A%84%E6%97%A5%E5%AD%90/">在人间凑数的日子</a>
+    
+    <a href="https://www.lovefive.club/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/">实用工具</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80%E5%90%8D%E4%BF%AE%E6%94%B9/">文件后缀名修改</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%97%A0%E9%99%90%E5%88%B7%E6%96%B0/">无限刷新</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%98%BE%E7%A4%BA%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80%E5%90%8D/">显示文件后缀名</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%9C%80%E5%A4%A7%E9%97%B4%E9%9A%99/">最大间隙</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5/">格式化输入</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/">注册表</a>
+    
+    <a href="https://www.lovefive.club/tags/%E7%BD%91%E7%AB%99/">网站</a>
+    
+    <a href="https://www.lovefive.club/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AE%97%E6%B3%95%E4%B8%8E%E8%AE%BE%E8%AE%A1/">计算机算法与设计</a>
+    
+    <a href="https://www.lovefive.club/tags/%E9%87%91%E5%B8%81%E9%98%B5%E5%88%97/">金币阵列</a>
+    
+    <a href="https://www.lovefive.club/tags/%E9%BB%98%E8%AE%A4%E5%BA%94%E7%94%A8/">默认应用</a>
+    
+</div>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="https://www.flysnow.org/" title="飞雪无情的博客">飞雪无情的博客</a>
+        </li>
+        
+        <li>
+            <a target="_blank" href="http://yuedu.baidu.com/ebook/14a722970740be1e640e9a3e" title="Android Gradle权威指南">Android Gradle权威指南</a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://www.lovefive.club/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

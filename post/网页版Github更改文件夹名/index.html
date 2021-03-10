@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+
+    <title>网页版Github更改文件夹名 | QHQ‘s Blog</title>
+    <meta property="og:title" content="网页版Github更改文件夹名 - QHQ‘s Blog">
+    <meta property="og:type" content="article">
+        
+        
+    <meta name="Keywords" content="java,android,博客,python,baer,lovefive">
+    <meta name="description" content="网页版Github更改文件夹名">
+        
+    <meta name="author" content="QHQ‘s">
+    <meta property="og:url" content="https://www.lovefive.club/post/%E7%BD%91%E9%A1%B5%E7%89%88Github%E6%9B%B4%E6%94%B9%E6%96%87%E4%BB%B6%E5%A4%B9%E5%90%8D/">
+    <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    
+    
+    
+    
+    
+        <link rel="stylesheet" href='/css/douban.css'>
+    
+        <link rel="stylesheet" href='/css/other.css'>
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://www.lovefive.club">
+                        QHQ‘s Blog
+                    </a>
+                
+                <p class="description">专注于Android、Java、移动互联网、LPC、GOA</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://www.lovefive.club">首页</a>
+                    
+                    <a  href="https://www.lovefive.club/tools/" title="工具">工具</a>
+                    
+                    <a  href="https://www.lovefive.club/archives/" title="归档">归档</a>
+                    
+                    <a  href="https://www.lovefive.club/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1首先打开想要更改的文件夹直到底层一个文件打开然后点击code编辑code">1.首先打开想要更改的文件夹，直到底层一个文件打开，然后点击<!-- raw HTML omitted -->编辑<!-- raw HTML omitted -->；</a></li>
+        <li><a href="#2在文件名编辑框按删除键回到了上一目录">2.在文件名编辑框按删除键，回到了上一目录；</a></li>
+        <li><a href="#3在重命名之后直接加入codecode-即">3.在重命名之后，直接加入<!-- raw HTML omitted -->/<!-- raw HTML omitted --> 即🆗！</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">网页版Github更改文件夹名</h1>
+        </header>
+        <date class="post-meta meta-date">
+            1年1月1日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/Github'>Github</a></span>
+            
+        </div>
+        
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        
+        
+        <div class="post-content">
+            <h3 id="1首先打开想要更改的文件夹直到底层一个文件打开然后点击code编辑code">1.首先打开想要更改的文件夹，直到底层一个文件打开，然后点击<!-- raw HTML omitted -->编辑<!-- raw HTML omitted -->；</h3>
+<p>
+        <img class="mx-auto" alt="image" src="//tvax4.sinaimg.cn/large/006WrmUrly1glvsirj9qwj313m0aut9k.jpg" />   
+    </p>
+<h3 id="2在文件名编辑框按删除键回到了上一目录">2.在文件名编辑框按删除键，回到了上一目录；</h3>
+<p>
+        <img class="mx-auto" alt="image" src="//tvax2.sinaimg.cn/large/006WrmUrly1glvsk6sh1qj30mk05h3ym.jpg" />   
+    
+👇
+
+        <img class="mx-auto" alt="image" src="//tvax4.sinaimg.cn/large/006WrmUrly1glvsl3d8n0j30nj04tmx8.jpg" />   
+    </p>
+<h3 id="3在重命名之后直接加入codecode-即">3.在重命名之后，直接加入<!-- raw HTML omitted -->/<!-- raw HTML omitted --> 即🆗！</h3>
+<p>
+        <img class="mx-auto" alt="image" src="//tvax4.sinaimg.cn/large/006WrmUrly1glvsmejy3lj30rv04y74h.jpg" />   
+    </p>
+<p><strong>注意：最后一定要<!-- raw HTML omitted -->commit changes<!-- raw HTML omitted --></strong></p>
+
+        </div>
+
+        
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="https://www.lovefive.club">QHQ‘s</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://www.lovefive.club/post/%E7%BD%91%E9%A1%B5%E7%89%88Github%E6%9B%B4%E6%94%B9%E6%96%87%E4%BB%B6%E5%A4%B9%E5%90%8D/">https://www.lovefive.club/post/%E7%BD%91%E9%A1%B5%E7%89%88Github%E6%9B%B4%E6%94%B9%E6%96%87%E4%BB%B6%E5%A4%B9%E5%90%8D/</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。</li>
+    </ul>
+</div>
+<br/>
+
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/Python_%E5%88%86%E5%A8%A9%E6%95%B0%E6%8D%AE%E9%9B%86%E5%A4%84%E7%90%86/">Python_分娩数据集处理</a></li>
+        
+        <li><a href="/post/second/">Second</a></li>
+        
+        <li><a href="/post/FirstHugo/">FirstHugo</a></li>
+        
+        <li><a href="/post/3D%E5%9C%B0%E7%90%83%E7%BB%9F%E8%AE%A1/">3D地球统计</a></li>
+        
+        <li><a href="/post/Living/">Living</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            没有标签
+            
+        </div>
+    </article>
+    
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "yourdiscussshortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+    
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "your github repo"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+    
+</div>
+
+                    <footer id="footer">
+    <div>
+        &copy; 2021 <a href="https://www.lovefive.club">QHQ‘s Blog By QHQ‘s</a>
+        
+    </div>
+    <br />
+    <div>
+        <div class="github-badge">
+            <a href="https://gohugo.io/" target="_black" rel="nofollow"><span class="badge-subject">Powered by</span><span class="badge-value bg-blue">Hugo</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://www.flysnow.org/" target="_black"><span class="badge-subject">Design by</span><span class="badge-value bg-brightgreen">飞雪无情</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://github.com/flysnow-org/maupassant-hugo" target="_black"><span class="badge-subject">Theme</span><span class="badge-value bg-yellowgreen">Maupassant</span></a>
+        </div>
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+
+
+    <script src='/js/douban.js'></script>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='https://www.lovefive.club/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://www.lovefive.club">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://www.lovefive.club/post/Python_%E5%88%86%E5%A8%A9%E6%95%B0%E6%8D%AE%E9%9B%86%E5%A4%84%E7%90%86/" title="Python_分娩数据集处理">Python_分娩数据集处理</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/second/" title="Second">Second</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/FirstHugo/" title="FirstHugo">FirstHugo</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/3D%E5%9C%B0%E7%90%83%E7%BB%9F%E8%AE%A1/" title="3D地球统计">3D地球统计</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/Living/" title="Living">Living</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/nginx%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/" title="nginx超详细配置及中文解释">nginx超详细配置及中文解释</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/%E7%85%A7%E7%89%87%E8%A6%81%E5%90%AF%E5%8A%A8gzip%E5%90%97/" title="照片要启动gzip吗？">照片要启动gzip吗？</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/%E4%BB%80%E4%B9%88%E6%98%AF%E8%B4%9F%E8%BD%BD%E5%B9%B3%E8%A1%A1/" title="什么是负载平衡？">什么是负载平衡？</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/%E5%AE%9E%E7%94%A8%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/" title="实用网站推荐">实用网站推荐</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/Windows%E4%B8%8B%E4%BD%BF%E7%94%A8Everything%E6%90%9C%E7%B4%A2/" title="Windows下使用Everything搜索">Windows下使用Everything搜索</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title" style="color:red">福利派送</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="https://cloud.tencent.com/act/cps/redirect?redirect=1048&amp;cps_key=14ff722692ac784fa8c3301c8c28d924&amp;from=console" title="助力产业智慧升级，云服务器首年88元起，更有千元代金券礼包免费领！" target="_blank" style="color:red">
+                
+                    <img src="https://upload-dianshi-1255598498.file.myqcloud.com/345-7c71532bd4935fbdd9a67c1a71e577b1767b805c.200%E7%89%88%E6%9C%ACB.jpg">
+                
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/categories/'>分类</a></h3>
+<ul class="widget-list">
+    
+    <li><a href="https://www.lovefive.club/categories/C&#43;&#43;/">C&#43;&#43; (4)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/Github/">Github (1)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/Javaweb/">Javaweb (1)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/bat/">bat (2)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/hexo/">hexo (1)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/v2rayN/">v2rayN (1)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/%E5%9C%A8%E4%BA%BA%E9%97%B4%E5%87%91%E6%95%B0%E7%9A%84%E6%97%A5%E5%AD%90/">在人间凑数的日子 (3)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/%E7%AE%97%E6%B3%95/">算法 (3)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/tags/'>标签</a></h3>
+<div class="tagcloud">
+    
+    <a href="https://www.lovefive.club/tags/C&#43;&#43;/">C&#43;&#43;</a>
+    
+    <a href="https://www.lovefive.club/tags/C&#43;&#43;%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA/">C&#43;&#43;格式化输出</a>
+    
+    <a href="https://www.lovefive.club/tags/First/">First</a>
+    
+    <a href="https://www.lovefive.club/tags/Second/">Second</a>
+    
+    <a href="https://www.lovefive.club/tags/Win10/">Win10</a>
+    
+    <a href="https://www.lovefive.club/tags/bat/">bat</a>
+    
+    <a href="https://www.lovefive.club/tags/html/">html</a>
+    
+    <a href="https://www.lovefive.club/tags/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/">众数问题</a>
+    
+    <a href="https://www.lovefive.club/tags/%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/">分割字符串</a>
+    
+    <a href="https://www.lovefive.club/tags/%E5%8D%8A%E6%95%B0%E9%9B%86%E9%97%AE%E9%A2%98/">半数集问题</a>
+    
+    <a href="https://www.lovefive.club/tags/%E5%9C%A8%E4%BA%BA%E9%97%B4%E5%87%91%E6%95%B0%E7%9A%84%E6%97%A5%E5%AD%90/">在人间凑数的日子</a>
+    
+    <a href="https://www.lovefive.club/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/">实用工具</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80%E5%90%8D%E4%BF%AE%E6%94%B9/">文件后缀名修改</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%97%A0%E9%99%90%E5%88%B7%E6%96%B0/">无限刷新</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%98%BE%E7%A4%BA%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80%E5%90%8D/">显示文件后缀名</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%9C%80%E5%A4%A7%E9%97%B4%E9%9A%99/">最大间隙</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5/">格式化输入</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/">注册表</a>
+    
+    <a href="https://www.lovefive.club/tags/%E7%BD%91%E7%AB%99/">网站</a>
+    
+    <a href="https://www.lovefive.club/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AE%97%E6%B3%95%E4%B8%8E%E8%AE%BE%E8%AE%A1/">计算机算法与设计</a>
+    
+    <a href="https://www.lovefive.club/tags/%E9%87%91%E5%B8%81%E9%98%B5%E5%88%97/">金币阵列</a>
+    
+    <a href="https://www.lovefive.club/tags/%E9%BB%98%E8%AE%A4%E5%BA%94%E7%94%A8/">默认应用</a>
+    
+</div>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="https://www.flysnow.org/" title="飞雪无情的博客">飞雪无情的博客</a>
+        </li>
+        
+        <li>
+            <a target="_blank" href="http://yuedu.baidu.com/ebook/14a722970740be1e640e9a3e" title="Android Gradle权威指南">Android Gradle权威指南</a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://www.lovefive.club/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

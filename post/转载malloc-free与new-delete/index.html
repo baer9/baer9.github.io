@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+
+    <title>【转载】malloc Free与new Delete | QHQ‘s Blog</title>
+    <meta property="og:title" content="【转载】malloc Free与new Delete - QHQ‘s Blog">
+    <meta property="og:type" content="article">
+        
+        
+    <meta name="Keywords" content="java,android,博客,python,baer,lovefive">
+    <meta name="description" content="【转载】malloc Free与new Delete">
+        
+    <meta name="author" content="QHQ‘s">
+    <meta property="og:url" content="https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BDmalloc-free%E4%B8%8Enew-delete/">
+    <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    
+    
+    
+    
+    
+        <link rel="stylesheet" href='/css/douban.css'>
+    
+        <link rel="stylesheet" href='/css/other.css'>
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://www.lovefive.club">
+                        QHQ‘s Blog
+                    </a>
+                
+                <p class="description">专注于Android、Java、移动互联网、LPC、GOA</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://www.lovefive.club">首页</a>
+                    
+                    <a  href="https://www.lovefive.club/tools/" title="工具">工具</a>
+                    
+                    <a  href="https://www.lovefive.club/archives/" title="归档">归档</a>
+                    
+                    <a  href="https://www.lovefive.club/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents"></nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">【转载】malloc Free与new Delete</h1>
+        </header>
+        <date class="post-meta meta-date">
+            1年1月1日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/%E7%AE%97%E6%B3%95'>算法</a></span>
+            
+        </div>
+        
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        
+        
+        <div class="post-content">
+            <p>在C语言中，我们已经熟悉利用malloc/free来管理动态内存，而在C++中，我们又有了新的工具：new/delete。你不禁会产生疑问—有了malloc/free为什么还要new/delete 呢？使用malloc/free和使用new/delete又有什么区别呢？首先来分析一下下面的代码片段：</p>
+<pre><code>class Object {
+	public:
+	Object() {
+		cout &lt;&lt; &quot;Hello, I was born.&quot; &lt;&lt; endl;
+	}
+	~Object() {
+		cout &lt;&lt; &quot;Bye, I am died.&quot; &lt;&lt; endl;
+	}
+	void Hello() {
+		cout &lt;&lt; &quot;I am Object.&quot;&lt;&lt;endl;
+	}
+}
+;
+int main() {
+	cout &lt;&lt; &quot; Using Malloc &amp; Free... &quot;&lt;&lt;endl;
+	Object* pObjectA = (Object*)malloc(sizeof(Object));
+	pObjectA-&gt;Hello();
+	free pObjectA;
+	cout &lt;&lt; &quot; Using New &amp; Delete... &quot;&lt;&lt;endl;
+	Object* pObjectB = new Object;
+	pObjectB-&gt;Hello();
+	delete pObjectB;
+	return 0;
+}
+</code></pre><p>代码运行的结果为：</p>
+<pre><code>UsingMalloc &amp; Free...
+I am Object.
+Using New &amp; Delete...
+Hello, I was born.
+I am Object. 
+Bye, I am died.
+</code></pre><p>通过结果我们可以得知：new/delete在管理内存的同时调用了构造和析构函数；而malloc/free仅仅实现了内存分配与释放。接下来，我们进行详细讨论。
+malloc/free是C/C++语言的标准库函数，而new/delete是C++的运算符。它们都可用于申请动态内存和释放内存。由于malloc/free是库函数，所以需要对应的头文件库函数支持。对于非内置数据类型的对象，用malloc/free无法满足创建动态对象的要求。这是因为对象在创建的同时要自动执行构造函数，对象在消亡之前则要自动执行析构函数。由于malloc/free不是运算符，不受编译器的控制管辖，所以不能够把执行构造函数和析构函数的任务强加于malloc/free上。而new/delete就不同了，它们是保留字，是操作符，它们和“+”、“-”、“<em>”、“/”有着一样的地位。new不仅能完成动态内存分配，还能完成初始化工作，稳妥地构造对象；delete不仅
+能完成内存的释放，还能进行对象的清理。举个形象的例子：通过new建造出来的是一栋房子，可以直接居住；而通过malloc申请到的仅仅是一块地皮，要想成为房子，还需要做出另外的努力。
+malloc的语法是：
+指针名=（数据类型）malloc（长度）; //（数据类型）表示指针
+new的语法是:
+指针名= new 类型(参数); // 单个对象
+指针名= new 类型[个数]; // 对象数组
+malloc函数返回的是void 类型，如果写成：ClassA p = malloc (sizeof(ClassA));，程序则无法通过编译，会抛出这样的错误信息：“不能将 void</em> 赋值给 ClassA * 类型变量”。所以必须通过 (ClassA ) 来进行强制转型。相较而言，new则不存在强制转型的问题，而且书写更为简单。总结起来，malloc与new之间的区别主要有以下几点：new是C++运算符，而malloc则是C标准库函数。通过new创建的东西是具有类型的，而malloc函数返回的则是void，需要进行强制
+转型。new可以自动调用对象的构造函数，而malloc不会。new失败时会调用new_handler处理函数，而malloc失败则直接返回NULL。
+free与delete之间的区别则只有以下两点：
+delete是C++运算符，free是C标准库函数。
+delete可以自动调用对象的析构函数，而malloc不会。
+针对内置类型而言，因为没有对象的构造与析构，所以malloc/free除了需要强制转型之外，和new/delete所做的工作无异，用哪一个只是涉及个人喜好而已。</p>
+<pre><code>//declaring native type
+int* i1 = new int;
+delete i1;
+int* i2 = (int*) malloc(sizeof(int));
+free(i2);
+//declaring native type array
+char* c1 = new char[10];
+delete[] c1;
+char* c2 = (char*) malloc(sizeof(char)*10);
+free(c2);
+</code></pre><p>既然提到了malloc/free，不能不提一下realloc。使用realloc函数可以重新设置内存块的大小，而在C++中没有类似于realloc这样的替代品。如果出现上述需求，所做的就是，释放原来的内存，再重新申请。既然new/delete的功能不仅赶上而且超越了malloc/free，那为什么C++标准中没有把malloc/free淘汰出局呢？这是因为C++要遵守“对C兼容”的承诺，要让一些有价值的包含malloc/free函数库的C程序在C++中得到重用。所以，在C++中，new/delete和malloc/
+free一直并存着。不过，将malloc/free和new/delete混合使用绝对不是什么好主意。Remember that, to new is C++; to malloc is C; and to mix them is sin. 如果用free来释放通过new创建的动态对象，或者用delete释放通过malloc申请的动态内存，其结果都是未定义的。换句话说，不能保证它会出现什么问题。如果程序在关键时刻就因为这个在重要客户面前出现问题，那么懊悔恐怕已经来不及了。
+请记住：
+（1） 不要企图用malloc/free 来完成动态对象的内存管理，应该用new/delete。
+（2）请记住：new是C++的，而malloc是c的。如果混淆了它们，那将是件蠢事。所以new/delete必须配对使用，malloc/free也一样。</p>
+
+        </div>
+
+        
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="https://www.lovefive.club">QHQ‘s</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BDmalloc-free%E4%B8%8Enew-delete/">https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BDmalloc-free%E4%B8%8Enew-delete/</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。</li>
+    </ul>
+</div>
+<br/>
+
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/Python_%E5%88%86%E5%A8%A9%E6%95%B0%E6%8D%AE%E9%9B%86%E5%A4%84%E7%90%86/">Python_分娩数据集处理</a></li>
+        
+        <li><a href="/post/second/">Second</a></li>
+        
+        <li><a href="/post/FirstHugo/">FirstHugo</a></li>
+        
+        <li><a href="/post/3D%E5%9C%B0%E7%90%83%E7%BB%9F%E8%AE%A1/">3D地球统计</a></li>
+        
+        <li><a href="/post/Living/">Living</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            没有标签
+            
+        </div>
+    </article>
+    
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "yourdiscussshortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+    
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "your github repo"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+    
+</div>
+
+                    <footer id="footer">
+    <div>
+        &copy; 2021 <a href="https://www.lovefive.club">QHQ‘s Blog By QHQ‘s</a>
+        
+    </div>
+    <br />
+    <div>
+        <div class="github-badge">
+            <a href="https://gohugo.io/" target="_black" rel="nofollow"><span class="badge-subject">Powered by</span><span class="badge-value bg-blue">Hugo</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://www.flysnow.org/" target="_black"><span class="badge-subject">Design by</span><span class="badge-value bg-brightgreen">飞雪无情</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://github.com/flysnow-org/maupassant-hugo" target="_black"><span class="badge-subject">Theme</span><span class="badge-value bg-yellowgreen">Maupassant</span></a>
+        </div>
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+
+
+    <script src='/js/douban.js'></script>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='https://www.lovefive.club/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://www.lovefive.club">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://www.lovefive.club/post/Python_%E5%88%86%E5%A8%A9%E6%95%B0%E6%8D%AE%E9%9B%86%E5%A4%84%E7%90%86/" title="Python_分娩数据集处理">Python_分娩数据集处理</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/second/" title="Second">Second</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/FirstHugo/" title="FirstHugo">FirstHugo</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/3D%E5%9C%B0%E7%90%83%E7%BB%9F%E8%AE%A1/" title="3D地球统计">3D地球统计</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/Living/" title="Living">Living</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/nginx%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/" title="nginx超详细配置及中文解释">nginx超详细配置及中文解释</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/%E7%85%A7%E7%89%87%E8%A6%81%E5%90%AF%E5%8A%A8gzip%E5%90%97/" title="照片要启动gzip吗？">照片要启动gzip吗？</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/%E4%BB%80%E4%B9%88%E6%98%AF%E8%B4%9F%E8%BD%BD%E5%B9%B3%E8%A1%A1/" title="什么是负载平衡？">什么是负载平衡？</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/%E5%AE%9E%E7%94%A8%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/" title="实用网站推荐">实用网站推荐</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/Windows%E4%B8%8B%E4%BD%BF%E7%94%A8Everything%E6%90%9C%E7%B4%A2/" title="Windows下使用Everything搜索">Windows下使用Everything搜索</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title" style="color:red">福利派送</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="https://cloud.tencent.com/act/cps/redirect?redirect=1048&amp;cps_key=14ff722692ac784fa8c3301c8c28d924&amp;from=console" title="助力产业智慧升级，云服务器首年88元起，更有千元代金券礼包免费领！" target="_blank" style="color:red">
+                
+                    <img src="https://upload-dianshi-1255598498.file.myqcloud.com/345-7c71532bd4935fbdd9a67c1a71e577b1767b805c.200%E7%89%88%E6%9C%ACB.jpg">
+                
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/categories/'>分类</a></h3>
+<ul class="widget-list">
+    
+    <li><a href="https://www.lovefive.club/categories/C&#43;&#43;/">C&#43;&#43; (4)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/Github/">Github (1)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/Javaweb/">Javaweb (1)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/bat/">bat (2)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/hexo/">hexo (1)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/v2rayN/">v2rayN (1)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/%E5%9C%A8%E4%BA%BA%E9%97%B4%E5%87%91%E6%95%B0%E7%9A%84%E6%97%A5%E5%AD%90/">在人间凑数的日子 (3)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/%E7%AE%97%E6%B3%95/">算法 (3)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/tags/'>标签</a></h3>
+<div class="tagcloud">
+    
+    <a href="https://www.lovefive.club/tags/C&#43;&#43;/">C&#43;&#43;</a>
+    
+    <a href="https://www.lovefive.club/tags/C&#43;&#43;%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA/">C&#43;&#43;格式化输出</a>
+    
+    <a href="https://www.lovefive.club/tags/First/">First</a>
+    
+    <a href="https://www.lovefive.club/tags/Second/">Second</a>
+    
+    <a href="https://www.lovefive.club/tags/Win10/">Win10</a>
+    
+    <a href="https://www.lovefive.club/tags/bat/">bat</a>
+    
+    <a href="https://www.lovefive.club/tags/html/">html</a>
+    
+    <a href="https://www.lovefive.club/tags/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/">众数问题</a>
+    
+    <a href="https://www.lovefive.club/tags/%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/">分割字符串</a>
+    
+    <a href="https://www.lovefive.club/tags/%E5%8D%8A%E6%95%B0%E9%9B%86%E9%97%AE%E9%A2%98/">半数集问题</a>
+    
+    <a href="https://www.lovefive.club/tags/%E5%9C%A8%E4%BA%BA%E9%97%B4%E5%87%91%E6%95%B0%E7%9A%84%E6%97%A5%E5%AD%90/">在人间凑数的日子</a>
+    
+    <a href="https://www.lovefive.club/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/">实用工具</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80%E5%90%8D%E4%BF%AE%E6%94%B9/">文件后缀名修改</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%97%A0%E9%99%90%E5%88%B7%E6%96%B0/">无限刷新</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%98%BE%E7%A4%BA%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80%E5%90%8D/">显示文件后缀名</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%9C%80%E5%A4%A7%E9%97%B4%E9%9A%99/">最大间隙</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5/">格式化输入</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/">注册表</a>
+    
+    <a href="https://www.lovefive.club/tags/%E7%BD%91%E7%AB%99/">网站</a>
+    
+    <a href="https://www.lovefive.club/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AE%97%E6%B3%95%E4%B8%8E%E8%AE%BE%E8%AE%A1/">计算机算法与设计</a>
+    
+    <a href="https://www.lovefive.club/tags/%E9%87%91%E5%B8%81%E9%98%B5%E5%88%97/">金币阵列</a>
+    
+    <a href="https://www.lovefive.club/tags/%E9%BB%98%E8%AE%A4%E5%BA%94%E7%94%A8/">默认应用</a>
+    
+</div>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="https://www.flysnow.org/" title="飞雪无情的博客">飞雪无情的博客</a>
+        </li>
+        
+        <li>
+            <a target="_blank" href="http://yuedu.baidu.com/ebook/14a722970740be1e640e9a3e" title="Android Gradle权威指南">Android Gradle权威指南</a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://www.lovefive.club/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
