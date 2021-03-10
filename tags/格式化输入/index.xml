@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>格式化输入 on Creative portfolio</title>
-    <link>https://example.org/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5/</link>
-    <description>Recent content in 格式化输入 on Creative portfolio</description>
+    <title>格式化输入 on QHQ‘s Blog</title>
+    <link>https://www.lovefive.club/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5/</link>
+    <description>Recent content in 格式化输入 on QHQ‘s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://example.org/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-CN</language><atom:link href="https://www.lovefive.club/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>C&#43;&#43;分割输入字符串</title>
-      <link>https://example.org/post/c&#43;&#43;%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5/</link>
+      <link>https://www.lovefive.club/post/C&#43;&#43;%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/post/c&#43;&#43;%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5/</guid>
-      <description>QHQ-It was day full of memories
-C++字符串分割 C++没有split分割的函数！！！！  C++没有c语言的那样方便的格式化输入，像c语言你如果想一次性输入1#2，而分别把1和2赋值给x和y，你可以这样： scanf(&amp;quot;%d#%d&amp;quot;,&amp;amp;x,&amp;amp;y); 当然你也可以自己定义一个方法来实现这个想法。
- ``` #include &amp;lt;iostream&amp;gt; #include &amp;lt;string&amp;gt; #include &amp;lt;cstddef&amp;gt; #include &amp;lt;vector&amp;gt; using namespace std; namespace strg { //函数模板 template&amp;lt;typename Container&amp;gt; inline std::size_t strtok(std::string&amp;amp; str, Container&amp;amp; cont, const std::string defstr = &amp;quot; &amp;quot;) { cont.clear(); std::size_t size = 0; std::size_t begpos = 0 ; std::size_t endpos = 0 ; begpos = str.find_first_not_of(defstr); while (begpos != std::string::npos) { size++; endpos = str.</description>
+      <guid>https://www.lovefive.club/post/C&#43;&#43;%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5/</guid>
+      <description>QHQ-It was day full of memories C++字符串分割 C++没有split分割的函数！！！！ C++没有c语言的那样方便的格式化输入，像c语言你如果想一次性输入1#2，而分别把1和2赋值给x和y，你可以这样： scanf(&amp;quot;%d#%d&amp;quot;,&amp;amp;x,&amp;amp;y); 当然你也可以自己定义一个方法来实现这个想法。 ``` #include &amp;lt;iostream&amp;gt; #include &amp;lt;string&amp;gt; #include &amp;lt;cstddef&amp;gt; #include &amp;lt;vector&amp;gt; using namespace std; namespace strg { //函数模板 template&amp;lt;typename Container&amp;gt; inline std::size_t strtok(std::string&amp;amp; str,</description>
     </item>
     
   </channel>

@@ -1,156 +1,221 @@
-<!DOCTYPE html>
-<html lang="en-us">
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Creative portfolio</title>
-<meta name="description" content="Describe your website">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://example.org/css/bootstrap.min.css">
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
-<link rel="stylesheet" href="https://example.org/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://example.org/css/owl.carousel.css">
-<link rel="stylesheet" href="https://example.org/css/owl.theme.css">
+<!doctype html>
+<html lang="zh-CN">
+<head>
 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
 
-  <link href="https://example.org/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+    <title>nginx超详细配置及中文解释 | QHQ‘s Blog</title>
+    <meta property="og:title" content="nginx超详细配置及中文解释 - QHQ‘s Blog">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2020-02-15T20:58:23&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2020-02-15T20:58:23&#43;08:00'>
+        
+    <meta name="Keywords" content="golang,go语言,go语言笔记,飞雪无情,java,android,博客,项目管理,python,软件架构,公众号,小程序">
+    <meta name="description" content="nginx超详细配置及中文解释">
+        
+    <meta name="author" content="QHQ‘s">
+    <meta property="og:url" content="https://www.lovefive.club/post/nginx%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/">
+    <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
- 
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  
-
-
-<link href="https://example.org/css/custom.css" rel="stylesheet">
-<link rel="shortcut icon" href="https://example.org/img/favicon.png">
-
-
+    
+    
+    
+    
+    
+    
+        <link rel="stylesheet" href='/css/douban.css'>
+    
+        <link rel="stylesheet" href='/css/other.css'>
+    
 </head>
+
+
 <body>
-  <div id="all">
-      <div class="container-fluid">
-          <div class="row row-offcanvas row-offcanvas-left">
-              <div id="sidebar" class="col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
-  <div class="sidebar-content">
-    <h1 class="sidebar-heading"><a href="https://example.org/">Creative portfolio</a></h1>
-    
-      <p class="sidebar-p">I am a creative illustrator and graphic designer with more than 10 years of experience.</p>
-    
-      <p class="sidebar-p">Originally from Toronto, currently based in London.</p>
-    
-    <ul class="sidebar-menu">
-      
-        <li><a href="https://example.org/portfolio/">Home</a></li>
-      
-        <li><a href="https://example.org/about/">About</a></li>
-      
-        <li><a href="https://example.org/contact/">Get in touch</a></li>
-      
-    </ul>
-    <p class="social">
-  
-  <a href="full%20page%20or%20profile%20url%20in%20facebook" data-animate-hover="pulse" class="external facebook">
-    <i class="fa fa-facebook"></i>
-  </a>
-  
-  
-  <a href="full%20profile%20url%20in%20googleplus" data-animate-hover="pulse" class="external gplus">
-    <i class="fa fa-google-plus"></i>
-  </a>
-  
-  
-  <a href="full%20profile%20url%20in%20twitter" data-animate-hover="pulse" class="external twitter">
-    <i class="fa fa-twitter"></i>
-  </a>
-  
-  
-  <a href="full%20profile%20url%20in%20instagram" title="" class="external instagram">
-    <i class="fa fa-instagram"></i>
-  </a>
-  
-  
-  <a href="mailto:email@example.com" data-animate-hover="pulse" class="email">
-    <i class="fa fa-envelope"></i>
-  </a>
-  
-  
-  <a href="full%20profile%20url%20in%20linkedin" data-animate-hover="pulse" class="external">
-    <i class="fa fa-linkedin"></i>
-  </a>
-  
-  
-  <a href="full%20profile%20url%20in%20stackoverflow" data-animate-hover="pulse" class="external">
-    <i class="fa fa-stack-overflow"></i>
-  </a>
-  
-  
-  <a href="full%20profile%20url%20in%20github" data-animate-hover="pulse" class="external">
-    <i class="fa fa-github"></i>
-  </a>
-  
-  
-  <a href="full%20profile%20url%20in%20gitlab" data-animate-hover="pulse" class="external">
-    <i class="fa fa-gitlab"></i>
-  </a>
-  
-  
-  <a href="full%20profile%20url%20in%20youtube" data-animate-hover="pulse" class="external">
-    <i class="fa fa-youtube"></i>
-  </a>
-  
-  
-  <a href="wa.me%20service%20link" data-animate-hover="pulse" class="external">
-    <i class="fa fa-whatsapp"></i>
-  </a>
-  
-</p>
-
-
-    <div class="copyright">
-      <p class="credit">
-        
-          &copy;2016 Your name or company |
-        
-        Template by <a href="https://bootstrapious.com/free-templates" class="external">Bootstrapious.com</a>
-
-&amp; ported to Hugo by <a href="https://github.com/kishaningithub">Kishan B</a>
-
-      </p>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://www.lovefive.club">
+                        QHQ‘s Blog
+                    </a>
+                
+                <p class="description">专注于Android、Java、Go语言(golang)、移动互联网、项目管理、软件架构</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://www.lovefive.club">首页</a>
+                    
+                    <a  href="https://www.lovefive.club/tools/" title="工具">工具</a>
+                    
+                    <a  href="https://www.lovefive.club/archives/" title="归档">归档</a>
+                    
+                    <a  href="https://www.lovefive.club/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+</header>
 
-              
-<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
-  <div class="small-navbar visible-xs">
-  <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
-  <h1 class="small-navbar-heading"><a href="https://example.org/">Creative portfolio</a></h1>
-</div>
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
 
-  <div class="row">
-    <div class="col-lg-8">
-      <div class="content-column-content">
-         <h1>nginx超详细配置及中文解释</h1>
-         <p>QHQ-【问题描述】</p>
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents"></nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">nginx超详细配置及中文解释</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年2月15日
+        </date>
+        
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        
+        
+        <div class="post-content">
+            <p>QHQ-【问题描述】</p>
 <p>Nginx的配置文件详解（超详细）</p>
 <!-- raw HTML omitted -->
 <hr>
-<p><strong>1、安装Nginx</strong>
-在安装Nginx之前，需确保系统已经安装了gcc、 openssl-devel、 pcre-devel和zlib-devel软件库。
+<p><strong>1、安装Nginx</strong></p>
+<p>在安装Nginx之前，需确保系统已经安装了gcc、 openssl-devel、 pcre-devel和zlib-devel软件库。
 下面是Nginx安装过程：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">wget http://nginx.org/download/nginx-1.0.14.tar.gztar zxvf nginx-1.0.14.tar.gz./configure --with-http_stub_status_module --prefix<span style="color:#f92672">=</span>/opt/nginxcd nginx-1.0.14makemake installwget http://nginx.org/download/nginx-1.0.14.tar.gz
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">wget http://nginx.org/download/nginx-1.0.14.tar.gztar zxvf nginx-1.0.14.tar.gz./configure --with-http_stub_status_module --prefix<span style="color:#000;font-weight:bold">=</span>/opt/nginxcd nginx-1.0.14makemake installwget http://nginx.org/download/nginx-1.0.14.tar.gz
 tar zxvf nginx-1.0.14.tar.gz
-./configure --with-http_stub_status_module --prefix<span style="color:#f92672">=</span>/opt/nginx
-cd nginx-1.0.14
+./configure --with-http_stub_status_module --prefix<span style="color:#000;font-weight:bold">=</span>/opt/nginx
+<span style="color:#0086b3">cd</span> nginx-1.0.14
 make
 make install
-</code></pre></div><p>其中， –with-http_stub_status_module 可以用来启用 Nginx 的 NginxStatus 功能，以监控 Nginx 的运行状态。
+</code></pre></td></tr></table>
+</div>
+</div><p>其中， –with-http_stub_status_module 可以用来启用 Nginx 的 NginxStatus 功能，以监控 Nginx 的运行状态。
 想要了解更多的模块的情况可以通过 ./configure –help 选项查看。</p>
-<p><strong>2、Nginx的配置文件结构</strong>
-Nginx的配置文件nginx.conf位于其安装目录的conf目录下。
+<p><strong>2、Nginx的配置文件结构</strong></p>
+<p>Nginx的配置文件nginx.conf位于其安装目录的conf目录下。
 nginx.conf由多个块组成，最外面的块是main，main包含Events和HTTP，HTTP包含upstream和多个Server，Server又包含多个location：</p>
 <p>main（全局设置）、server（主机设置）、upstream（负载均衡服务器设置）和 location（URL匹配特定位置的设置）。</p>
 <ul>
@@ -163,17 +228,33 @@ nginx.conf由多个块组成，最外面的块是main，main包含Events和HTTP�
 在这四个部分当中，每个部分都包含若干指令，这些指令主要包含Nginx的主模块指令、事件模块指令、HTTP核心模块指令，同时每个部分还可以使用其他HTTP模块指令，例如Http SSL模块、HttpGzip Static模块和Http Addition模块等。</p>
 <p><strong>2.1 Nginx的全局配置</strong></p>
 <p>代码如下：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">user nobody nobody<span style="color:#f92672">;</span>
-worker_processes 2<span style="color:#f92672">;</span>
-error_log logs<span style="color:#f92672">/</span>error<span style="color:#f92672">.</span><span style="color:#a6e22e">log</span> notice<span style="color:#f92672">;</span>
-pid logs<span style="color:#f92672">/</span>nginx<span style="color:#f92672">.</span><span style="color:#a6e22e">pid</span><span style="color:#f92672">;</span>
-worker_rlimit_nofile 65535<span style="color:#f92672">;</span>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">user nobody nobody<span style="color:#000;font-weight:bold">;</span>
+worker_processes 2<span style="color:#000;font-weight:bold">;</span>
+error_log logs<span style="color:#000;font-weight:bold">/</span>error<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">log</span> notice<span style="color:#000;font-weight:bold">;</span>
+pid logs<span style="color:#000;font-weight:bold">/</span>nginx<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">pid</span><span style="color:#000;font-weight:bold">;</span>
+worker_rlimit_nofile 65535<span style="color:#000;font-weight:bold">;</span>
 
-events<span style="color:#f92672">{</span>
-use epoll<span style="color:#f92672">;</span>
-worker_connections 65536<span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>每个配置选项的含义解释如下：</p>
+events<span style="color:#000;font-weight:bold">{</span>
+use epoll<span style="color:#000;font-weight:bold">;</span>
+worker_connections 65536<span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>每个配置选项的含义解释如下：</p>
 <ul>
 <li>user是个主模块指令，指定Nginx Worker进程运行用户以及用户组，默认由nobody账号运行。</li>
 <li>worker_processes是个主模块指令，指定了Nginx要开启的进程数。每个Nginx进程平均耗费10M~12M内存。建议指定和CPU的数量一致即可。</li>
@@ -186,8 +267,8 @@ use是个事件模块指令，用来指定Nginx的工作模式。Nginx支持的�
 worker_connections也是个事件模块指令，用于定义Nginx每个进程的最大连接数，默认是1024。最大客户端连接数由worker_processes和worker_connections决定，即Max_client=worker_processes*worker_connections。
 在作为反向代理时，max_clients变为：max_clients = worker_processes * worker_connections/4。
 进程的最大连接数受Linux系统进程的最大打开文件数限制，在执行操作系统命令“ulimit -n 65536”后worker_connections的设置才能生效</p>
-<p><strong>2.2 HTTP服务器配置</strong>
-Nginx对HTTP服务器相关属性的配置代码如下：</p>
+<p><strong>2.2 HTTP服务器配置</strong></p>
+<p>Nginx对HTTP服务器相关属性的配置代码如下：</p>
 <pre><code>http{
 include conf/mime.types;
 default_type application/octet-stream;
@@ -213,15 +294,29 @@ send_timeout 10;
 include是个主模块指令，实现对配置文件所包含的文件的设定，可以减少主配置文件的复杂度。类似于Apache中的include方法。
 default_type属于HTTP核心模块指令，这里设定默认类型为二进制流，也就是当文件类型未定义时使用这种方式，例如在没有配置PHP环境时，Nginx是不予解析的，此时，用浏览器访问PHP文件就会出现下载窗口。</p>
 <p>下面的代码实现对日志格式的设定：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">log_format main <span style="color:#960050;background-color:#1e0010">&#39;</span>$remote_addr <span style="color:#f92672">-</span> $remote_user <span style="color:#f92672">[</span>$time_local<span style="color:#f92672">]</span> <span style="color:#e6db74">&#39;
-</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&#34;$request&#34;</span> $status $bytes_sent <span style="color:#e6db74">&#39;
-</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&#34;$http_referer&#34;</span> <span style="color:#e6db74">&#34;$http_user_agent&#34;</span> <span style="color:#e6db74">&#39;
-</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&#34;$gzip_ratio&#34;</span><span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#f92672">;</span>
-log_format download <span style="color:#960050;background-color:#1e0010">&#39;</span>$remote_addr <span style="color:#f92672">-</span> $remote_user <span style="color:#f92672">[</span>$time_local<span style="color:#f92672">]</span> <span style="color:#e6db74">&#39;
-</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&#34;$request&#34;</span> $status $bytes_sent <span style="color:#e6db74">&#39;
-</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&#34;$http_referer&#34;</span> <span style="color:#e6db74">&#34;$http_user_agent&#34;</span> <span style="color:#e6db74">&#39;
-</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&#34;$http_range&#34;</span> <span style="color:#e6db74">&#34;$sent_http_content_range&#34;</span><span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#f92672">;</span>
-</code></pre></div><p>log_format是Nginx的HttpLog模块指令，用于指定Nginx日志的输出格式。main为此日志输出格式的名称，可以在下面的access_log指令中引用。</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">log_format main <span style="color:#a61717;background-color:#e3d2d2">&#39;</span>$remote_addr <span style="color:#000;font-weight:bold">-</span> $remote_user <span style="color:#000;font-weight:bold">[</span>$time_local<span style="color:#000;font-weight:bold">]</span> <span style="color:#d14">&#39;
+</span><span style="color:#d14">&#39;</span><span style="color:#d14">&#34;$request&#34;</span> $status $bytes_sent <span style="color:#d14">&#39;
+</span><span style="color:#d14">&#39;</span><span style="color:#d14">&#34;$http_referer&#34;</span> <span style="color:#d14">&#34;$http_user_agent&#34;</span> <span style="color:#d14">&#39;
+</span><span style="color:#d14">&#39;</span><span style="color:#d14">&#34;$gzip_ratio&#34;</span><span style="color:#a61717;background-color:#e3d2d2">&#39;</span><span style="color:#000;font-weight:bold">;</span>
+log_format download <span style="color:#a61717;background-color:#e3d2d2">&#39;</span>$remote_addr <span style="color:#000;font-weight:bold">-</span> $remote_user <span style="color:#000;font-weight:bold">[</span>$time_local<span style="color:#000;font-weight:bold">]</span> <span style="color:#d14">&#39;
+</span><span style="color:#d14">&#39;</span><span style="color:#d14">&#34;$request&#34;</span> $status $bytes_sent <span style="color:#d14">&#39;
+</span><span style="color:#d14">&#39;</span><span style="color:#d14">&#34;$http_referer&#34;</span> <span style="color:#d14">&#34;$http_user_agent&#34;</span> <span style="color:#d14">&#39;
+</span><span style="color:#d14">&#39;</span><span style="color:#d14">&#34;$http_range&#34;</span> <span style="color:#d14">&#34;$sent_http_content_range&#34;</span><span style="color:#a61717;background-color:#e3d2d2">&#39;</span><span style="color:#000;font-weight:bold">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>log_format是Nginx的HttpLog模块指令，用于指定Nginx日志的输出格式。main为此日志输出格式的名称，可以在下面的access_log指令中引用。</p>
 <ul>
 <li>client_max_body_size用来设置允许客户端请求的最大的单个文件字节数；</li>
 <li>client_header_buffer_size用于指定来自客户端请求头的headerbuffer大小。对于大多数请求，1K的缓冲区大小已经足够，如果自定义了消息头或有更大的Cookie，可以增加缓冲区大小。这里设置为32K；</li>
@@ -235,20 +330,43 @@ log_format download <span style="color:#960050;background-color:#1e0010">&#39;</
 <p><strong>2.3 HttpGzip模块配置</strong>
 下面配置Nginx的HttpGzip模块。这个模块支持在线实时压缩输出数据流。
 看是否安装了HttpGzip模块：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>root@qi ~<span style="color:#f92672">]</span><span style="color:#75715e"># /opt/nginx/sbin/nginx  -V   （注意V是大写）</span>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#000;font-weight:bold">[</span>root@qi ~<span style="color:#000;font-weight:bold">]</span><span style="color:#998;font-style:italic"># /opt/nginx/sbin/nginx  -V   （注意V是大写）</span>
 nginx version: nginx/1.0.14
-built by gcc 4.4.6 <span style="color:#ae81ff">20110731</span> <span style="color:#f92672">(</span>Red Hat 4.4.6-3<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>GCC<span style="color:#f92672">)</span>
-configure arguments: --with-http_stub_status_module --with-http_gzip_static_module --prefix<span style="color:#f92672">=</span>/opt/nginx
-</code></pre></div><p>通过/opt/nginx/sbin/nginx -V命令可以查看安装Nginx时的编译选项，由输出可知，我们已经安装了HttpGzip模块。</p>
+built by gcc 4.4.6 <span style="color:#099">20110731</span> <span style="color:#000;font-weight:bold">(</span>Red Hat 4.4.6-3<span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">(</span>GCC<span style="color:#000;font-weight:bold">)</span>
+configure arguments: --with-http_stub_status_module --with-http_gzip_static_module --prefix<span style="color:#000;font-weight:bold">=</span>/opt/nginx
+</code></pre></td></tr></table>
+</div>
+</div><p>通过/opt/nginx/sbin/nginx -V命令可以查看安装Nginx时的编译选项，由输出可知，我们已经安装了HttpGzip模块。</p>
 <p>下面是HttpGzip模块在Nginx配置中的相关属性设置：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">gzip on<span style="color:#f92672">;</span>
-gzip_min_length 1k<span style="color:#f92672">;</span>
-gzip_buffers 4 16k<span style="color:#f92672">;</span>
-gzip_http_version 1<span style="color:#f92672">.</span><span style="color:#a6e22e">1</span><span style="color:#f92672">;</span>
-gzip_comp_level 2<span style="color:#f92672">;</span>
-gzip_types text<span style="color:#f92672">/</span>plain application<span style="color:#f92672">/</span>x<span style="color:#f92672">-</span>javascript text<span style="color:#f92672">/</span>css application<span style="color:#f92672">/</span>xml<span style="color:#f92672">;</span>
-gzip_vary on<span style="color:#f92672">;</span>
-</code></pre></div><ul>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">gzip on<span style="color:#000;font-weight:bold">;</span>
+gzip_min_length 1k<span style="color:#000;font-weight:bold">;</span>
+gzip_buffers 4 16k<span style="color:#000;font-weight:bold">;</span>
+gzip_http_version 1<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">1</span><span style="color:#000;font-weight:bold">;</span>
+gzip_comp_level 2<span style="color:#000;font-weight:bold">;</span>
+gzip_types text<span style="color:#000;font-weight:bold">/</span>plain application<span style="color:#000;font-weight:bold">/</span>x<span style="color:#000;font-weight:bold">-</span>javascript text<span style="color:#000;font-weight:bold">/</span>css application<span style="color:#000;font-weight:bold">/</span>xml<span style="color:#000;font-weight:bold">;</span>
+gzip_vary on<span style="color:#000;font-weight:bold">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>gzip用于设置开启或者关闭gzip模块，“gzip on”表示开启GZIP压缩，实时压缩输出数据流；</li>
 <li>gzip_min_length设置允许压缩的页面最小字节数，页面字节数从header头的Content-Length中获取。默认值是0，不管页面多大都进行压缩。建议设置成大于1K的字节数，小于1K可能会越压越大；</li>
 <li>gzip_buffers表示申请4个单位为16K的内存作为压缩结果流缓存，默认值是申请与原始数据大小相同的内存空间来存储gzip压缩结果；</li>
@@ -259,14 +377,27 @@ gzip_vary on<span style="color:#f92672">;</span>
 </ul>
 <p><strong>2.4 负载均衡配置</strong>     <em><strong><a href="https://www.lovefive.club/archives/%E4%BB%80%E4%B9%88%E6%98%AF%E8%B4%9F%E8%BD%BD%E5%B9%B3%E8%A1%A1">负载均衡</a></strong></em>
 下面设定负载均衡的服务器列表：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">upstream cszhi<span style="color:#f92672">.</span><span style="color:#a6e22e">com</span><span style="color:#f92672">{</span>
-ip_hash<span style="color:#f92672">;</span>
-server 192<span style="color:#f92672">.</span><span style="color:#a6e22e">168</span><span style="color:#f92672">.</span><span style="color:#a6e22e">8</span><span style="color:#f92672">.</span><span style="color:#a6e22e">11</span><span style="color:#f92672">:</span>80<span style="color:#f92672">;</span>
-server 192<span style="color:#f92672">.</span><span style="color:#a6e22e">168</span><span style="color:#f92672">.</span><span style="color:#a6e22e">8</span><span style="color:#f92672">.</span><span style="color:#a6e22e">12</span><span style="color:#f92672">:</span>80 down<span style="color:#f92672">;</span>
-server 192<span style="color:#f92672">.</span><span style="color:#a6e22e">168</span><span style="color:#f92672">.</span><span style="color:#a6e22e">8</span><span style="color:#f92672">.</span><span style="color:#a6e22e">13</span><span style="color:#f92672">:</span>8009 max_fails<span style="color:#f92672">=</span>3 fail_timeout<span style="color:#f92672">=</span>20s<span style="color:#f92672">;</span>
-server 192<span style="color:#f92672">.</span><span style="color:#a6e22e">168</span><span style="color:#f92672">.</span><span style="color:#a6e22e">8</span><span style="color:#f92672">.</span><span style="color:#a6e22e">146</span><span style="color:#f92672">:</span>8080<span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>upstream是Nginx的HTTP Upstream模块，这个模块通过一个简单的调度算法来实现客户端IP到后端服务器的负载均衡。
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">upstream cszhi<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">com</span><span style="color:#000;font-weight:bold">{</span>
+ip_hash<span style="color:#000;font-weight:bold">;</span>
+server 192<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#008080">8</span><span style="color:#000;font-weight:bold">.</span><span style="color:#008080">11</span><span style="color:#000;font-weight:bold">:</span>80<span style="color:#000;font-weight:bold">;</span>
+server 192<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#008080">8</span><span style="color:#000;font-weight:bold">.</span><span style="color:#008080">12</span><span style="color:#000;font-weight:bold">:</span>80 down<span style="color:#000;font-weight:bold">;</span>
+server 192<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#008080">8</span><span style="color:#000;font-weight:bold">.</span><span style="color:#008080">13</span><span style="color:#000;font-weight:bold">:</span>8009 max_fails<span style="color:#000;font-weight:bold">=</span>3 fail_timeout<span style="color:#000;font-weight:bold">=</span>20s<span style="color:#000;font-weight:bold">;</span>
+server 192<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">168</span><span style="color:#000;font-weight:bold">.</span><span style="color:#008080">8</span><span style="color:#000;font-weight:bold">.</span><span style="color:#008080">146</span><span style="color:#000;font-weight:bold">:</span>8080<span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>upstream是Nginx的HTTP Upstream模块，这个模块通过一个简单的调度算法来实现客户端IP到后端服务器的负载均衡。
 在上面的设定中，通过upstream指令指定了一个负载均衡器的名称cszhi.com。这个名称可以任意指定，在后面需要的地方直接调用即可。</p>
 <p>Nginx的负载均衡模块目前支持4种调度算法，下面进行分别介绍，其中后两项属于第三方的调度方法。</p>
 <ul>
@@ -287,82 +418,433 @@ server 192<span style="color:#f92672">.</span><span style="color:#a6e22e">168</s
 <p><strong>2.5 server虚拟主机配置</strong>
 下面介绍对虚拟主机的配置。
 建议将对虚拟主机进行配置的内容写进另外一个文件，然后通过include指令包含进来，这样更便于维护和管理。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">server<span style="color:#f92672">{</span>
-listen 80<span style="color:#f92672">;</span>
-server_name www<span style="color:#f92672">.</span><span style="color:#a6e22e">lovefive</span><span style="color:#f92672">.</span><span style="color:#a6e22e">club</span> lovefive<span style="color:#f92672">.</span><span style="color:#a6e22e">club</span><span style="color:#f92672">;</span>
-index index<span style="color:#f92672">.</span><span style="color:#a6e22e">html</span> index<span style="color:#f92672">.</span><span style="color:#a6e22e">htm</span> index<span style="color:#f92672">.</span><span style="color:#a6e22e">php</span><span style="color:#f92672">;</span>
-root <span style="color:#f92672">/</span>www<span style="color:#f92672">/</span>www<span style="color:#f92672">.</span><span style="color:#a6e22e">lovefive</span><span style="color:#f92672">.</span><span style="color:#a6e22e">club</span>
-charset gb2312<span style="color:#f92672">;</span>
-access_log logs<span style="color:#f92672">/</span>www<span style="color:#f92672">.</span><span style="color:#a6e22e">ixdba</span><span style="color:#f92672">.</span><span style="color:#a6e22e">net</span><span style="color:#f92672">.</span><span style="color:#a6e22e">access</span><span style="color:#f92672">.</span><span style="color:#a6e22e">log</span> main<span style="color:#f92672">;</span>
-</code></pre></div><p>server标志定义虚拟主机开始，listen用于指定虚拟主机的服务端口，server_name用来指定IP地址或者域名，多个域名之间用空格分 开。index用于设定访问的默认首页地址，root指令用于指定虚拟主机的网页根目录，这个目录可以是相对路径，也可以是绝对路径。Charset用于 设置网页的默认编码格式。access_log用来指定此虚拟主机的访问日志存放路径，最后的main用于指定访问日志的输出格式。</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">server<span style="color:#000;font-weight:bold">{</span>
+listen 80<span style="color:#000;font-weight:bold">;</span>
+server_name www<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">lovefive</span><span style="color:#000;font-weight:bold">.</span><span style="color:#008080">club</span> lovefive<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">club</span><span style="color:#000;font-weight:bold">;</span>
+index index<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">html</span> index<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">htm</span> index<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">php</span><span style="color:#000;font-weight:bold">;</span>
+root <span style="color:#000;font-weight:bold">/</span>www<span style="color:#000;font-weight:bold">/</span>www<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">lovefive</span><span style="color:#000;font-weight:bold">.</span><span style="color:#008080">club</span>
+charset gb2312<span style="color:#000;font-weight:bold">;</span>
+access_log logs<span style="color:#000;font-weight:bold">/</span>www<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">ixdba</span><span style="color:#000;font-weight:bold">.</span><span style="color:#008080">net</span><span style="color:#000;font-weight:bold">.</span><span style="color:#008080">access</span><span style="color:#000;font-weight:bold">.</span><span style="color:#008080">log</span> main<span style="color:#000;font-weight:bold">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>server标志定义虚拟主机开始，listen用于指定虚拟主机的服务端口，server_name用来指定IP地址或者域名，多个域名之间用空格分 开。index用于设定访问的默认首页地址，root指令用于指定虚拟主机的网页根目录，这个目录可以是相对路径，也可以是绝对路径。Charset用于 设置网页的默认编码格式。access_log用来指定此虚拟主机的访问日志存放路径，最后的main用于指定访问日志的输出格式。</p>
 <p><strong>2.6 location URL匹配配置</strong>
 URL地址匹配是进行Nginx配置中最灵活的部分。 location支持正则表达式匹配，也支持条件判断匹配，用户可以通过location指令实现Nginx对动、静态网页进行过滤处理。使用location URL匹配配置还可以实现反向代理，用于实现PHP动态解析或者负载负载均衡。
 以下这段设置是通过location指令来对网页URL进行分析处理，所有扩展名以.gif、.jpg、.jpeg、.png、.bmp、.swf结尾的静态文件都交给nginx处理，而expires用来指定静态文件的过期时间，这里是30天。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">location <span style="color:#f92672">~</span> <span style="color:#f92672">.*</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">.(</span>gif<span style="color:#f92672">|</span>jpg<span style="color:#f92672">|</span>jpeg<span style="color:#f92672">|</span>png<span style="color:#f92672">|</span>bmp<span style="color:#f92672">|</span>swf<span style="color:#f92672">)</span>$ <span style="color:#f92672">{</span>
-root <span style="color:#f92672">/</span>web<span style="color:#f92672">/</span>www<span style="color:#f92672">/</span>www<span style="color:#f92672">.</span><span style="color:#a6e22e">lovefive</span><span style="color:#f92672">.</span><span style="color:#a6e22e">club</span><span style="color:#f92672">;</span>
-expires 30d<span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>以下这段设置是将upload和html下的所有文件都交给nginx来处理，当然，upload和html目录包含在/web/www/www.lovefive.club目录中。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">location <span style="color:#f92672">~</span> <span style="color:#f92672">^/(</span>upload<span style="color:#f92672">|</span>html<span style="color:#f92672">)/</span> <span style="color:#f92672">{</span>
-root <span style="color:#f92672">/</span>web<span style="color:#f92672">/</span>www<span style="color:#f92672">/</span>www<span style="color:#f92672">.</span><span style="color:#a6e22e">lovefive</span><span style="color:#f92672">.</span><span style="color:#a6e22e">club</span><span style="color:#f92672">;</span>
-expires 30d<span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>在最后这段设置中，location是对此虚拟主机下动态网页的过滤处理，也就是将所有以.jsp为后缀的文件都交给本机的8080端口处理。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">location <span style="color:#f92672">~</span> <span style="color:#f92672">.*.</span><span style="color:#a6e22e">php$</span> <span style="color:#f92672">{</span>
-index index<span style="color:#f92672">.</span><span style="color:#a6e22e">php</span><span style="color:#f92672">;</span>
-proxy_pass http<span style="color:#f92672">:</span><span style="color:#75715e">//localhost:8080;
-</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</code></pre></div><p><strong>2.7 StubStatus模块配置</strong>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">location <span style="color:#000;font-weight:bold">~</span> <span style="color:#000;font-weight:bold">.*</span><span style="color:#a61717;background-color:#e3d2d2">\</span><span style="color:#000;font-weight:bold">.(</span>gif<span style="color:#000;font-weight:bold">|</span>jpg<span style="color:#000;font-weight:bold">|</span>jpeg<span style="color:#000;font-weight:bold">|</span>png<span style="color:#000;font-weight:bold">|</span>bmp<span style="color:#000;font-weight:bold">|</span>swf<span style="color:#000;font-weight:bold">)</span>$ <span style="color:#000;font-weight:bold">{</span>
+root <span style="color:#000;font-weight:bold">/</span>web<span style="color:#000;font-weight:bold">/</span>www<span style="color:#000;font-weight:bold">/</span>www<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">lovefive</span><span style="color:#000;font-weight:bold">.</span><span style="color:#008080">club</span><span style="color:#000;font-weight:bold">;</span>
+expires 30d<span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>以下这段设置是将upload和html下的所有文件都交给nginx来处理，当然，upload和html目录包含在/web/www/www.lovefive.club目录中。</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">location <span style="color:#000;font-weight:bold">~</span> <span style="color:#000;font-weight:bold">^/(</span>upload<span style="color:#000;font-weight:bold">|</span>html<span style="color:#000;font-weight:bold">)/</span> <span style="color:#000;font-weight:bold">{</span>
+root <span style="color:#000;font-weight:bold">/</span>web<span style="color:#000;font-weight:bold">/</span>www<span style="color:#000;font-weight:bold">/</span>www<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">lovefive</span><span style="color:#000;font-weight:bold">.</span><span style="color:#008080">club</span><span style="color:#000;font-weight:bold">;</span>
+expires 30d<span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>在最后这段设置中，location是对此虚拟主机下动态网页的过滤处理，也就是将所有以.jsp为后缀的文件都交给本机的8080端口处理。</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">location <span style="color:#000;font-weight:bold">~</span> <span style="color:#000;font-weight:bold">.*.</span><span style="color:#008080">php$</span> <span style="color:#000;font-weight:bold">{</span>
+index index<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">php</span><span style="color:#000;font-weight:bold">;</span>
+proxy_pass http<span style="color:#000;font-weight:bold">:</span><span style="color:#998;font-style:italic">//localhost:8080;
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>2.7 StubStatus模块配置</strong>
 StubStatus模块能够获取Nginx自上次启动以来的工作状态，此模块非核心模块，需要在Nginx编译安装时手工指定才能使用此功能。
 以下指令实指定启用获取Nginx工作状态的功能。</p>
 <ol>
 <li>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">location <span style="color:#f92672">/</span>NginxStatus <span style="color:#f92672">{</span>
-stub_status on<span style="color:#f92672">;</span>
-access_log logs<span style="color:#f92672">/</span>NginxStatus<span style="color:#f92672">.</span><span style="color:#a6e22e">log</span><span style="color:#f92672">;</span>
-auth_basic <span style="color:#e6db74">&#34;NginxStatus&#34;</span><span style="color:#f92672">;</span>
-auth_basic_user_file <span style="color:#f92672">../</span>htpasswd<span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div></li>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">location <span style="color:#000;font-weight:bold">/</span>NginxStatus <span style="color:#000;font-weight:bold">{</span>
+stub_status on<span style="color:#000;font-weight:bold">;</span>
+access_log logs<span style="color:#000;font-weight:bold">/</span>NginxStatus<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">log</span><span style="color:#000;font-weight:bold">;</span>
+auth_basic <span style="color:#d14">&#34;NginxStatus&#34;</span><span style="color:#000;font-weight:bold">;</span>
+auth_basic_user_file <span style="color:#000;font-weight:bold">../</span>htpasswd<span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 </ol>
 <p>stub_status设置为“on”表示启用StubStatus的工作状态统计功能。access_log 用来指定StubStatus模块的访问日志文件。auth_basic是Nginx的一种认证机制。auth_basic_user_file用来指定认证的密码文件，由于Nginx的auth_basic认证采用的是与Apache兼容的密码文件，因此需要用Apache的htpasswd命令来生成密码文件，例如要添加一个test用户，可以使用下面方式生成密码文件：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">/usr/local/apache/bin/htpasswd -c  /opt/nginx/conf/htpasswd test
-</code></pre></div><p>然后输入两次密码后确认之后添加用户成功。</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">/usr/local/apache/bin/htpasswd -c  /opt/nginx/conf/htpasswd <span style="color:#0086b3">test</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>然后输入两次密码后确认之后添加用户成功。</p>
 <p>要查看Nginx的运行状态，可以输入http://ip/NginxStatus，输入创建的用户名和密码就可以看到Nginx的运行状态：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Active connections: <span style="color:#ae81ff">1</span>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Active connections: <span style="color:#099">1</span>
 server accepts handled requests
-<span style="color:#ae81ff">34561</span> <span style="color:#ae81ff">35731</span> <span style="color:#ae81ff">354399</span>
-Reading: <span style="color:#ae81ff">0</span> Writing: <span style="color:#ae81ff">3</span> Waiting: <span style="color:#ae81ff">0</span>
-</code></pre></div><p>Active connections表示当前活跃的连接数，第三行的三个数字表示 Nginx当前总共处理了34561个连接， 成功创建次握手， 总共处理了354399个请求。最后一行的Reading表示Nginx读取到客户端Header信息数， Writing表示Nginx返回给客户端的Header信息数
+<span style="color:#099">34561</span> <span style="color:#099">35731</span> <span style="color:#099">354399</span>
+Reading: <span style="color:#099">0</span> Writing: <span style="color:#099">3</span> Waiting: <span style="color:#099">0</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Active connections表示当前活跃的连接数，第三行的三个数字表示 Nginx当前总共处理了34561个连接， 成功创建次握手， 总共处理了354399个请求。最后一行的Reading表示Nginx读取到客户端Header信息数， Writing表示Nginx返回给客户端的Header信息数
 ，“Waiting”表示Nginx已经处理完，正在等候下一次请求指令时的驻留连接数。</p>
 <p>在最后这段设置中，设置了虚拟主机的错误信息返回页面，通过error_page指令可以定制各种错误信息的返回页面。在默认情况下，Nginx会在主目录的html目录中查找指定的返回页面，特别需要注意的是，这些错误信息的返回页面大小一定要超过512K，否者会被ie浏览器替换为ie默认的错误页面。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">error_page 404 <span style="color:#f92672">/</span>404<span style="color:#f92672">.</span><span style="color:#a6e22e">html</span><span style="color:#f92672">;</span>
-error_page 500 502 503 504 <span style="color:#f92672">/</span>50x<span style="color:#f92672">.</span><span style="color:#a6e22e">html</span><span style="color:#f92672">;</span>
-location <span style="color:#f92672">=</span> <span style="color:#f92672">/</span>50x<span style="color:#f92672">.</span><span style="color:#a6e22e">html</span> <span style="color:#f92672">{</span>
-root html<span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p><a href="https://blog.csdn.net/wangbin_0729/article/details/82109693">参考一</a></p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">error_page 404 <span style="color:#000;font-weight:bold">/</span>404<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">html</span><span style="color:#000;font-weight:bold">;</span>
+error_page 500 502 503 504 <span style="color:#000;font-weight:bold">/</span>50x<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">html</span><span style="color:#000;font-weight:bold">;</span>
+location <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">/</span>50x<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">html</span> <span style="color:#000;font-weight:bold">{</span>
+root html<span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><a href="https://blog.csdn.net/wangbin_0729/article/details/82109693">参考一</a></p>
 
-         
-      </div>
-    </div>
-  </div>
+        </div>
+
+        
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="https://www.lovefive.club">QHQ‘s</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://www.lovefive.club/post/nginx%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/">https://www.lovefive.club/post/nginx%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。</li>
+    </ul>
+</div>
+<br/>
+
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/%E7%85%A7%E7%89%87%E8%A6%81%E5%90%AF%E5%8A%A8gzip%E5%90%97/">照片要启动gzip吗？</a></li>
+        
+        <li><a href="/post/%E4%BB%80%E4%B9%88%E6%98%AF%E8%B4%9F%E8%BD%BD%E5%B9%B3%E8%A1%A1/">什么是负载平衡？</a></li>
+        
+        <li><a href="/post/%E5%AE%9E%E7%94%A8%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/">实用网站推荐</a></li>
+        
+        <li><a href="/post/Windows%E4%B8%8B%E4%BD%BF%E7%94%A8Everything%E6%90%9C%E7%B4%A2/">Windows下使用Everything搜索</a></li>
+        
+        <li><a href="/post/apache%E5%92%8Cnginx%E7%AE%80%E5%8D%95%E5%8C%BA%E5%88%86/">apache和nginx简单区分</a></li>
+        
+    </ul>
 </div>
 
-          </div>
-      </div>
-  </div>
-  <script src="https://example.org/js/jquery.min.js"></script>
-<script src="https://example.org/js/bootstrap.min.js"></script>
-<script src="https://example.org/js/jquery.cookie.js"> </script>
-<script src="https://example.org/js/ekko-lightbox.js"></script>
-<script src="https://example.org/js/jquery.scrollTo.min.js"></script>
-<script src="https://example.org/js/masonry.pkgd.min.js"></script>
-<script src="https://example.org/js/imagesloaded.pkgd.min.js"></script>
-<script src="https://example.org/js/owl.carousel.min.js"></script>
-<script src="https://example.org/js/front.js"></script>
+
+        <div class="post-meta meta-tags">
+            
+            没有标签
+            
+        </div>
+    </article>
+    
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "yourdiscussshortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+    
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "your github repo"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+    
+</div>
+
+                    <footer id="footer">
+    <div>
+        &copy; 2021 <a href="https://www.lovefive.club">QHQ‘s Blog By QHQ‘s</a>
+        
+    </div>
+    <br />
+    <div>
+        <div class="github-badge">
+            <a href="https://gohugo.io/" target="_black" rel="nofollow"><span class="badge-subject">Powered by</span><span class="badge-value bg-blue">Hugo</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://www.flysnow.org/" target="_black"><span class="badge-subject">Design by</span><span class="badge-value bg-brightgreen">飞雪无情</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://github.com/flysnow-org/maupassant-hugo" target="_black"><span class="badge-subject">Theme</span><span class="badge-value bg-yellowgreen">Maupassant</span></a>
+        </div>
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
 
 
 
+    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+
+
+    <script src='/js/douban.js'></script>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='https://www.lovefive.club/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://www.lovefive.club">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://www.lovefive.club/post/second/" title="Second">Second</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/FirstHugo/" title="FirstHugo">FirstHugo</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/3D%E5%9C%B0%E7%90%83%E7%BB%9F%E8%AE%A1/" title="3D地球统计">3D地球统计</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/Living/" title="Living">Living</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/nginx%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/" title="nginx超详细配置及中文解释">nginx超详细配置及中文解释</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/%E7%85%A7%E7%89%87%E8%A6%81%E5%90%AF%E5%8A%A8gzip%E5%90%97/" title="照片要启动gzip吗？">照片要启动gzip吗？</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/%E4%BB%80%E4%B9%88%E6%98%AF%E8%B4%9F%E8%BD%BD%E5%B9%B3%E8%A1%A1/" title="什么是负载平衡？">什么是负载平衡？</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/%E5%AE%9E%E7%94%A8%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/" title="实用网站推荐">实用网站推荐</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/Windows%E4%B8%8B%E4%BD%BF%E7%94%A8Everything%E6%90%9C%E7%B4%A2/" title="Windows下使用Everything搜索">Windows下使用Everything搜索</a>
+    </li>
+    
+    <li>
+        <a href="https://www.lovefive.club/post/apache%E5%92%8Cnginx%E7%AE%80%E5%8D%95%E5%8C%BA%E5%88%86/" title="apache和nginx简单区分">apache和nginx简单区分</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title" style="color:red">福利派送</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="https://cloud.tencent.com/act/cps/redirect?redirect=1048&amp;cps_key=14ff722692ac784fa8c3301c8c28d924&amp;from=console" title="助力产业智慧升级，云服务器首年88元起，更有千元代金券礼包免费领！" target="_blank" style="color:red">
+                
+                    <img src="https://upload-dianshi-1255598498.file.myqcloud.com/345-7c71532bd4935fbdd9a67c1a71e577b1767b805c.200%E7%89%88%E6%9C%ACB.jpg">
+                
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/categories/'>分类</a></h3>
+<ul class="widget-list">
+    
+    <li><a href="https://www.lovefive.club/categories/C&#43;&#43;/">C&#43;&#43; (4)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/bat/">bat (1)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/hexo/">hexo (1)</a></li>
+    
+    <li><a href="https://www.lovefive.club/categories/%E5%9C%A8%E4%BA%BA%E9%97%B4%E5%87%91%E6%95%B0%E7%9A%84%E6%97%A5%E5%AD%90/">在人间凑数的日子 (3)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/tags/'>标签</a></h3>
+<div class="tagcloud">
+    
+    <a href="https://www.lovefive.club/tags/C&#43;&#43;/">C&#43;&#43;</a>
+    
+    <a href="https://www.lovefive.club/tags/C&#43;&#43;%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA/">C&#43;&#43;格式化输出</a>
+    
+    <a href="https://www.lovefive.club/tags/First/">First</a>
+    
+    <a href="https://www.lovefive.club/tags/Second/">Second</a>
+    
+    <a href="https://www.lovefive.club/tags/Win10/">Win10</a>
+    
+    <a href="https://www.lovefive.club/tags/bat/">bat</a>
+    
+    <a href="https://www.lovefive.club/tags/html/">html</a>
+    
+    <a href="https://www.lovefive.club/tags/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/">众数问题</a>
+    
+    <a href="https://www.lovefive.club/tags/%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/">分割字符串</a>
+    
+    <a href="https://www.lovefive.club/tags/%E5%8D%8A%E6%95%B0%E9%9B%86%E9%97%AE%E9%A2%98/">半数集问题</a>
+    
+    <a href="https://www.lovefive.club/tags/%E5%9C%A8%E4%BA%BA%E9%97%B4%E5%87%91%E6%95%B0%E7%9A%84%E6%97%A5%E5%AD%90/">在人间凑数的日子</a>
+    
+    <a href="https://www.lovefive.club/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/">实用工具</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80%E5%90%8D%E4%BF%AE%E6%94%B9/">文件后缀名修改</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%97%A0%E9%99%90%E5%88%B7%E6%96%B0/">无限刷新</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%98%BE%E7%A4%BA%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80%E5%90%8D/">显示文件后缀名</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%9C%80%E5%A4%A7%E9%97%B4%E9%9A%99/">最大间隙</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5/">格式化输入</a>
+    
+    <a href="https://www.lovefive.club/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/">注册表</a>
+    
+    <a href="https://www.lovefive.club/tags/%E7%BD%91%E7%AB%99/">网站</a>
+    
+    <a href="https://www.lovefive.club/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AE%97%E6%B3%95%E4%B8%8E%E8%AE%BE%E8%AE%A1/">计算机算法与设计</a>
+    
+    <a href="https://www.lovefive.club/tags/%E9%87%91%E5%B8%81%E9%98%B5%E5%88%97/">金币阵列</a>
+    
+    <a href="https://www.lovefive.club/tags/%E9%BB%98%E8%AE%A4%E5%BA%94%E7%94%A8/">默认应用</a>
+    
+</div>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="https://www.flysnow.org/" title="飞雪无情的博客">飞雪无情的博客</a>
+        </li>
+        
+        <li>
+            <a target="_blank" href="http://yuedu.baidu.com/ebook/14a722970740be1e640e9a3e" title="Android Gradle权威指南">Android Gradle权威指南</a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://www.lovefive.club/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

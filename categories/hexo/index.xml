@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>hexo on Creative portfolio</title>
-    <link>https://example.org/categories/hexo/</link>
-    <description>Recent content in hexo on Creative portfolio</description>
+    <title>hexo on QHQ‘s Blog</title>
+    <link>https://www.lovefive.club/categories/hexo/</link>
+    <description>Recent content in hexo on QHQ‘s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://example.org/categories/hexo/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-CN</language><atom:link href="https://www.lovefive.club/categories/hexo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://example.org/post/%E5%85%B3%E4%BA%8Ehexo%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</link>
+      <link>https://www.lovefive.club/post/%E5%85%B3%E4%BA%8EHexo%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/post/%E5%85%B3%E4%BA%8Ehexo%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</guid>
-      <description>Hexo主题的一些踩过的坑 一、主题选择问题  首先你需要在官网hexo选择你喜欢的主题。主要下载步骤有：Hxeo+Github pages。
- 二、绑定域名问题  每一次推送都会把你在setting设置的域名给覆盖，让你每一次都需要重新绑定一些域名，很麻烦。
-所以我就上网搜索与尝试，找到解决方法，首先在你hexo根目录找到source目录，先新建*.txt*文件，在里面写入你要绑定的域名。再重命名为*CNAME*，删除后缀名。使其没有后缀名，类型为文件。然后在github的setting里设置一次（保险设置一次，不设置也行）。
- 三、主题内容更改  在这只说一些我自己碰到的，基本上一般的坑网上都有详细教程。
-3.1、标题，作者和文字的更换 ​	基本上在hexo的根目录下的*_config.yml*文件就可以更改了。注意：冒号后面需要空一格，不然会报错。默认语言为en，中文为zh—CN（有需要可以更改，一般不变）。
-3.2、js特效的更换添加 ​	比如我的添加点击显示文字的特效：
-​	以我选择miho主题为例，先添加点击显示文字的js（目录为..\themes\miho\source\js\click_show_text.js**）click_show_text.js**：
-var a_idx = 0; jQuery(document).ready(function($) { $(&amp;quot;body&amp;quot;).click(function(e) { var a = new Array (&amp;quot;富强&amp;quot;, &amp;quot;民主&amp;quot;, &amp;quot;文明&amp;quot;, &amp;quot;和谐&amp;quot;, &amp;quot;自由&amp;quot;, &amp;quot;平等&amp;quot;, &amp;quot;公正&amp;quot;, &amp;quot;法治&amp;quot;, &amp;quot;爱国&amp;quot;, &amp;quot;敬业&amp;quot;, &amp;quot;诚信&amp;quot;, &amp;quot;友善&amp;quot;);//文字自己填写所想要的 var $i = $(&amp;quot;&amp;lt;span/&amp;gt;&amp;quot;).text(a[a_idx]); a_idx = (a_idx + 1) % a.length; var x = e.pageX, y = e.pageY; $i.css({ &amp;quot;z-index&amp;quot;: 5, &amp;quot;top&amp;quot;: y - 20, &amp;quot;left&amp;quot;: x, &amp;quot;position&amp;quot;: &amp;quot;absolute&amp;quot;, &amp;quot;font-weight&amp;quot;: &amp;quot;bold&amp;quot;, &amp;quot;color&amp;quot;: &amp;quot;#FF0000&amp;quot; }); $(&amp;quot;body&amp;quot;).</description>
+      <guid>https://www.lovefive.club/post/%E5%85%B3%E4%BA%8EHexo%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</guid>
+      <description>Hexo主题的一些踩过的坑 一、主题选择问题 首先你需要在官网hexo选择你喜欢的主题。主要下载步骤有：Hxeo+Github pages。 二、绑定域名问题 每一次推送都会把你在setting设置的域名给覆盖，让你每一次都需要重新绑定一些域名，很麻烦。 所以我就上网搜索与尝试，找到解决方法</description>
     </item>
     
   </channel>
