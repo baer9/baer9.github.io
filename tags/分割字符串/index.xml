@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>分割字符串 on QHQ‘s Blog</title>
+    <link>https://www.lovefive.club/tags/%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+    <description>Recent content in 分割字符串 on QHQ‘s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 16 Oct 2019 20:12:12 +0000</lastBuildDate><atom:link href="https://www.lovefive.club/tags/%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#43;&#43;分割输入字符串</title>
+      <link>https://www.lovefive.club/post/%E5%88%86%E5%89%B2%E8%BE%93%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Wed, 16 Oct 2019 20:12:12 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/%E5%88%86%E5%89%B2%E8%BE%93%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description>QHQ-It was day full of memories C++字符串分割 C++没有split分割的函数！！！！ C++没有c语言的那样方便的格式化输入，像c语言你如果想一次性输入1#2，</description>
+    </item>
+    
+  </channel>
+</rss>

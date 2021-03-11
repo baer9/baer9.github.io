@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>众数问题 on QHQ‘s Blog</title>
+    <link>https://www.lovefive.club/tags/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/</link>
+    <description>Recent content in 众数问题 on QHQ‘s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 21 Oct 2019 20:12:12 +0000</lastBuildDate><atom:link href="https://www.lovefive.club/tags/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#43;&#43;众数问题</title>
+      <link>https://www.lovefive.club/post/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Mon, 21 Oct 2019 20:12:12 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/</guid>
+      <description>QHQ-【问题描述】给定含有S个元素的多重集合S，每个元素在S中出现的次数称为该元素的重数。多重集S中重数最大的元素称为众数。例如，S={1</description>
+    </item>
+    
+  </channel>
+</rss>

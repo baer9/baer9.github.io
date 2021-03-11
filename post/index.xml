@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on QHQ‘s Blog</title>
+    <link>https://www.lovefive.club/post/</link>
+    <description>Recent content in Posts on QHQ‘s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 10 Mar 2021 11:19:15 +0800</lastBuildDate><atom:link href="https://www.lovefive.club/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git常见错误</title>
+      <link>https://www.lovefive.club/post/Git%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/</link>
+      <pubDate>Wed, 10 Mar 2021 11:19:15 +0800</pubDate>
+      
+      <guid>https://www.lovefive.club/post/Git%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/</guid>
+      <description>一、fatal: unable to access &amp;lsquo;https://github.com/baer9/baer9.github.io.git/&#39;: OpenSSL SSL_read: Connection was reset, errno 10054 解除ssl验证 解决：关闭验证 git config &amp;ndash;global http.sslVerify &amp;ldquo;false&amp;rdquo; 二、fatal: unable to access &amp;lsquo;https://github.com/baer9/baer9.github.io.git/&#39;: Failed to connect to github.com port 443: Timed out 文件可能太大 解决：gi</description>
+    </item>
+    
+    <item>
+      <title>幸会-1988</title>
+      <link>https://www.lovefive.club/post/%E5%B9%B8%E4%BC%9A-1988/</link>
+      <pubDate>Mon, 21 Dec 2020 21:27:21 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/%E5%B9%B8%E4%BC%9A-1988/</guid>
+      <description>我会再回来的-1988！ 双门洞五个家庭： 成东日、李一花：成宝拉、成德善、成晚霞； 金成钧、罗美兰：金正峰、金正焕； 金善英（单亲妈妈）：成善宇、</description>
+    </item>
+    
+    <item>
+      <title>网页版Github更改文件夹名</title>
+      <link>https://www.lovefive.club/post/%E7%BD%91%E9%A1%B5%E7%89%88Github%E6%9B%B4%E6%94%B9%E6%96%87%E4%BB%B6%E5%A4%B9%E5%90%8D/</link>
+      <pubDate>Mon, 21 Dec 2020 21:27:21 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/%E7%BD%91%E9%A1%B5%E7%89%88Github%E6%9B%B4%E6%94%B9%E6%96%87%E4%BB%B6%E5%A4%B9%E5%90%8D/</guid>
+      <description>1.首先打开想要更改的文件夹，直到底层一个文件打开，然后点击编辑； 2.在文件名编辑框按删除键，回到了上一目录； 👇 3.在重命名之后，直接加入/</description>
+    </item>
+    
+    <item>
+      <title>【转载】关于三次握手，四次挥手！</title>
+      <link>https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BD%E5%85%B3%E4%BA%8E%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</link>
+      <pubDate>Mon, 21 Dec 2020 13:53:21 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BD%E5%85%B3%E4%BA%8E%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</guid>
+      <description>关于三次握手，四次挥手！ 为什么连接的时候是三次握手？ 什么是半连接队列？ ISN(Initial Sequence Number)是固定的吗？ 三次握手过程中可以携带数据吗？ 如果第三次</description>
+    </item>
+    
+    <item>
+      <title>Bat批量修改文件名</title>
+      <link>https://www.lovefive.club/post/Bat%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%90%8D/</link>
+      <pubDate>Mon, 14 Dec 2020 16:56:32 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/Bat%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%90%8D/</guid>
+      <description>1、新建文本文档 写入dir*.*/b &amp;gt;file.csv 保存并更改为bat文件。 2、打开 file.csv 表格 复制第一列文件名到第二列，选择第二列全部内容，CTRL+F替换想</description>
+    </item>
+    
+    <item>
+      <title>【转载补充】48个实用的HTML特效代码！！！（推荐初学者使用）</title>
+      <link>https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BD%E8%A1%A5%E5%85%8548%E4%B8%AA%E5%AE%9E%E7%94%A8%E7%9A%84HTML%E7%89%B9%E6%95%88%E4%BB%A3%E7%A0%81%E6%8E%A8%E8%8D%90%E5%88%9D%E5%AD%A6%E8%80%85%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Fri, 20 Nov 2020 16:48:21 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BD%E8%A1%A5%E5%85%8548%E4%B8%AA%E5%AE%9E%E7%94%A8%E7%9A%84HTML%E7%89%B9%E6%95%88%E4%BB%A3%E7%A0%81%E6%8E%A8%E8%8D%90%E5%88%9D%E5%AD%A6%E8%80%85%E4%BD%BF%E7%94%A8/</guid>
+      <description>1.忽视右键 &amp;lt;body&amp;gt; 或 &amp;lt;body style=&amp;quot;overflow-y:hidden&amp;quot;&amp;gt; 2.加入背景音乐 IE:&amp;lt;bgsound src=&amp;quot;*.mid&amp;quot; loop=infinite&amp;gt; NS:&amp;lt;embed src=&amp;quot;*.mid&amp;quot; autostart=true hidden=true loop=true&amp;gt; &amp;lt;/embed&amp;gt; *.mid你的背景音乐的midi格式文件 3.简单的window.open方法 &amp;lt;a href</description>
+    </item>
+    
+    <item>
+      <title>【转载】Malloc Free与New Delete</title>
+      <link>https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BDMalloc-Free%E4%B8%8ENew-Delete/</link>
+      <pubDate>Mon, 19 Oct 2020 13:53:21 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BDMalloc-Free%E4%B8%8ENew-Delete/</guid>
+      <description>在C语言中，我们已经熟悉利用malloc/free来管理动态内存，而在C++中，我们又有了新的工具：new/delete。你不禁会产生疑问—</description>
+    </item>
+    
+    <item>
+      <title>Just as they say</title>
+      <link>https://www.lovefive.club/post/Just/</link>
+      <pubDate>Mon, 05 Oct 2020 23:48:22 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/Just/</guid>
+      <description>16/9/21 Many hands make light work. foster 培养，促进，助长。 pursuit 追求，职业 productivity 生产力 maintain 维护，保持，坚持 giant 巨人，（tech giant 科技巨头） ···always give top priority to ··· ···总</description>
+    </item>
+    
+    <item>
+      <title>【转载】十大经典排序算法（动图演示）</title>
+      <link>https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BD%E5%8D%81%E5%A4%A7%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%8A%A8%E5%9B%BE%E6%BC%94%E7%A4%BA/</link>
+      <pubDate>Sat, 03 Oct 2020 20:29:21 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/%E8%BD%AC%E8%BD%BD%E5%8D%81%E5%A4%A7%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%8A%A8%E5%9B%BE%E6%BC%94%E7%A4%BA/</guid>
+      <description>0、算法概述 0.1 算法分类 十种常见排序算法可以分为两大类： 比较类排序：通过比较来决定元素间的相对次序，由于其时间复杂度不能突破O(nlogn)，</description>
+    </item>
+    
+    <item>
+      <title>V2rayN的Pac自动模式无法登录Telegram问题！</title>
+      <link>https://www.lovefive.club/post/v2rayN%E7%9A%84Pac%E8%87%AA%E5%8A%A8%E6%A8%A1%E5%BC%8F%E6%97%A0%E6%B3%95%E7%99%BB%E5%BD%95Telegram%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sat, 05 Sep 2020 18:46:53 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/v2rayN%E7%9A%84Pac%E8%87%AA%E5%8A%A8%E6%A8%A1%E5%BC%8F%E6%97%A0%E6%B3%95%E7%99%BB%E5%BD%95Telegram%E9%97%AE%E9%A2%98/</guid>
+      <description>前言：本来全局模式无任何影响，但考虑到有时对国内网站的不友好，所以就换为Pac自动给模式了，但是Tg登录就出了问题。 小圆圈一直在转⬇ 解决方法</description>
+    </item>
+    
+    <item>
+      <title>3D地球统计</title>
+      <link>https://www.lovefive.club/post/3D%E5%9C%B0%E7%90%83%E7%BB%9F%E8%AE%A1/</link>
+      <pubDate>Fri, 27 Mar 2020 18:07:35 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/3D%E5%9C%B0%E7%90%83%E7%BB%9F%E8%AE%A1/</guid>
+      <description>QHQ-【问题描述】 3D炫酷的地球统计js 3D炫酷的地球统计js.地址→ https://www.revolvermaps.com/?targ</description>
+    </item>
+    
+    <item>
+      <title>Living</title>
+      <link>https://www.lovefive.club/post/Living/</link>
+      <pubDate>Fri, 27 Mar 2020 17:18:09 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/Living/</guid>
+      <description>QHQ-【问题描述】 无</description>
+    </item>
+    
+    <item>
+      <title>Nginx超详细配置及中文解释</title>
+      <link>https://www.lovefive.club/post/Nginx%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sat, 15 Feb 2020 20:58:23 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/Nginx%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/</guid>
+      <description>QHQ-【问题描述】 Nginx的配置文件详解（超详细） 1、安装Nginx 在安装Nginx之前，需确保系统已经安装了gcc、 openssl-d</description>
+    </item>
+    
+    <item>
+      <title>照片要启动gzip吗？</title>
+      <link>https://www.lovefive.club/post/%E7%85%A7%E7%89%87%E8%A6%81%E5%90%AF%E5%8A%A8gzip%E5%90%97/</link>
+      <pubDate>Sat, 15 Feb 2020 20:58:23 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/%E7%85%A7%E7%89%87%E8%A6%81%E5%90%AF%E5%8A%A8gzip%E5%90%97/</guid>
+      <description>QHQ-【问题描述】 图片要启用gzip压缩吗 今天在细看nginx配置的时候，发现一个httpGzip模块，图片到底需不需要启用GZip压缩？</description>
+    </item>
+    
+    <item>
+      <title>什么是负载平衡？</title>
+      <link>https://www.lovefive.club/post/%E4%BB%80%E4%B9%88%E6%98%AF%E8%B4%9F%E8%BD%BD%E5%B9%B3%E8%A1%A1/</link>
+      <pubDate>Sat, 15 Feb 2020 20:55:54 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/%E4%BB%80%E4%B9%88%E6%98%AF%E8%B4%9F%E8%BD%BD%E5%B9%B3%E8%A1%A1/</guid>
+      <description>QHQ-【问题描述】 什么是负载平衡？负载平衡有什么用？具体功能有什么？具体应用有？未来趋势会怎样？ 概述 随着网络的出现，人们便开始频频使用各种</description>
+    </item>
+    
+    <item>
+      <title>实用网站推荐</title>
+      <link>https://www.lovefive.club/post/%E5%AE%9E%E7%94%A8%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/</link>
+      <pubDate>Fri, 14 Feb 2020 12:00:11 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/%E5%AE%9E%E7%94%A8%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/</guid>
+      <description>QHQ-【问题描述】 实用网站推荐！！! 如有不可用或失效，请留言联系，第一时间给予回复解决！ 一个刚上路的小菜鸟！ 名称 链接 个人喜爱级别 AI智能图</description>
+    </item>
+    
+    <item>
+      <title>Windows下使用Everything搜索</title>
+      <link>https://www.lovefive.club/post/Windows%E4%B8%8B%E4%BD%BF%E7%94%A8Everything%E6%90%9C%E7%B4%A2/</link>
+      <pubDate>Sun, 09 Feb 2020 10:10:13 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/Windows%E4%B8%8B%E4%BD%BF%E7%94%A8Everything%E6%90%9C%E7%B4%A2/</guid>
+      <description>QHQ-【问题描述】 全局搜索文件，无内存占据，方便快捷搜索（即时搜索），可集成右键快捷，也可创建组合快捷键。 Everything的下载安装教</description>
+    </item>
+    
+    <item>
+      <title>Apache和Nginx简单区分</title>
+      <link>https://www.lovefive.club/post/Apache%E5%92%8CNginx%E7%AE%80%E5%8D%95%E5%8C%BA%E5%88%86/</link>
+      <pubDate>Tue, 14 Jan 2020 18:44:12 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/Apache%E5%92%8CNginx%E7%AE%80%E5%8D%95%E5%8C%BA%E5%88%86/</guid>
+      <description>QHQ-【问题描述】web服务器该选择apache还是nginx *一、apache与nginx的区别：* ​ 1、二者最核心的区别在于apach</description>
+    </item>
+    
+    <item>
+      <title>md短代码怎么写</title>
+      <link>https://www.lovefive.club/post/Md%E7%9F%AD%E4%BB%A3%E7%A0%81%E6%80%8E%E4%B9%88%E5%86%99/</link>
+      <pubDate>Thu, 19 Dec 2019 17:15:15 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/Md%E7%9F%AD%E4%BB%A3%E7%A0%81%E6%80%8E%E4%B9%88%E5%86%99/</guid>
+      <description>QHQ-【问题描述】 刚写了一篇博客，然后发现一个小bug，写的&amp;lt;input&amp;gt;&amp;lt;/input&amp;gt;字段发表出来是个文本输入</description>
+    </item>
+    
+    <item>
+      <title>Java web 的form表单问题</title>
+      <link>https://www.lovefive.club/post/JAVA-Web%E7%9A%84form%E8%A1%A8%E5%8D%95%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Thu, 19 Dec 2019 16:29:36 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/JAVA-Web%E7%9A%84form%E8%A1%A8%E5%8D%95%E9%97%AE%E9%A2%98/</guid>
+      <description>QHQ-【问题描述】今天做Java web项目的时候，里面一个功能让我form表单里面套表单了，但是里面的form 提交action中参数无效。</description>
+    </item>
+    
+    <item>
+      <title>Win10无限刷新</title>
+      <link>https://www.lovefive.club/post/Win10%E6%97%A0%E9%99%90%E5%88%B7%E6%96%B0/</link>
+      <pubDate>Mon, 16 Dec 2019 19:58:15 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/Win10%E6%97%A0%E9%99%90%E5%88%B7%E6%96%B0/</guid>
+      <description>QHQ-【问题描述】 ​ 怎么样修复Win10系统 ，win10在选择默认应用就是更改不了，重置也没有反应，打开一个包含html文件的文件夹，桌面</description>
+    </item>
+    
+    <item>
+      <title>奶牛快传</title>
+      <link>https://www.lovefive.club/post/%E5%A5%B6%E7%89%9B%E5%BF%AB%E4%BC%A0/</link>
+      <pubDate>Wed, 11 Dec 2019 20:33:04 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/%E5%A5%B6%E7%89%9B%E5%BF%AB%E4%BC%A0/</guid>
+      <description>QHQ-【问题描述】 告别百度云，云盘等限速下载，了解免费无限流下载神器-奶牛快传。 奶牛快传 冲击波 重点一：APP新上线(2019.11.11)</description>
+    </item>
+    
+    <item>
+      <title>在人间凑数的日子（三）</title>
+      <link>https://www.lovefive.club/post/%E5%9C%A8%E4%BA%BA%E9%97%B4%E5%87%91%E6%95%B0%E7%9A%84%E6%97%A5%E5%AD%90%E4%B8%89/</link>
+      <pubDate>Fri, 06 Dec 2019 14:53:21 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/%E5%9C%A8%E4%BA%BA%E9%97%B4%E5%87%91%E6%95%B0%E7%9A%84%E6%97%A5%E5%AD%90%E4%B8%89/</guid>
+      <description>在人间凑数的日子（三） 终于长到能与父亲碰杯的年纪， 却没能成为他的骄傲。 后来才发现， 那并不是属于我的花， 我只是途经她的绽放。 曾以为贫穷是指饥饿</description>
+    </item>
+    
+    <item>
+      <title>在人间凑数的日子（二）</title>
+      <link>https://www.lovefive.club/post/%E5%9C%A8%E4%BA%BA%E9%97%B4%E5%87%91%E6%95%B0%E7%9A%84%E6%97%A5%E5%AD%90%E4%BA%8C/</link>
+      <pubDate>Fri, 06 Dec 2019 14:23:21 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/%E5%9C%A8%E4%BA%BA%E9%97%B4%E5%87%91%E6%95%B0%E7%9A%84%E6%97%A5%E5%AD%90%E4%BA%8C/</guid>
+      <description>在人间凑数的日子（二） ​ 年轻不懂爱情与友情， ​ 长大后才懂得爱情是那么不容易， ​ 友情是那么的脆弱。 生活从来都是这样， 不把我放在眼里。 ​ 你羡慕的</description>
+    </item>
+    
+    <item>
+      <title>在人间凑数的日子（一）</title>
+      <link>https://www.lovefive.club/post/%E5%9C%A8%E4%BA%BA%E9%97%B4%E5%87%91%E6%95%B0%E7%9A%84%E6%97%A5%E5%AD%90%E4%B8%80/</link>
+      <pubDate>Fri, 06 Dec 2019 13:53:21 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/%E5%9C%A8%E4%BA%BA%E9%97%B4%E5%87%91%E6%95%B0%E7%9A%84%E6%97%A5%E5%AD%90%E4%B8%80/</guid>
+      <description>在人间凑数的日子（一） 鱼和熊掌不可兼得， 唯独穷和单身可以。 爷爷没有输给战火， 父亲没有输给贫穷， 我却输给了和平年代的生活和爱情，以及太过自由。</description>
+    </item>
+    
+    <item>
+      <title>Hexo 博客回顾</title>
+      <link>https://www.lovefive.club/post/%E5%B9%B2%E6%8E%89bashhexocommand-not-found/</link>
+      <pubDate>Mon, 25 Nov 2019 12:12:21 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/%E5%B9%B2%E6%8E%89bashhexocommand-not-found/</guid>
+      <description>好久没动过 Hexo 博客了，都是在用halo博客,今天准备一起更新的时候输入 hexo new linving新建时，报错 bash: hexo: command not found，忽然不知道咋回事了,就</description>
+    </item>
+    
+    <item>
+      <title>Bat批修改文件后缀名</title>
+      <link>https://www.lovefive.club/post/Bat%E7%AE%80%E5%8D%95%E6%89%B9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/Bat%E7%AE%80%E5%8D%95%E6%89%B9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</guid>
+      <description>今天先说说bat最简单的操作 ren *.jpg *.txt 此语句可以把当前文件夹的所有jpg照片转换为txt格式，（有利于隐藏照片哦）。 接下来就简单来说一下怎么具体</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;半数集问题</title>
+      <link>https://www.lovefive.club/post/%E5%8D%8A%E6%95%B0%E9%9B%86/</link>
+      <pubDate>Fri, 25 Oct 2019 13:53:21 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/%E5%8D%8A%E6%95%B0%E9%9B%86/</guid>
+      <description>QHQ-【问题描述】给定一个自然数n，由n开始可以依次产生半数集set(n)中的数如下： （1）n∈set(n); （2）在n的左边加上一个自然</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;众数问题</title>
+      <link>https://www.lovefive.club/post/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Mon, 21 Oct 2019 20:12:12 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/</guid>
+      <description>QHQ-【问题描述】给定含有S个元素的多重集合S，每个元素在S中出现的次数称为该元素的重数。多重集S中重数最大的元素称为众数。例如，S={1</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;最大间隙</title>
+      <link>https://www.lovefive.club/post/%E6%9C%80%E5%A4%A7%E9%97%B4%E9%9A%99/</link>
+      <pubDate>Mon, 21 Oct 2019 13:53:21 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/%E6%9C%80%E5%A4%A7%E9%97%B4%E9%9A%99/</guid>
+      <description>QHQ-【问题描述】给定n个实数x1,x2,&amp;hellip;,xn, 求着n个数在实轴上相邻两个数之间的最大差值。假设对任何实数的下取整函数好</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;金币阵列</title>
+      <link>https://www.lovefive.club/post/%E9%87%91%E5%B8%81%E9%98%B5%E5%88%97/</link>
+      <pubDate>Mon, 21 Oct 2019 13:53:21 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/%E9%87%91%E5%B8%81%E9%98%B5%E5%88%97/</guid>
+      <description>QHQ-【问题描述】有m*n(m&amp;lt;=100, n&amp;lt;=100)枚金币在桌面上排成一个m行n列的金币矩阵。每枚金币或正面朝上或背面朝上</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;分割输入字符串</title>
+      <link>https://www.lovefive.club/post/%E5%88%86%E5%89%B2%E8%BE%93%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Wed, 16 Oct 2019 20:12:12 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/%E5%88%86%E5%89%B2%E8%BE%93%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description>QHQ-It was day full of memories C++字符串分割 C++没有split分割的函数！！！！ C++没有c语言的那样方便的格式化输入，像c语言你如果想一次性输入1#2，</description>
+    </item>
+    
+    <item>
+      <title>第一次测试尝试！</title>
+      <link>https://www.lovefive.club/post/First-test/</link>
+      <pubDate>Wed, 16 Oct 2019 20:12:12 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/First-test/</guid>
+      <description>QHQ-This is a nice day Why Blog 对博客的理解 喜欢写Blog的人，会经历三个阶段。 第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。 第二阶段，发现</description>
+    </item>
+    
+    <item>
+      <title>Python_分娩数据集处理</title>
+      <link>https://www.lovefive.club/post/Python_%E5%88%86%E5%A8%A9%E6%95%B0%E6%8D%AE%E9%9B%86%E5%A4%84%E7%90%86/</link>
+      <pubDate>Thu, 10 Jan 2019 16:29:25 +0800</pubDate>
+      
+      <guid>https://www.lovefive.club/post/Python_%E5%88%86%E5%A8%A9%E6%95%B0%E6%8D%AE%E9%9B%86%E5%A4%84%E7%90%86/</guid>
+      <description>Python分娩数据集处理_2019 目录 一、 简介 1.1、数据集摘要 1.2、资料来源 1.2.1、网址: 1.2.2、来源机构： 1.2.3、分析前</description>
+    </item>
+    
+    <item>
+      <title>Hexo主题的一些踩过的坑</title>
+      <link>https://www.lovefive.club/post/%E5%85%B3%E4%BA%8EHexo%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</link>
+      <pubDate>Sun, 25 Nov 2018 12:55:21 +0000</pubDate>
+      
+      <guid>https://www.lovefive.club/post/%E5%85%B3%E4%BA%8EHexo%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</guid>
+      <description>Hexo主题的一些踩过的坑 一、主题选择问题 首先你需要在官网hexo选择你喜欢的主题。主要下载步骤有：Hxeo+Github pages。 二、绑</description>
+    </item>
+    
+  </channel>
+</rss>
