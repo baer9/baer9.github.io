@@ -6,7 +6,16 @@
     <description>Recent content in Categories on QHQ‘s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 10 Mar 2021 11:19:15 +0800</lastBuildDate><atom:link href="https://www.lovefive.club/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Mar 2021 09:04:43 +0800</lastBuildDate><atom:link href="https://www.lovefive.club/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>图片</title>
+      <link>https://www.lovefive.club/categories/%E5%9B%BE%E7%89%87/</link>
+      <pubDate>Fri, 12 Mar 2021 09:04:43 +0800</pubDate>
+      
+      <guid>https://www.lovefive.club/categories/%E5%9B%BE%E7%89%87/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Git</title>
       <link>https://www.lovefive.club/categories/Git/</link>
