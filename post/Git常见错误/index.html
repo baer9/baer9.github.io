@@ -157,9 +157,9 @@
         <li><a href="#四fatal-unable-to-access-httpsgithubcombaer9baer9githubiogit-empty-reply-from-server-http或者https-通道不稳定">四、fatal: unable to access &lsquo;<a href="https://github.com/baer9/baer9.github.io.git/':">https://github.com/baer9/baer9.github.io.git/':</a> Empty reply from server http或者https 通道不稳定</a></li>
         <li><a href="#五git远程仓库地址变更本地如何修改">五、Git远程仓库地址变更本地如何修改</a></li>
         <li><a href="#六git--fatal-not-a-git-repository-or-any-of-the-parent-directories-git">六、Git  fatal: not a git repository (or any of the parent directories): .git</a></li>
-        <li><a href="#六如果提示filename-too-long说明文件名或路径太长08129665">六、如果提示Filename too long，说明文件名或路径太长08129665</a></li>
         <li><a href="#七fatal-refusing-to-merge-unrelated-histories">七、fatal: refusing to merge unrelated histories</a></li>
         <li><a href="#八git强制推送命令">八、git强制推送命令</a></li>
+        <li><a href="#九如果提示filename-too-long说明文件名或路径太长08129665">九、如果提示Filename too long，说明文件名或路径太长08129665</a></li>
       </ul>
     </li>
   </ul>
@@ -257,28 +257,20 @@ git remote set-url origin + 要替换的地址</li>
 <ul>
 <li>git init</li>
 </ul>
-<h3 id="六如果提示filename-too-long说明文件名或路径太长08129665">六、如果提示Filename too long，说明文件名或路径太长08129665</h3>
-<ul>
-<li>解决：git config &ndash;global core.longpaths true51</li>
-</ul>
 <h3 id="七fatal-refusing-to-merge-unrelated-histories">七、fatal: refusing to merge unrelated histories</h3>
 <ul>
 <li>解决 git pull origin master &ndash;allow-unrelated-histories</li>
 </ul>
 <h3 id="八git强制推送命令">八、git强制推送命令</h3>
 <ul>
-<li>
-<p>git push -f origin master</p>
-</li>
-<li>
-<p>注释： origin远程仓库名，master分支名，-f为force，意为：强行、强制。</p>
-</li>
-<li>
-<p>这行命令的意思就是强制用本地的代码去覆盖掉远程仓库的代码，敲git push &ndash;help可查看官方的解释（英文的）。当然不止这一种操作方式了，但是这种操作是最快(bao)速(li)的，不会有冲突什么的，当然我也有一个忠告：请谨慎使用！请谨慎使用！请谨慎使用！</p>
-</li>
-<li>
-<p>千里之行，始于足下。改变现在，就是改变未来。改变未来，从现在开始。</p>
-</li>
+<li>git push -f origin master</li>
+<li>注释： origin远程仓库名，master分支名，-f为force，意为：强行、强制。</li>
+<li>这行命令的意思就是强制用本地的代码去覆盖掉远程仓库的代码，敲git push &ndash;help可查看官方的解释（英文的）。当然不止这一种操作方式了，但是这种操作是最快(bao)速(li)的，不会有冲突什么的，当然我也有一个忠告：请谨慎使用！请谨慎使用！请谨慎使用！</li>
+<li>千里之行，始于足下。改变现在，就是改变未来。改变未来，从现在开始。</li>
+</ul>
+<h3 id="九如果提示filename-too-long说明文件名或路径太长08129665">九、如果提示Filename too long，说明文件名或路径太长08129665</h3>
+<ul>
+<li>解决：git config &ndash;global core.longpaths true51</li>
 </ul>
 <hr>
 <ul>
