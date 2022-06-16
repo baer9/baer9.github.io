@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on My New Hugo Site</title>
+    <link>http://www.lovefive.club/categories/</link>
+    <description>Recent content in Categories on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 12 Mar 2021 09:04:43 +0800</lastBuildDate><atom:link href="http://www.lovefive.club/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>图片</title>
+      <link>http://www.lovefive.club/categories/%E5%9B%BE%E7%89%87/</link>
+      <pubDate>Fri, 12 Mar 2021 09:04:43 +0800</pubDate>
+      
+      <guid>http://www.lovefive.club/categories/%E5%9B%BE%E7%89%87/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>http://www.lovefive.club/categories/git/</link>
+      <pubDate>Wed, 10 Mar 2021 11:19:15 +0800</pubDate>
+      
+      <guid>http://www.lovefive.club/categories/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>http://www.lovefive.club/categories/github/</link>
+      <pubDate>Mon, 21 Dec 2020 21:27:21 +0000</pubDate>
+      
+      <guid>http://www.lovefive.club/categories/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>杂记</title>
+      <link>http://www.lovefive.club/categories/%E6%9D%82%E8%AE%B0/</link>
+      <pubDate>Mon, 21 Dec 2020 21:27:21 +0000</pubDate>
+      
+      <guid>http://www.lovefive.club/categories/%E6%9D%82%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>算法</title>
+      <link>http://www.lovefive.club/categories/%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Mon, 21 Dec 2020 13:53:21 +0000</pubDate>
+      
+      <guid>http://www.lovefive.club/categories/%E7%AE%97%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bat</title>
+      <link>http://www.lovefive.club/categories/bat/</link>
+      <pubDate>Mon, 14 Dec 2020 16:56:32 +0000</pubDate>
+      
+      <guid>http://www.lovefive.club/categories/bat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javaweb</title>
+      <link>http://www.lovefive.club/categories/javaweb/</link>
+      <pubDate>Fri, 20 Nov 2020 16:48:21 +0000</pubDate>
+      
+      <guid>http://www.lovefive.club/categories/javaweb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>v2rayN</title>
+      <link>http://www.lovefive.club/categories/v2rayn/</link>
+      <pubDate>Sat, 05 Sep 2020 18:46:53 +0000</pubDate>
+      
+      <guid>http://www.lovefive.club/categories/v2rayn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>奶牛快传</title>
+      <link>http://www.lovefive.club/categories/%E5%A5%B6%E7%89%9B%E5%BF%AB%E4%BC%A0/</link>
+      <pubDate>Wed, 11 Dec 2019 20:33:04 +0000</pubDate>
+      
+      <guid>http://www.lovefive.club/categories/%E5%A5%B6%E7%89%9B%E5%BF%AB%E4%BC%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>在人间凑数的日子</title>
+      <link>http://www.lovefive.club/categories/%E5%9C%A8%E4%BA%BA%E9%97%B4%E5%87%91%E6%95%B0%E7%9A%84%E6%97%A5%E5%AD%90/</link>
+      <pubDate>Fri, 06 Dec 2019 14:53:21 +0000</pubDate>
+      
+      <guid>http://www.lovefive.club/categories/%E5%9C%A8%E4%BA%BA%E9%97%B4%E5%87%91%E6%95%B0%E7%9A%84%E6%97%A5%E5%AD%90/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>http://www.lovefive.club/categories/c&#43;&#43;/</link>
+      <pubDate>Fri, 25 Oct 2019 13:53:21 +0000</pubDate>
+      
+      <guid>http://www.lovefive.club/categories/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>http://www.lovefive.club/categories/python/</link>
+      <pubDate>Thu, 10 Jan 2019 16:29:25 +0800</pubDate>
+      
+      <guid>http://www.lovefive.club/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hexo</title>
+      <link>http://www.lovefive.club/categories/hexo/</link>
+      <pubDate>Sun, 25 Nov 2018 12:55:21 +0000</pubDate>
+      
+      <guid>http://www.lovefive.club/categories/hexo/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

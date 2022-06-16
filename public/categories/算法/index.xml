@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>算法 on My New Hugo Site</title>
+    <link>http://www.lovefive.club/categories/%E7%AE%97%E6%B3%95/</link>
+    <description>Recent content in 算法 on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 21 Dec 2020 13:53:21 +0000</lastBuildDate><atom:link href="http://www.lovefive.club/categories/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【转载】关于三次握手，四次挥手！</title>
+      <link>http://www.lovefive.club/post/%E8%BD%AC%E8%BD%BD%E5%85%B3%E4%BA%8E%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</link>
+      <pubDate>Mon, 21 Dec 2020 13:53:21 +0000</pubDate>
+      
+      <guid>http://www.lovefive.club/post/%E8%BD%AC%E8%BD%BD%E5%85%B3%E4%BA%8E%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</guid>
+      <description>关于三次握手，四次挥手！  为什么连接的时候是三次握手？ 什么是半连接队列？ ISN(Initial Sequence Number)是固定的吗？ 三次握手过程中可以携带数据吗？ 如果第三次握手丢失了，客户端服务端会如何处理？ SYN攻击是什么？ 挥手为什么需要四次？ 四次挥手释放连接时，等待2MSL的意义?  1. 三次握手 三次握手（Three-way Handshake）其实就是指建立一个TCP连接时，需要客户端和服务器总共发送3个包。进行三次握手的主要作用就是为了确认双方的接收能力和发送能力是否正常、指定自己的初始化序列号为后面的可靠性传送做准备。实质上其实就是连接服务器指定端口，建立TCP连接，并同步连接双方的序列号和确认号，交换TCP窗口大小信息。
+刚开始客户端处于 Closed 的状态，服务端处于 Listen 状态。
+进行三次握手：
+第一次握手：客户端给服务端发一个 SYN 报文，并指明客户端的初始化序列号 ISN©。此时客户端处于 SYN_SEND 状态。
+首部的同步位SYN=1，初始序号seq=x，SYN=1的报文段不能携带数据，但要消耗掉一个序号。
+第二次握手：服务器收到客户端的 SYN 报文之后，会以自己的 SYN 报文作为应答，并且也是指定了自己的初始化序列号 ISN(s)。同时会把客户端的 ISN + 1 作为ACK 的值，表示自己已经收到了客户端的 SYN，此时服务器处于 SYN_REVD 的状态。
+在确认报文段中SYN=1，ACK=1，确认号ack=x+1，初始序号seq=y。
+第三次握手：客户端收到 SYN 报文之后，会发送一个 ACK 报文，当然，也是一样把服务器的 ISN + 1 作为 ACK 的值，表示已经收到了服务端的 SYN 报文，此时客户端处于 ESTABLISHED 状态。服务器收到 ACK 报文之后，也处于 ESTABLISHED 状态，此时，双方已建立起了连接。
+确认报文段ACK=1，确认号ack=y+1，序号seq=x+1（初始为seq=x，第二个报文段所以要+1），ACK报文段可以携带数据，不携带数据则不消耗序号。
+发送第一个SYN的一端将执行主动打开（active open），接收这个SYN并发回下一个SYN的另一端执行被动打开（passive open）。
+在socket编程中，客户端执行connect()时，将触发三次握手。 1.1 为什么需要三次握手，两次不行吗？ 弄清这个问题，我们需要先弄明白三次握手的目的是什么，能不能只用两次握手来达到同样的目的。</description>
+    </item>
+    
+    <item>
+      <title>【转载】Malloc Free与New Delete</title>
+      <link>http://www.lovefive.club/post/%E8%BD%AC%E8%BD%BDmalloc-free%E4%B8%8Enew-delete/</link>
+      <pubDate>Mon, 19 Oct 2020 13:53:21 +0000</pubDate>
+      
+      <guid>http://www.lovefive.club/post/%E8%BD%AC%E8%BD%BDmalloc-free%E4%B8%8Enew-delete/</guid>
+      <description>在C语言中，我们已经熟悉利用malloc/free来管理动态内存，而在C++中，我们又有了新的工具：new/delete。你不禁会产生疑问—有了malloc/free为什么还要new/delete 呢？使用malloc/free和使用new/delete又有什么区别呢？首先来分析一下下面的代码片段：
+class Object { public: Object() { cout &amp;lt;&amp;lt; &amp;quot;Hello, I was born.&amp;quot; &amp;lt;&amp;lt; endl; } ~Object() { cout &amp;lt;&amp;lt; &amp;quot;Bye, I am died.&amp;quot; &amp;lt;&amp;lt; endl; } void Hello() { cout &amp;lt;&amp;lt; &amp;quot;I am Object.&amp;quot;&amp;lt;&amp;lt;endl; } } ; int main() { cout &amp;lt;&amp;lt; &amp;quot; Using Malloc &amp;amp; Free... &amp;quot;&amp;lt;&amp;lt;endl; Object* pObjectA = (Object*)malloc(sizeof(Object)); pObjectA-&amp;gt;Hello(); free pObjectA; cout &amp;lt;&amp;lt; &amp;quot; Using New &amp;amp; Delete... &amp;quot;&amp;lt;&amp;lt;endl; Object* pObjectB = new Object; pObjectB-&amp;gt;Hello(); delete pObjectB; return 0; } 代码运行的结果为：</description>
+    </item>
+    
+    <item>
+      <title>【转载】十大经典排序算法（动图演示）</title>
+      <link>http://www.lovefive.club/post/%E8%BD%AC%E8%BD%BD%E5%8D%81%E5%A4%A7%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%8A%A8%E5%9B%BE%E6%BC%94%E7%A4%BA/</link>
+      <pubDate>Sat, 03 Oct 2020 20:29:21 +0000</pubDate>
+      
+      <guid>http://www.lovefive.club/post/%E8%BD%AC%E8%BD%BD%E5%8D%81%E5%A4%A7%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%8A%A8%E5%9B%BE%E6%BC%94%E7%A4%BA/</guid>
+      <description>0、算法概述 0.1 算法分类 十种常见排序算法可以分为两大类：
+ 比较类排序：通过比较来决定元素间的相对次序，由于其时间复杂度不能突破O(nlogn)，因此也称为非线性时间比较类排序。 非比较类排序：不通过比较来决定元素间的相对次序，它可以突破基于比较排序的时间下界，以线性时间运行，因此也称为线性时间非比较类排序。   0.2 时间复杂度 0.3 相关概念  稳定：如果a原本在b前面，而a=b，排序之后a仍然在b的前面。 不稳定：如果a原本在b的前面，而a=b，排序之后 a 可能会出现在 b 的后面。 时间复杂度：对排序数据的总的操作次数。反映当n变化时，操作次数呈现什么规律。 空间复杂度：是指算法在计算机内执行时所需存储空间的度量，它也是数据规模n的函数。  1、冒泡排序（Bubble Sort） 冒泡排序是一种简单的排序算法。它重复地走访过要排序的数列，一次比较两个元素，如果它们的顺序错误就把它们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。这个算法的名字由来是因为越小的元素会经由交换慢慢“浮”到数列的顶端。
+1.1 算法描述  比较相邻的元素。如果第一个比第二个大，就交换它们两个； 对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对，这样在最后的元素应该会是最大的数； 针对所有的元素重复以上的步骤，除了最后一个； 重复步骤1~3，直到排序完成。  1.2 动图演示 1.3 代码实现 function bubbleSort(arr) { varlen = arr.length; for(vari = 0; i &amp;lt; len - 1; i++) { for(varj = 0; j &amp;lt; len - 1 - i; j++) { if(arr[j] &amp;gt; arr[j+1]) { // 相邻元素两两对比 vartemp = arr[j+1]; // 元素交换 arr[j+1] = arr[j]; arr[j] = temp; } } } returnarr; } 2、选择排序（Selection Sort） 选择排序(Selection-sort)是一种简单直观的排序算法。它的工作原理：首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置，然后，再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。以此类推，直到所有元素均排序完毕。</description>
+    </item>
+    
+  </channel>
+</rss>

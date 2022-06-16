@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on My New Hugo Site</title>
+    <link>http://www.lovefive.club/categories/python/</link>
+    <description>Recent content in Python on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 10 Jan 2019 16:29:25 +0800</lastBuildDate><atom:link href="http://www.lovefive.club/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python_分娩数据集处理</title>
+      <link>http://www.lovefive.club/post/python_%E5%88%86%E5%A8%A9%E6%95%B0%E6%8D%AE%E9%9B%86%E5%A4%84%E7%90%86/</link>
+      <pubDate>Thu, 10 Jan 2019 16:29:25 +0800</pubDate>
+      
+      <guid>http://www.lovefive.club/post/python_%E5%88%86%E5%A8%A9%E6%95%B0%E6%8D%AE%E9%9B%86%E5%A4%84%E7%90%86/</guid>
+      <description>Python分娩数据集处理_2019  目录 一、 简介
+1.1、数据集摘要
+1.2、资料来源
+1.2.1、网址:
+1.2.2、来源机构：
+1.2.3、分析前资料理解：
+1.3、分析目标及方法：
+二、 数据读取
+2.1、数据读取方法
+2.2、读取的结果
+2.3、数据简单概要描述
+三、 数据预处理
+3.1、分析数据现状，明确问题
+3.2、预处理方法及结果
+3.2.1、数据清洗
+3.2.2、数据变换
+四、 用分类模型实现分娩分析
+4.1、分析目标
+4.2、分析方法及结果
+4.2.1、准备工作
+4.2.2、详细步骤
+五、 结论与展望
+5.1、结论及局限性
+5.2、过程感悟及展望
+一、 简介 1.1、数据集摘要 此数据集包含有关 80 名孕妇的剖腹产结果的信息，这些孕妇在医疗领域具有最重要的分娩问题特征：
+   名称 （Name） 分娩情况分类数据集数据集 (Caesarian Section Classification Dataset Data Set)     特征简介 （Feature introduction） 整数（Integer）   记录数（Record number） 80/6（Eighty/Six）   分析目标 （Analysis target） 分娩情况（是否剖腹产）与年龄、分娩次数、分娩时间、血压、心脏状况有无准确联系 （Is there any accurate relationship between delivery and age, delivery times, delivery time, blood pressure and heart condition）   分析思路及方法（Analysis ideas and methods） 收集多数信息，分析计算其中是否有准确联系 （Collect most information, analyze and calculate whether there is an accurate connection）    1.</description>
+    </item>
+    
+  </channel>
+</rss>

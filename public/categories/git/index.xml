@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on My New Hugo Site</title>
+    <link>http://www.lovefive.club/categories/git/</link>
+    <description>Recent content in Git on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 10 Mar 2021 11:19:15 +0800</lastBuildDate><atom:link href="http://www.lovefive.club/categories/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git常见错误</title>
+      <link>http://www.lovefive.club/post/git%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/</link>
+      <pubDate>Wed, 10 Mar 2021 11:19:15 +0800</pubDate>
+      
+      <guid>http://www.lovefive.club/post/git%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/</guid>
+      <description>QHQ-【问题描述】Git————常见错误（error10051、Timed out、some refs to、Empty reply from server http等.)
+一、fatal: unable to access &amp;lsquo;https://github.com/baer9/baer9.github.io.git/&#39;: OpenSSL SSL_read: Connection was reset, errno 10054 解除ssl验证  解决：关闭验证 git config &amp;ndash;global http.sslVerify &amp;ldquo;false&amp;rdquo;  二、fatal: unable to access &amp;lsquo;https://github.com/baer9/baer9.github.io.git/&#39;: Failed to connect to github.com port 443: Timed out 文件可能太大  解决：git config http.postBuffer 524288000  三、 ! [rejected] main -&amp;gt; main (fetch first)error: failed to push some refs to &amp;lsquo;https://github.com/baer9/baer9.github.io.git&#39; 远端比本地多文件（可能是多一个README.md文件)  解决：git pull &amp;ndash;rebase origin main 【注：pull=fetch+merge]  四、fatal: unable to access &amp;lsquo;https://github.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javaweb on My New Hugo Site</title>
+    <link>http://www.lovefive.club/categories/javaweb/</link>
+    <description>Recent content in Javaweb on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 20 Nov 2020 16:48:21 +0000</lastBuildDate><atom:link href="http://www.lovefive.club/categories/javaweb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【转载补充】48个实用的HTML特效代码！！！（推荐初学者使用）</title>
+      <link>http://www.lovefive.club/post/%E8%BD%AC%E8%BD%BD%E8%A1%A5%E5%85%8548%E4%B8%AA%E5%AE%9E%E7%94%A8%E7%9A%84html%E7%89%B9%E6%95%88%E4%BB%A3%E7%A0%81%E6%8E%A8%E8%8D%90%E5%88%9D%E5%AD%A6%E8%80%85%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Fri, 20 Nov 2020 16:48:21 +0000</pubDate>
+      
+      <guid>http://www.lovefive.club/post/%E8%BD%AC%E8%BD%BD%E8%A1%A5%E5%85%8548%E4%B8%AA%E5%AE%9E%E7%94%A8%E7%9A%84html%E7%89%B9%E6%95%88%E4%BB%A3%E7%A0%81%E6%8E%A8%E8%8D%90%E5%88%9D%E5%AD%A6%E8%80%85%E4%BD%BF%E7%94%A8/</guid>
+      <description>1.忽视右键
+&amp;lt;body&amp;gt; 或 &amp;lt;body style=&amp;quot;overflow-y:hidden&amp;quot;&amp;gt; 2.加入背景音乐
+　IE:&amp;lt;bgsound src=&amp;quot;*.mid&amp;quot; loop=infinite&amp;gt; NS:&amp;lt;embed src=&amp;quot;*.mid&amp;quot; autostart=true hidden=true loop=true&amp;gt; &amp;lt;/embed&amp;gt; *.mid你的背景音乐的midi格式文件 3.简单的window.open方法
+　&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;文字或图片&amp;lt;/a&amp;gt; 参数解释： &amp;lt;SCRIPT LANGUAGE=&amp;quot;javascript&amp;quot;&amp;gt; js脚本开始； window.open 弹出新窗口的命令； 文件路径/文件名 弹出窗口的文件名； newwindow 弹出窗口的名字（不是文件名），非必须，可用空代替； width=400 窗口宽度； height=300 窗口高度； top=0 窗口距离屏幕上方的象素值； left=0 窗口距离屏幕左侧的象素值； toolbar=no 是否显示工具栏，yes为显示； menubar，scrollbars 表示菜单栏和滚动栏。 resizable=no 是否允许改变窗口大小，yes为允许； location=no 是否显示地址栏，yes为允许； status=no 是否显示状态栏内的信息（通常是文件已经打开），yes为允许； &amp;lt;/SCRIPT&amp;gt; js脚本结束 4.简单的页面加密
+　&amp;lt;script LANGUAGE=&amp;quot;javascript&amp;quot;&amp;gt; &amp;lt;!-- function loopy(){ var sWord =&amp;quot;&amp;quot;; while(sWord!=&amp;quot;login&amp;quot;){sWord=prompt(&amp;quot;请输入你的登陆密码&amp;quot;);} alert(&amp;quot;登陆成功！&amp;quot;); } loopy() //--&amp;gt; &amp;lt;/script&amp;gt; 5.拉动页面时背景图不动
+　&amp;lt;style&amp;gt; body{background-image:url(logo.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43; on My New Hugo Site</title>
+    <link>http://www.lovefive.club/tags/c&#43;&#43;/</link>
+    <description>Recent content in C&#43;&#43; on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 25 Oct 2019 13:53:21 +0000</lastBuildDate><atom:link href="http://www.lovefive.club/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#43;&#43;半数集问题</title>
+      <link>http://www.lovefive.club/post/%E5%8D%8A%E6%95%B0%E9%9B%86/</link>
+      <pubDate>Fri, 25 Oct 2019 13:53:21 +0000</pubDate>
+      
+      <guid>http://www.lovefive.club/post/%E5%8D%8A%E6%95%B0%E9%9B%86/</guid>
+      <description>QHQ-【问题描述】给定一个自然数n，由n开始可以依次产生半数集set(n)中的数如下：
+（1）n∈set(n);
+（2）在n的左边加上一个自然数，但该自然数不能超过最近添加的数的一半；
+（3）按此规则进行处理，直到不能再添加自然数为止。
+  【问题描述】给定一个自然数n，由n开始可以依次产生半数集set(n)中的数如下： （1）n∈set(n); （2）在n的左边加上一个自然数，但该自然数不能超过最近添加的数的一半； （3）按此规则进行处理，直到不能再添加自然数为止。 例如，set(6)={6,16,26,126,36,136}。半数集set（6）中有6个元素。注意，该半数集是多重集。 【算法设计】对于给定的自然数n，计算半数集set(n)中的元素个数。 【输入形式】只有1行，给出整数n（0&amp;lt;n&amp;lt;1000）。 【输出形式】只有1行，给出半数集set(n)中的元素个数。 【样例输入】 6 【样例输出】 6   #include&amp;lt;iostream&amp;gt; using namespace std; int my_set(int n) { int set_count = 1; if (n == 1) return 1; else { int i = 1; while (i &amp;lt;= (n / 2)) { set_count = set_count + my_set(i); i++; } return set_count; } } int main() { int n = 0; cin &amp;gt;&amp;gt; n; cout &amp;lt;&amp;lt; my_set(n); } </description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;众数问题</title>
+      <link>http://www.lovefive.club/post/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Mon, 21 Oct 2019 20:12:12 +0000</pubDate>
+      
+      <guid>http://www.lovefive.club/post/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/</guid>
+      <description>QHQ-【问题描述】给定含有S个元素的多重集合S，每个元素在S中出现的次数称为该元素的重数。多重集S中重数最大的元素称为众数。例如，S={1,2,2,2,3,5}。多重数S的众数是2，其重数为3 。
+ ``` 【问题描述】给定含有S个元素的多重集合S，每个元素在S中出现的次数称为该元素的重数。多重集S中重数最大的元素称为众数。例如，S={1,2,2,2,3,5}。多重数S的众数是2，其重数为3 。 【算法设计】对于给定的由n个自然数组成的多重集S，计算S的众数及其重数。 【输入形式】第1行为多重数集S中元素个数n；接下来的n行中，每行有一个自然数。 【输出形式】输出文件有2行，第1行是众数，第2行是重数。 【样例输入】 6 1 2 2 2 3 5 【样例输出】 2 3 ```   ``` #include&amp;lt;iostream&amp;gt; #include&amp;lt;algorithm&amp;gt; using namespace std; #define MAXINT 10000 int main() { int n = 0; cin &amp;gt;&amp;gt; n; int a[MAXINT] = { 0 }; for (int i = 0; i &amp;lt; n; i++) { cin &amp;gt;&amp;gt; a[i]; } sort(a, a + n); int maxcount = 0; int maxcount_index = 0; int temp = 1; int b[MAXINT] = { 0 }; b[0] = a[0]; int b_index = 1; bool flag = false; for (int i = 0; i &amp;lt; (n - 1); i++) { if (a[i] !</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;最大间隙</title>
+      <link>http://www.lovefive.club/post/%E6%9C%80%E5%A4%A7%E9%97%B4%E9%9A%99/</link>
+      <pubDate>Mon, 21 Oct 2019 13:53:21 +0000</pubDate>
+      
+      <guid>http://www.lovefive.club/post/%E6%9C%80%E5%A4%A7%E9%97%B4%E9%9A%99/</guid>
+      <description>QHQ-【问题描述】给定n个实数x1,x2,&amp;hellip;,xn, 求着n个数在实轴上相邻两个数之间的最大差值。假设对任何实数的下取整函数好事O(1), 设计解最大间隙问题的线性时间算法。
+ 【问题描述】给定n个实数x1,x2,...,xn, 求着n个数在实轴上相邻两个数之间的最大差值。假设对任何实数的下取整函数好事O(1), 设计解最大间隙问题的线性时间算法。 算法设计：对于给定的n个实数x1,x2,...,xn，计算它们的最大间隙。（只有一位小数） 【输入形式】第一行有1个正整数n（n不超过10），接下来的1行有n个实数x1,x2,...,xn，中间用空格隔开。 【输出形式】输出找到的最大间隙 【样例输入】 5 2.3 3.1 7.5 1.5 6.3 【样例输出】3.2（保留一位小数） #include&amp;lt;iostream&amp;gt; #include&amp;lt;iomanip&amp;gt; using namespace std; const int MAX = 200001; double num[MAX]; bool run() { int n; if (scanf_s(&amp;quot;%d&amp;quot;, &amp;amp;n) == EOF) return false; int i; double max = 0.0, min = INT_MAX; for (i = 0; i &amp;lt; n; i++) { scanf_s(&amp;quot;%lf&amp;quot;, &amp;amp;num[i]); if (num[i] &amp;gt; max) max = num[i]; if (num[i] &amp;lt; min) min = num[i]; } int* cnt = new int[n]; double* low = new double[n]; double* high = new double[n]; for (i = 0; i &amp;lt; n; i++) { cnt[i] = 0; low[i] = max; high[i] = min; } double ave = (max - min) / (n - 1); for (i = 0; i &amp;lt; n; i++) { int tmp = (int)((num[i] - min) / ave); cnt[tmp]++; if (num[i] &amp;gt; high[tmp]) high[tmp] = num[i]; if (num[i] &amp;lt; low[tmp]) low[tmp] = num[i]; } double t = high[0], res = 0.</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;金币阵列</title>
+      <link>http://www.lovefive.club/post/%E9%87%91%E5%B8%81%E9%98%B5%E5%88%97/</link>
+      <pubDate>Mon, 21 Oct 2019 13:53:21 +0000</pubDate>
+      
+      <guid>http://www.lovefive.club/post/%E9%87%91%E5%B8%81%E9%98%B5%E5%88%97/</guid>
+      <description>QHQ-【问题描述】有m*n(m&amp;lt;=100, n&amp;lt;=100)枚金币在桌面上排成一个m行n列的金币矩阵。每枚金币或正面朝上或背面朝上。用数字表示金币状态，0表示金币正面朝上，1表示金币背面朝上。
+金币矩阵游戏的规则是：1.每次可将任一行金币翻转过来放在原来的位置上；2.每次可任选2列，交换着2列金币位置。
+算法设计：给定金币阵列的初始状态和目标状态，计算按金币游戏规则，将金币阵列从初始状态转换到目标状态所需要的最小变换次数。
+ ``` 问题描述】有m*n(m&amp;lt;=100, n&amp;lt;=100)枚金币在桌面上排成一个m行n列的金币矩阵。每枚金币或正面朝上或背面朝上。用数字表示金币状态，0表示金币正面朝上， 1表示金币背面朝上。 金币矩阵游戏的规则是：1.每次可将任一行金币翻转过来放在原来的位置上；2.每次可任选2列，交换着2列金币位置。 算法设计：给定金币阵列的初始状态和目标状态，计算按金币游戏规则，将金币阵列从初始状态转换到目标状态所需要的最小变换次数。 【输入形式】第1行有2个正整数m和n，用#隔开。以下m行是金币阵列的初始状态，每行有n个数字表示该行金币的状态，0表示正面朝上，1表示背面朝上。接着的m行是金币阵列的目标状态，不用#隔开 。 【输出形式】输出计算出的最小变化次数。相应数据无解是，输出-1 。 【样例输入】 4#3 101 000 110 101 101 111 011 101 【样例输出】2 ```   ``` #include &amp;lt;fstream&amp;gt; #include &amp;lt;iostream&amp;gt; using namespace std; const int size1 = 100; int k, n, m, ccount, best; int b0[size1 + 1][size1 + 1], b1[size1 + 1][size1 + 1], b[size1 + 1][size1 + 1]; bool found; void stringToInt(string str,int&amp;amp; n,int&amp;amp; m) { int len = str.</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;分割输入字符串</title>
+      <link>http://www.lovefive.club/post/%E5%88%86%E5%89%B2%E8%BE%93%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Wed, 16 Oct 2019 20:12:12 +0000</pubDate>
+      
+      <guid>http://www.lovefive.club/post/%E5%88%86%E5%89%B2%E8%BE%93%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description>QHQ-It was day full of memories
+C++字符串分割 C++没有split分割的函数！！！！  C++没有c语言的那样方便的格式化输入，像c语言你如果想一次性输入1#2，而分别把1和2赋值给x和y，你可以这样： scanf(&amp;quot;%d#%d&amp;quot;,&amp;amp;x,&amp;amp;y); 当然你也可以自己定义一个方法来实现这个想法。
+ ``` #include &amp;lt;iostream&amp;gt; #include &amp;lt;string&amp;gt; #include &amp;lt;cstddef&amp;gt; #include &amp;lt;vector&amp;gt; using namespace std; namespace strg { //函数模板 template&amp;lt;typename Container&amp;gt; inline std::size_t strtok(std::string&amp;amp; str, Container&amp;amp; cont, const std::string defstr = &amp;quot; &amp;quot;) { cont.clear(); std::size_t size = 0; std::size_t begpos = 0 ; std::size_t endpos = 0 ; begpos = str.find_first_not_of(defstr); while (begpos != std::string::npos) { size++; endpos = str.</description>
+    </item>
+    
+  </channel>
+</rss>

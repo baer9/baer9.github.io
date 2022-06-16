@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43;格式化输出 on My New Hugo Site</title>
+    <link>http://www.lovefive.club/tags/c&#43;&#43;%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA/</link>
+    <description>Recent content in C&#43;&#43;格式化输出 on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 21 Oct 2019 13:53:21 +0000</lastBuildDate><atom:link href="http://www.lovefive.club/tags/c++%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#43;&#43;最大间隙</title>
+      <link>http://www.lovefive.club/post/%E6%9C%80%E5%A4%A7%E9%97%B4%E9%9A%99/</link>
+      <pubDate>Mon, 21 Oct 2019 13:53:21 +0000</pubDate>
+      
+      <guid>http://www.lovefive.club/post/%E6%9C%80%E5%A4%A7%E9%97%B4%E9%9A%99/</guid>
+      <description>QHQ-【问题描述】给定n个实数x1,x2,&amp;hellip;,xn, 求着n个数在实轴上相邻两个数之间的最大差值。假设对任何实数的下取整函数好事O(1), 设计解最大间隙问题的线性时间算法。
+ 【问题描述】给定n个实数x1,x2,...,xn, 求着n个数在实轴上相邻两个数之间的最大差值。假设对任何实数的下取整函数好事O(1), 设计解最大间隙问题的线性时间算法。 算法设计：对于给定的n个实数x1,x2,...,xn，计算它们的最大间隙。（只有一位小数） 【输入形式】第一行有1个正整数n（n不超过10），接下来的1行有n个实数x1,x2,...,xn，中间用空格隔开。 【输出形式】输出找到的最大间隙 【样例输入】 5 2.3 3.1 7.5 1.5 6.3 【样例输出】3.2（保留一位小数） #include&amp;lt;iostream&amp;gt; #include&amp;lt;iomanip&amp;gt; using namespace std; const int MAX = 200001; double num[MAX]; bool run() { int n; if (scanf_s(&amp;quot;%d&amp;quot;, &amp;amp;n) == EOF) return false; int i; double max = 0.0, min = INT_MAX; for (i = 0; i &amp;lt; n; i++) { scanf_s(&amp;quot;%lf&amp;quot;, &amp;amp;num[i]); if (num[i] &amp;gt; max) max = num[i]; if (num[i] &amp;lt; min) min = num[i]; } int* cnt = new int[n]; double* low = new double[n]; double* high = new double[n]; for (i = 0; i &amp;lt; n; i++) { cnt[i] = 0; low[i] = max; high[i] = min; } double ave = (max - min) / (n - 1); for (i = 0; i &amp;lt; n; i++) { int tmp = (int)((num[i] - min) / ave); cnt[tmp]++; if (num[i] &amp;gt; high[tmp]) high[tmp] = num[i]; if (num[i] &amp;lt; low[tmp]) low[tmp] = num[i]; } double t = high[0], res = 0.</description>
+    </item>
+    
+  </channel>
+</rss>

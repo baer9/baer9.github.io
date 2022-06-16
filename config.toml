@@ -1,0 +1,3 @@
+baseURL = 'http://www.lovefive.club/'
+languageCode = 'zh-CN'
+title = 'My New Hugo Site'

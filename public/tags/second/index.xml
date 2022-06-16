@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Second on My New Hugo Site</title>
+    <link>http://www.lovefive.club/tags/second/</link>
+    <description>Recent content in Second on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 16 Oct 2019 20:12:12 +0000</lastBuildDate><atom:link href="http://www.lovefive.club/tags/second/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第一次测试尝试！</title>
+      <link>http://www.lovefive.club/post/first-test/</link>
+      <pubDate>Wed, 16 Oct 2019 20:12:12 +0000</pubDate>
+      
+      <guid>http://www.lovefive.club/post/first-test/</guid>
+      <description>QHQ-This is a nice day
+Why Blog 对博客的理解 喜欢写Blog的人，会经历三个阶段。
+ 第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。
+  第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。
+  第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。
+ 我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。
+通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。
+关于巴尔 巴尔郝图 是小柒（戚浩强）的个人站。
+ 一盏灯， 一片昏黄； 一简书， 一杯淡茶。 守着那一份淡定， 品读属于自己的寂寞。 保持淡定， 才能欣赏到最美丽的风景！ 保持淡定， 人生从此不再寂寞。
+ 一盏灯， 一片昏黄；一简书， 一杯淡茶。 守着那一份淡定， 品读属于自己的寂寞。 保持淡定， 才能欣赏到最美丽的风景！ 保持淡定， 人生从此不再寂寞。
+   Tables Are Cool     col 3 is right-aligned $1600   col 2 is centered $12   zebra stripes are neat $1    </description>
+    </item>
+    
+  </channel>
+</rss>

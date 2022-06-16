@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bat on My New Hugo Site</title>
+    <link>http://www.lovefive.club/categories/bat/</link>
+    <description>Recent content in bat on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 14 Dec 2020 16:56:32 +0000</lastBuildDate><atom:link href="http://www.lovefive.club/categories/bat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bat批量修改文件名</title>
+      <link>http://www.lovefive.club/post/bat%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%90%8D/</link>
+      <pubDate>Mon, 14 Dec 2020 16:56:32 +0000</pubDate>
+      
+      <guid>http://www.lovefive.club/post/bat%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%90%8D/</guid>
+      <description>1、新建文本文档  写入dir*.*/b &amp;gt;file.csv 保存并更改为bat文件。
+ 2、打开 file.csv 表格  复制第一列文件名到第二列，选择第二列全部内容，CTRL+F替换想换的内容，在这是直接去除字符。   如只想要其中的英文、汉字或数字可以移步第五步。
+ 3、写入公式  用公式生成重命名的批处理命令 =&amp;ldquo;ren &amp;ldquo;&amp;amp;A2&amp;amp;&amp;rdquo; &amp;ldquo;&amp;amp;B2 在存放文件的文件夹内新建一个记事本，将批处理命令粘贴到记事本，保存。 将后缀名txt修改为bat，双击 注意：ren后面有一个空格，不要漏掉 如果文件名中有空格，需要在公式中的文件名前后再加上一对半角引号，例如： =&amp;ldquo;ren &amp;ldquo;&amp;quot;&amp;quot;&amp;amp;A2&amp;amp;&amp;rdquo;&amp;rdquo;&amp;rdquo; &amp;ldquo;&amp;quot;&amp;quot;&amp;amp;B2&amp;amp;&amp;rdquo;&amp;rdquo;&amp;quot;&amp;quot; 可以选择直接使用这个！ 然后拖动公式应用整列，制作成下面的表格：  4、新建bat文件，一键完成  复制第三列全面内容，与第一步相同，只需把第一步内容变更为复制内容即可。  5、除去其中的数字  做完以上的步骤，感觉文件名中还存有数字看着也不是很舒服，所有就多加一步除去其中的数字，因为文件名中的数字是随机的，所有就不能用查找替换了，但Excel里有一个CTRL+E快速填充。 在第三列插入一列，以方便提取第二列的关键字。然后输入英文、汉字或数字其中一种，再用CTRL+E快速填充这一列。 图片来源请点击 然后转入第三步。
+ 另一种方法  选择除去特定字符串，一步搞定
+ @echo off Setlocal Enabledelayedexpansion set &amp;quot;str=需要除去的特定字符串&amp;quot; for /f &amp;quot;delims=&amp;quot; %%i in (&#39;dir /b *.*&#39;) do ( set &amp;quot;var=%%i&amp;quot; &amp;amp; ren &amp;quot;%%i&amp;quot; &amp;quot;!var:%str%=!&amp;quot;) 如：除去所有文件名中含有704的字符串(去除汉字和英文也OK!) </description>
+    </item>
+    
+    <item>
+      <title>Bat批修改文件后缀名</title>
+      <link>http://www.lovefive.club/post/bat%E7%AE%80%E5%8D%95%E6%89%B9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.lovefive.club/post/bat%E7%AE%80%E5%8D%95%E6%89%B9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</guid>
+      <description>今天先说说bat最简单的操作 ren *.jpg *.txt  此语句可以把当前文件夹的所有jpg照片转换为txt格式，（有利于隐藏照片哦）。
+ 接下来就简单来说一下怎么具体操作吧  新建txt文本 在里面填写上面语句 修改txt后缀名为bat   提示：.jpg 意思是任意文件名的jpg格式，当然也可以.* ，表示任意文件文件格式，第二个*.txt意思是任意任意文件名的最终格式。就是原文件名不变，只修改后缀名。（后缀名可以根据自己的要求自己更改）。
+   未完待续。。。  </description>
+    </item>
+    
+  </channel>
+</rss>
