@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Python_分娩数据集处理 | Bear</title>
+<meta name="description" content="有志者，事竟成">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://lovefive.club/favicon.ico?v=1661931557503">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://lovefive.club/styles/main.css">
+
+
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://lovefive.club">Bear</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>Python_分娩数据集处理</h1>
+            <p class="article-meta">
+              2019-01-10
+              
+            </p>
+            
+              <img src="https://lovefive.club/post-images/Python_分娩数据集处理.jpg" alt="Python_分娩数据集处理">
+            
+            <div class="post-content" v-pre>
+              <h3 id="python分娩数据集处理_2019">Python分娩数据集处理_2019</h3>
+<hr>
+<h4 id="目录">目录</h4>
+<p><a href="#_Toc42501022">一、  简介</a></p>
+<p><a href="#_Toc42501023">1.1、数据集摘要</a></p>
+<p><a href="#_Toc42501024">1.2、资料来源</a></p>
+<p><a href="#_Toc42501025">1.2.1、网址:</a></p>
+<p><a href="#_Toc42501026">1.2.2、来源机构：</a></p>
+<p><a href="#_Toc42501027">1.2.3、分析前资料理解：</a></p>
+<p><a href="#_Toc42501028">1.3、分析目标及方法：</a></p>
+<p><a href="#_Toc42501029">二、  数据读取</a></p>
+<p><a href="#_Toc42501030">2.1、数据读取方法</a></p>
+<p><a href="#_Toc42501031">2.2、读取的结果</a></p>
+<p><a href="#_Toc42501032">2.3、数据简单概要描述</a></p>
+<p><a href="#_Toc42501033">三、  数据预处理</a></p>
+<p><a href="#_Toc42501034">3.1、分析数据现状，明确问题</a></p>
+<p><a href="#_Toc42501035">3.2、预处理方法及结果</a></p>
+<p><a href="#_Toc42501036">3.2.1、数据清洗</a></p>
+<p><a href="#_Toc42501037">3.2.2、数据变换</a></p>
+<p><a href="#_Toc42501038">四、  用分类模型实现分娩分析</a></p>
+<p><a href="#_Toc42501039">4.1、分析目标</a></p>
+<p><a href="#_Toc42501040">4.2、分析方法及结果</a></p>
+<p><a href="#_Toc42501041">4.2.1、准备工作</a></p>
+<p><a href="#_Toc42501042">4.2.2、详细步骤</a></p>
+<p><a href="#_Toc42501043">五、  结论与展望</a></p>
+<p><a href="#_Toc42501044">5.1、结论及局限性</a></p>
+<p><a href="#_Toc42501045">5.2、过程感悟及展望</a></p>
+<h3 id="一-简介">一、  简介</h3>
+<h4 id="11-数据集摘要">1.1、数据集摘要</h4>
+<p>此数据集包含有关 80 名孕妇的剖腹产结果的信息，这些孕妇在医疗领域具有最重要的分娩问题特征：</p>
+<table>
+<thead>
+<tr>
+<th>名称  （Name）</th>
+<th>分娩情况分类数据集数据集  (Caesarian Section Classification Dataset Data  Set)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>特征简介  （Feature introduction）</td>
+<td>整数（Integer）</td>
+</tr>
+<tr>
+<td>记录数（Record number）</td>
+<td>80/6（Eighty/Six）</td>
+</tr>
+<tr>
+<td>分析目标  （Analysis target）</td>
+<td>分娩情况（是否剖腹产）与年龄、分娩次数、分娩时间、血压、心脏状况有无准确联系  （Is there any accurate relationship between  delivery and age, delivery times, delivery time, blood pressure and heart  condition）</td>
+</tr>
+<tr>
+<td>分析思路及方法（Analysis ideas and methods）</td>
+<td>收集多数信息，分析计算其中是否有准确联系  （Collect most information, analyze and calculate  whether there is an accurate connection）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-资料来源">1.2、资料来源</h3>
+<h4 id="121-网址">1.2.1、网址:</h4>
+<p>UCI Machine Learning Repository （加利福尼大学欧文分校的机器学习库）， http://archive.ics.uci.edu/ml/datasets.php（网址）</p>
+<p>Caesariaqwn Section Classification Dataset Data Set（分娩情况分类数据集数据集），</p>
+<p>http://archive.ics.uci.edu/ml/datasets/Caesarian+Section+Classification+Dataset</p>
+<h4 id="122-来源机构">1.2.2、来源机构：</h4>
+<p>Name: Muhammad Zain Amin</p>
+<p>Email: ZainAmin1@outlook.com</p>
+<p>Institution: University of Engineering and Technology, Lahore, Pakistan</p>
+<p>机构：巴基斯坦拉合尔工程技术大学</p>
+<p>Name: Amir Ali</p>
+<p>Email: amirali.ryk1@gmail.com</p>
+<p>Institution: University of Engineering and Technology, Lahore, Pakistan</p>
+<p>机构：巴基斯坦拉合尔工程技术大学</p>
+<p>其中数据集中选择年龄、分娩次数、分娩时间、血压、心脏状况和是否剖腹产为6个属性。我们将分娩时间分类为早产、准时和晚点。就像分娩时间一样，我们考虑血压处于低、正常和高情绪三种状态。心脏问题被归类为正常和无能。</p>
+<h4 id="123-分析前资料理解">1.2.3、分析前资料理解：</h4>
+<p>通过百度得到理解各个名词意义，理解得到其中是否有客观因素联系，猜测是否有联系，再用以数据分析，得到科学分析证明。</p>
+<p>其中百度百科得到各个因素的含义，猜测分娩情况受年龄、分娩次数、分娩时间、血压、心脏状况的影响，所以这五项为因变量，而是否采取了剖腹产则是结果变量。然后来一一分析证明是否猜测正确。</p>
+<h3 id="13-分析目标及方法">1.3、分析目标及方法：</h3>
+<p><strong>分析目标：</strong></p>
+<p>每一个变量对分娩情况的影响，寻到最适变量或最适范围及其是成正相关还是负相关。</p>
+<p><strong>方法：</strong></p>
+<p>在建立svm模型后，采用固定其他变量，定一变量在范围中寻找最值及其趋势。</p>
+<h3 id="二-数据读取">二、  数据读取</h3>
+<h4 id="21-数据读取方法">2.1、数据读取方法</h4>
+<p>导入xlrd使用open_workbook()函数对本次数据集文件caesarian.xlsx进行读取（本来想的是用Pandas里的read_excel()函数来读取文件，但网上搜集学习的时候，看到这个库包，很感兴趣，而且 Pandas的基本操作已经都会了。所以就学习了一下。）</p>
+<p>基础方法(pandas)：</p>
+<pre><code>          ![image](https://tva3.sinaimg.cn//006WrmUrly1goewk1c167j30dh07h0vc.jpg)               
+</code></pre>
+<p style="text-align:center">图2.1 读取方法</p>
+<p>改进的（xlrd）：</p>
+<p><em>导入</em>xlrd<em>库包</em></p>
+<p><code>import xlrd</code></p>
+<p><code>import matplotlib.pyplot as plt</code></p>
+<p><em>读取<strong>caesarian.xlsx</strong>文件，<strong>r</strong>代表<strong>read</strong>，其中也有<strong>w</strong>，<strong>write</strong>等</em></p>
+<p><code>data = xlrd.open_workbook(r'./data/caesarian.xlsx' )</code></p>
+<p><em>选择<strong>xlsx</strong>文件的第一个表单，也可更改为其他表单</em></p>
+<p><code>table = data.sheets()[0]</code></p>
+<h4 id="22-读取的结果">2.2、读取的结果</h4>
+<p>读取的表单数据概况：</p>
+<p><em>获取第一行所有内容,如果括号中1就是第二行，这点跟列表索引类似</em></p>
+<p><code>keys = table.row_values(0)</code></p>
+<p><em>获取工作表的有效行数</em></p>
+<p><code>rowNum = table.nrows</code></p>
+<p><em>获取工作表的有效列数</em></p>
+<p><code>colNum = table.ncols</code></p>
+<p><code>print(keys)</code></p>
+<p><code>print(rowNum, colNum)</code></p>
+<p>输出结果:</p>
+<figure data-type="image" tabindex="1"><img src="//tva2.sinaimg.cn//006WrmUrly1goewjqmgxfj30hr02c0t8.jpg" alt="image" loading="lazy"></figure>
+<p style="text-align:center">图2.2.1 读取结果</p>
+<p>Pandas的语句：</p>
+<pre><code>
+import pandas as pd
+
+data = pd.read_excel('./data/caesarian.xlsx')
+
+data.head()
+
+print(data.shape)
+
+print('数据: \n',data.head(15))
+</code></pre>
+<p>Pandas的简单输出数据：<br>
+<img src="//tva4.sinaimg.cn//006WrmUrly1goewjgyjh2j30fe0bbabq.jpg" alt="image" loading="lazy"></p>
+<p style="text-align:center">图 2.2.2 读取结果</p>
+<h4 id="23-数据简单概要描述">2.3、数据简单概要描述</h4>
+<blockquote>
+<p>从读取的数据可知，数据文件有八十行六列，有年龄、分娩次数、分娩时间、血压、心脏状况和剖腹产6个属性，而且文档介绍中也说明了年龄在17-40区间，分娩次数在1-4次，分娩时间0表示准时，1表示提前，2表示晚于，血压是0表示低，1是正常，2是高，心脏问题0表示恰当正常的，1表示不正常的，剖腹产0表示没有采用，即顺利分娩，1表示剖腹产了，即非自然分娩。</p>
+</blockquote>
+<ul>
+<li>
+<p>@attribute ‘year 年龄’<br>
+{ 22,26,28,27,32,36,33,23,20,29,25,37,24,18,30,40,31,19,21,35,17,38 }</p>
+</li>
+<li>
+<p>@attribute 'Delivery number次数' { 1,2,3,4 }</p>
+</li>
+<li>
+<p>@attribute 'Delivery time分娩时间' { 准时0,提前的1,晚于的2 }</p>
+</li>
+<li>
+<p>@attribute 'Blood of Pressure血压' { 高2,正常1,低0 }</p>
+</li>
+<li>
+<p>@attribute 'Heart Problem心脏问题' { 不恰当1,恰当的0 }</p>
+</li>
+<li>
+<p>@attribute Caesarianpa'剖腹产 {不 0, 是1 }</p>
+</li>
+</ul>
+<h3 id="三-数据预处理">三、  数据预处理</h3>
+<h4 id="31-分析数据现状明确问题">3.1、分析数据现状，明确问题</h4>
+<blockquote>
+<p>读取数据发现数据都是数值化，基本数据操作很方便，下一步检查数据是否有缺失，是否均衡，重复值情况等。</p>
+</blockquote>
+<h4 id="32-预处理方法及结果">3.2、预处理方法及结果</h4>
+<h5 id="321-数据清洗">3.2.1、数据清洗</h5>
+<h6 id="3211-查看数据的缺失值">3.2.1.1、查看数据的缺失值</h6>
+<p><strong>代码：</strong></p>
+<p><em>通过describe()方法看数据</em></p>
+<p><code>data.describe()</code></p>
+<p><em>使用isnull识别缺失值</em></p>
+<p><code>print('caesarian每个特征缺失的数目为：\n', data.isnull().sum())</code></p>
+<p><em>使用notnull识别非缺失值</em></p>
+<p><code>print('caesarian每个特征非缺失的数目为：\n', data.notnull().sum())</code></p>
+<ul>
+<li>
+<p>通过describe()方法看数据，主要关注mean这个，对数据分布有个大体的了解。 然后再看数据样本是否均衡</p>
+</li>
+<li>
+<p>两个print代码是检测数据中是否有某个或某些特征的值是不完整的，即是否有缺失值。使用isnull()识别缺失值，使用notnull()识别非缺失值</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="//tvax4.sinaimg.cn//006WrmUrgy1goewi8vbagj307n05ngm6.jpg" alt="image" loading="lazy"></th>
+<th style="text-align:center"><img src="//tvax3.sinaimg.cn//006WrmUrgy1goewi08qk7j307q05njs1.jpg" alt="image" loading="lazy"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">图3.2.1 缺失结果</td>
+<td style="text-align:center">图3.2.2 非缺失情况</td>
+</tr>
+</tbody>
+</table>
+<h6 id="结合isnull及notnull方法可以从输出结果中看出此数据集中不存在缺失值-且样本较为均衡差别不大">结合isnull及notnull方法，可以从输出结果中看出此数据集中不存在缺失值。且样本较为均衡，差别不大</h6>
+<ul>
+<li>所有数据的数值为79，所以没有缺失值。</li>
+</ul>
+<h6 id="3212-查看重复值">3.2.1.2、查看重复值</h6>
+<p>代码：</p>
+<pre><code>extra = data[data.duplicated()]
+
+print(extra.shape)
+</code></pre>
+<p>结果：</p>
+<figure data-type="image" tabindex="2"><img src="//tvax3.sinaimg.cn//006WrmUrgy1goewhemf7uj302800ugle.jpg" alt="image" loading="lazy"></figure>
+<p style="text-align:center">图3.2.3 重复值结果</p>
+<p>代码查看数据重复值。有4个重复值，但先不删除它，因为这些数据是用数值代替的。</p>
+<h4 id="322-数据变换">3.2.2、数据变换</h4>
+<h5 id="3221-设置中文显示">3.2.2.1、设置中文显示</h5>
+<p>代码：</p>
+<p><em>#</em> <em>中文显示</em></p>
+<pre><code>plt.rcParams['font.sans-serif'] = 'SimHei' 
+
+plt.rcParams['axes.unicode_minus'] = False
+</code></pre>
+<h5 id="3222-单变量可视化">3.2.2.2、单变量可视化</h5>
+<p>代码：</p>
+<pre><code>*每一个变量是一列，获取一列数值保存为数组*
+
+y = table.col_values(0)
+
+*设置刻度的字体大小*
+
+plt.tick_params(labelsize=20)
+
+plt.title('分娩实验年龄分布', fontsize='18')
+
+plt.xlabel('血压情况/人', fontsize='18')
+
+plt.ylabel('年龄', fontsize='18')
+
+*绘制折线图*
+
+plt.plot(range(0, 80), y)
+
+*保存图片，设置dpi和inches使图片清晰完整*
+
+plt.savefig('./img/分娩实验年龄分布.png', dpi=500, bbox_inches='tight')
+
+plt.show()
+</code></pre>
+<figure data-type="image" tabindex="3"><img src="//tvax3.sinaimg.cn//006WrmUrgy1goewgybfhvj30hx0dgjv1.jpg" alt="image" loading="lazy"></figure>
+<p style="text-align:center">图3.2.4  分娩实验年龄分布</p>
+<p><strong>下面的代码只写出不同的重点之处，其余基本都不在书写。</strong></p>
+<p>代码：</p>
+<pre><code>y = table.col_values(1) # *读取列的值*
+
+*运用四个小变量来计数*
+
+cout0 = 0
+cout1 = 0
+cout2 = 0
+cout3 = 0
+
+for i in range(0, len(y)):
+  if y[i] == 1:
+    cout0 = cout0 + 1
+  if y[i] == 2:
+    cout1 = cout1 + 1
+  if y[i] == 3:
+    cout2 = cout2 + 1
+  if y[i] == 4:
+    cout3 = cout3 + 1
+
+y = [cout0, cout1, cout2, cout3]
+x = ['1', '2', '3', '4']
+*在柱状图上标记具体数量，ha表示水平，va表示竖直*
+for x, y in enumerate(y):
+  plt.text(x, y + 0.1, '%s' % y, fontsize='16', ha='center', va='bottom')
+
+其中y+0.1是指在y轴的上面距离0.1，可以调高度
+</code></pre>
+<img src="//tvax1.sinaimg.cn//006WrmUrgy1goewgfgio8j30h90cxn13.jpg" alt="image">
+<p style="text-align:center">图3.2.5 单变量图表实例图</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="//tva2.sinaimg.cn//006WrmUrgy1goewfrqbsjj30hx0dgjv1.jpg" alt="image" alt="image.png" style="zoom:50%;" /></th>
+<th style="text-align:center"><img src="//tvax2.sinaimg.cn//006WrmUrgy1goewf34dgvj308i06paa5.jpg" alt="image" loading="lazy"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">图一 分娩实验年龄分布</td>
+<td style="text-align:center">图二  分娩次数情况柱状图</td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="//tvax3.sinaimg.cn//006WrmUrgy1goewelyj9nj308a06gdfy.jpg" alt="image"></td>
+<td style="text-align:center"><img src="//tva3.sinaimg.cn//006WrmUrgy1goewe94qnoj308j06e3yj.jpg" alt="image"></td>
+</tr>
+<tr>
+<td style="text-align:center">图三  分娩情况柱状图</td>
+<td style="text-align:center">图四  血压情况柱状图</td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="//tva1.sinaimg.cn//006WrmUrgy1goewdstcnzj308806674b.jpg" alt="image"></td>
+<td style="text-align:center"><img src="//tvax3.sinaimg.cn//006WrmUrgy1goewdchayrj30ai07wwem.jpg" alt="image"></td>
+</tr>
+<tr>
+<td style="text-align:center">图五  心脏情况柱状图</td>
+<td style="text-align:center">图六  剖腹产情况柱状图</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>六张图分别为图一、分娩实验年龄分布；图二、分娩次数情况柱状图；图三、分娩情况柱状图；图四、血压情况柱状图；图五、心脏情况柱状图；图六、剖腹产情况柱状图。</p>
+</blockquote>
+<blockquote>
+<p>由单一变量可视化操作之后，可清晰的看出这组数据分布情况，可知数据均衡，符合实验数据分析样例，接下来就是使用分类方法来验证这五个因素对分娩到底有没有联系。</p>
+</blockquote>
+<h3 id="四-用分类模型实现分娩分析">四、  用分类模型实现分娩分析</h3>
+<h4 id="41-分析目标">4.1、分析目标</h4>
+<p>我们有五个可以输入的属性，分别为：年龄、分娩次数、分娩时间、血压和心脏状况，输出则是剖腹产属性。通过构建一个SVM模型，再通过预测训练集的结果与真实的结果对比，计算准确率，并多测几组数据，然后得到数据，即可证明分娩情况与年龄、分娩次数、分娩时间、血压和心脏状况是否有联系。</p>
+<h3 id="42-分析方法及结果">4.2、分析方法及结果</h3>
+<h4 id="421-准备工作">4.2.1、准备工作</h4>
+<p>我所获得的数据集来源于UCI Machine Learning Repository网站，我们首先看caesarian.csv文件中6个字符串数据的排序：</p>
+<p>年龄、分娩次数、分娩时间、血压情况、心脏情况、是否剖腹产</p>
+<p>前5个字段组成输入数据，我们的任务是预测是否剖腹产。</p>
+<p>转换为txt文本，名字为caesarian.txt，更容易处理。因为是六个字段所以代码如下：</p>
+<pre><code>import pandas as pd
+
+data = pd.read_csv('./data/caesarian.csv', encoding='utf-8')
+
+with open('./data/news_data.txt','a+') as f:
+
+  for line in data.values:
+
+    f.write((str(line[0])+','+str(line[1])+','+
+
+       str(line[2])+','+str(line[3])+','+
+
+       str(line[4])+','+str(line[5])+'\n'))
+</code></pre>
+<p>txt文件的六列属性：</p>
+<p>年龄、分娩次数、时间、血压、心脏和剖腹产</p>
+<h4 id="422-详细步骤">4.2.2、详细步骤</h4>
+<h5 id="1数据全部加在x">1）数据全部加在X</h5>
+<p><code>input_file = './data/news_data.txt'</code></p>
+<p>#读取数据</p>
+<pre><code>X = []
+
+count = 0
+
+with open(input_file,'r') as f:
+
+  for line in f.readlines():
+
+    data = line[:-1].split(',')
+
+    X.append([data[0]] + data[2:])
+
+X = np.array(X)
+</code></pre>
+<p>得到的X数据为：</p>
+<figure data-type="image" tabindex="4"><img src="//tvax3.sinaimg.cn//006WrmUrgy1goewceudeuj305k03fwel.jpg" alt="image" loading="lazy"></figure>
+<p style="text-align:center">图4.2.1  x数据</p>
+<h5 id="2将字符串格式转换成数值格式">2）将字符串格式转换成数值格式</h5>
+<p>为了更好的去读取操作统计，所以要转换为数值格式，方便构建模型。</p>
+<pre><code>label_encoder = []
+
+X_encoder = np.empty(X.shape)
+
+for i,item in enumerate(X[0]):
+
+  if item.isdigit():
+
+    X_encoder[:,i] = X[:,i]
+
+  else:
+
+    label_encoder.append(preprocessing.LabelEncoder())
+
+    X_encoder[:,i] = label_encoder[-1].fit_transform(X[:,i])
+
+X = X_encoder[:,:-1].astype(int)
+
+y = X_encoder[:,-1].astype(int)
+</code></pre>
+<p>得到X和y的值为:</p>
+<figure data-type="image" tabindex="5"><img src="//tva2.sinaimg.cn//006WrmUrgy1goewbuunulj305o04m3yk.jpg" alt="image" loading="lazy"></figure>
+<p style="text-align:center">图4.2.2 X和y的值</p>
+<h5 id="3svm模型操作">3)svm模型操作</h5>
+<pre><code>params = {'kernel':'rbf','probability':True}
+
+classifier = SVC(**params)
+
+classifier.fit(X,y)
+
+\#交叉验证
+
+from sklearn.model_selection import cross_val_score
+
+这个已经废弃，所以引用上面的进行交叉验证
+
+\#from sklearn import cross_validation
+
+就不需要cross_validation，直接使用cross_val_score（）方法
+
+\#accuracy = cross_validation.cross_val_score(classifier,
+
+\#        X,y,scoring = 'accuracy',cv = 3)
+
+accuracy = cross_val_score(classifier,
+
+        X,y,scoring = 'accuracy',cv = 3)
+
+print(&quot;Accuracy of the classifier:&quot; + str(round(100*accuracy.mean(),2))+&quot;%&quot;)
+</code></pre>
+<p>在这需要说明一下 在用<code>from sklearn import cross_validation</code>时，报错为<code>cannot import name 'cross_validation' from 'sklearn'</code>。</p>
+<figure data-type="image" tabindex="6"><img src="//tva4.sinaimg.cn//006WrmUrgy1goewb6wzoxj30ee030q3m.jpg" alt="image" loading="lazy"></figure>
+<p style="text-align:center">图4.2.3 报错信息</p>
+<p>查询得知说是新版<code>sklearn</code>中<code>cross_validation</code>被废弃，可是测试了几个网上的解决办法，依然报错。</p>
+<p>最后还是深入了解到这个方法后知道，<code>cross_val_score（）</code>方法已经迁移到<code>model_selection</code>，所以可以直接从 <code>sklearn.model_selection</code> 导入<code>cross_val_score（）</code>进行使用。交叉验证换成百分比得到结果：</p>
+<figure data-type="image" tabindex="7"><img src="//tvax2.sinaimg.cn//006WrmUrgy1goewasb79dj30do01y0t4.jpg" alt="image" loading="lazy"></figure>
+<p style="text-align:center">图4.2.4 SVM训练结果</p>
+<p>结果只是73.85%，比预想的要低，但是没有关系，还没有结束。</p>
+<h5 id="4用一个新的数据点测试svm">4）用一个新的数据点测试SVM</h5>
+<pre><code>input_data = ['22', '1','1','1']
+
+input_data=np.array(input_data).reshape(1,-1)
+
+input_data_encoded = [-1] * len(input_data)
+
+\#input_data = flatten(input_data).reshape(1,-1)
+
+count = 0
+
+for i,item in enumerate(input_data):
+
+  if item.isdigit() :
+
+    input_data_encoded[i] = int(input_data[i])
+
+  else:
+
+    input_data_encoded[i]=     int(label_encoder[count].transform(input_data[i]))
+
+    count = count + 1
+</code></pre>
+<p>用一个新的数据点来校正数据精度。</p>
+<pre><code>input_data_encoded = np.array(input_data_encoded)
+
+output_class = classifier.predict(input_data_encoded)
+
+print(&quot;Outputclass:&quot;,label_encoder[1].inverse_transform(output_class)[0])label_encoder = []）
+</code></pre>
+<p>最后得到结果为:</p>
+<figure data-type="image" tabindex="8"><img src="//tva4.sinaimg.cn//006WrmUrgy1goewa9x860j30dn022dgc.jpg" alt="image" loading="lazy"></figure>
+<p style="text-align:center">图4.2.5 实训结果</p>
+<h5 id="5定四变量动一变量寻找最值">5）定四变量，动一变量，寻找最值</h5>
+<blockquote>
+<p>由下面的属性可知，数据集的年龄范围是17-40，分娩次数取2，分娩时间取0，血压取1，心脏问题取0，来判断是否采用了剖腹产，百分比越大即越符合模型，即最值。年龄从上面的单变量可视化的年龄折线图可知，27岁为平均值。</p>
+</blockquote>
+<ul>
+<li>
+<p>@attribute ‘year 年龄’<br>
+{ 22,26,28,27,32,36,33,23,20,29,25,37,24,18,30,40,31,19,21,35,17,38 }</p>
+</li>
+<li>
+<p>@attribute 'Delivery number次数' { 1,2,3,4 }</p>
+</li>
+<li>
+<p>@attribute 'Delivery time分娩时间' { 准时0,提前的1,晚于的2 }</p>
+</li>
+<li>
+<p>@attribute 'Blood of Pressure血压' { 高2,正常1,低0 }</p>
+</li>
+<li>
+<p>@attribute 'Heart Problem心脏问题' { 不恰当1,恰当的0 }</p>
+</li>
+<li>
+<p>@attribute Caesarianpa'剖腹产 {不 0, 是1 }</p>
+</li>
+</ul>
+<figure data-type="image" tabindex="9"><img src="//tvax2.sinaimg.cn//006WrmUrgy1goew9uerhij30hv09ft9i.jpg" alt="image" loading="lazy"></figure>
+<p style="text-align:center">图4.2.6 年龄影响图</p>
+<blockquote>
+<p>根据折线图可知，27不仅为平均值，而且还是最值，并且呈现为正太分布，39岁的忽然有一小幅度上升，估计是svm模型有一点不完善，猜测是数据不是很多，所以造成的一点准确，但是基本可知27为最适年龄。</p>
+</blockquote>
+<ul>
+<li>然后定年龄为27，分析分娩次数的影响。</li>
+</ul>
+<figure data-type="image" tabindex="10"><img src="//tva1.sinaimg.cn//006WrmUrgy1goew9d3hjej30gn0863yx.jpg" alt="image" loading="lazy"></figure>
+<p style="text-align:center">图4.2.6 分娩次数影响图</p>
+<ul>
+<li>得到结果为，分娩次数与分娩情况成负相关。</li>
+</ul>
+<figure data-type="image" tabindex="11"><img src="//tvax2.sinaimg.cn//006WrmUrgy1goew8ox551j30gc08hmxp.jpg" alt="image" loading="lazy"></figure>
+<p style="text-align:center">图4.2.7  分娩时间影响图</p>
+<ul>
+<li>因为分娩时间的准确度都在50%左右，所以没有很重要的影响分娩情况。即分娩时间不是直接影响因素。</li>
+</ul>
+<figure data-type="image" tabindex="12"><img src="//tva2.sinaimg.cn//006WrmUrgy1goew7o2wn0j30hv087t94.jpg" alt="image" loading="lazy"></figure>
+<p style="text-align:center">图4.2.8 血压情况图</p>
+<ul>
+<li>从图可知，血压越正常对分娩情况越好。偏低或偏高对分娩都有负面影响。</li>
+</ul>
+<img src="//tvax1.sinaimg.cn//006WrmUrgy1goew5qc5asj30he08cq3h.jpg" alt="image">
+<p style="text-align:center">图4.2.9 心脏情况图</p>
+<ul>
+<li>从图可知，心脏也好对分娩情况也好，成正相关。</li>
+</ul>
+<h3 id="五-结论与展望">五、  结论与展望</h3>
+<h4 id="51-结论及局限性">5.1、结论及局限性</h4>
+<p>根据上面猜测与实际预测，得到的结果是分娩情况与年龄，分娩次数，分娩时间，血压情况和心脏情况有准确联系，而且年龄在27对分娩情况影响越小，年龄偏大偏小都会对分娩造成或多或少的负面影响，成正态分布；而分娩次数则成负相关，分娩时间没有太直接影响，血压情况正常最好，偏高偏低都会对分娩造成负影响，心脏问题也是正常为好。但是也有局限性，就是具体的那个因素对分娩造成的影响更大还没有得出，这个需要得到更多的数据，然后从损失函数、最小二乘法以及核函数Kernel的方面来进行预测核实。</p>
+<h4 id="52-过程感悟及展望">5.2、过程感悟及展望</h4>
+<p>在刚开始去处理这个数据集的时候没有一点头绪，翻看了很多资料，理解了这个这个数据集的内容和目的之后，脑中思路就很清晰了，然后就开始编写代码。但开始读取文本的简单操作就让我重新查看了书本和网上资料，发现对知识的掌握还是没有自己所想的那么牢固，在数据预处理的时候，因为选取的数据很工整简洁，所以在这个方面操作的很少，只有简单的基本操作，但在可视化操作中对图表的基本绘制还是掌握的不错的，做的过程中又因为一些需求，学习掌握了更多关于这方面的知识，然后就是最好一步也是最重要的一步，对我来说耗时最久，学习知识层面最宽的一个就是数据预测模型学习与应用。书本上的这点很浅，对我的帮助很少，但是处理数据方面的方面不少，可以让我扩宽知识面。在我的编程操作及需求上，最大的障碍就是建立成自己的模型，而不是去读取调用公共模块，从刚开始的修改库函数，到一次次报错，我放弃了，就这一步耗费了一天时间，最后也无疾而终，然后我就想调用函数来构造自己的数据集，最后因为在学习这个过程的期间，遇到了更好的办法，也放弃这个想法，最后采取的方法是转文本，数据清洗，采用svm模型进行回归预测。但是由于数据量不是很多，所以只能预测他们（五个属性）对分娩有影响，没有得到具体的个别属性对其影响的权重关系。所以想以后加强学习对数据分析方面的知识，多了解几个算法函数和预测模型，这些我可以等这个数据多了以后，再来试着分析一次。</p>
+<blockquote>
+<p>展望：我想在接下来的一段时间里，多加强数据分析的了解分析，然后在多学习爬虫方面的知识，因为我对爬取数据很感兴趣，所以有可能的话，我应该会试着自己去爬取数据然后自己分析。</p>
+</blockquote>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                👉🏻下一篇
+              </div>
+              <a href="https://lovefive.club/post/关于Hexo主题的一些踩过的坑/">
+                <h3 class="post-title">
+                  Hexo主题的一些踩过的坑
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://lovefive.club/images/avatar.png?v=1661931557503" class="no-responsive avatar">
+    <div class="text-muted">有志者，事竟成</div>
+    <div class="social-container">
+      
+        
+          <a href="https://github.com/baer9" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+          <a href="https://weibo.com/u/6360347403" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/sui-bi-2022626/"> 随笔「2022.6.26」</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/Gallery/">Gallery</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/Git常见错误/">Git常见错误</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/幸会-1988/">幸会-1988</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/网页版Github更改文件夹名/">网页版Github更改文件夹名</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/【转载】关于三次握手，四次挥手！/">【转载】关于三次握手，四次挥手！</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/Bat批量修改文件名/">Bat批量修改文件名</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/【转载补充】48个实用的HTML特效代码！！！（推荐初学者使用）/">【转载补充】48个实用的HTML特效代码！！！（推荐初学者使用）</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/【转载】Malloc-Free与New-Delete/">【转载】Malloc Free与New Delete</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/Just/">Just as they say</a>
+            </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://lovefive.club/tag/80P7hqz46/" class="badge warning">
+          Novel
+        </a>
+      
+        <a href="https://lovefive.club/tag/KHS9yk3xI/" class="badge secondary">
+          Win10
+        </a>
+      
+        <a href="https://lovefive.club/tag/igVDxxD69q/" class="badge secondary">
+          默认应用
+        </a>
+      
+        <a href="https://lovefive.club/tag/e7cHt0UFL4/" class="badge secondary">
+          html
+        </a>
+      
+        <a href="https://lovefive.club/tag/NzoHsqk9yc/" class="badge warning">
+          注册表
+        </a>
+      
+        <a href="https://lovefive.club/tag/nW5LRN1JIb/" class="badge secondary">
+          无限刷新
+        </a>
+      
+        <a href="https://lovefive.club/tag/3GnvH0q6gL/" class="badge ">
+          奶牛快传
+        </a>
+      
+        <a href="https://lovefive.club/tag/YfvZxyXHhf/" class="badge secondary">
+          百度云
+        </a>
+      
+        <a href="https://lovefive.club/tag/yfIJtF9jG6/" class="badge ">
+          IDM
+        </a>
+      
+        <a href="https://lovefive.club/tag/OBLbFizWxC/" class="badge ">
+          Negibox
+        </a>
+      
+        <a href="https://lovefive.club/tag/y9CYY4OkG8/" class="badge ">
+          Aria2
+        </a>
+      
+        <a href="https://lovefive.club/tag/dWEJPbinIG/" class="badge secondary">
+          在人间凑数的日子
+        </a>
+      
+        <a href="https://lovefive.club/tag/sl6tJ-gW3w/" class="badge secondary">
+          bat
+        </a>
+      
+        <a href="https://lovefive.club/tag/zvAoOevyqq/" class="badge warning">
+          文件后缀名修改
+        </a>
+      
+        <a href="https://lovefive.club/tag/vwJcfxXtyS/" class="badge success">
+          显示文件后缀名
+        </a>
+      
+        <a href="https://lovefive.club/tag/rXPKO-I9xm/" class="badge warning">
+          C++
+        </a>
+      
+        <a href="https://lovefive.club/tag/-GhOrM6RKT/" class="badge secondary">
+          半数集问题
+        </a>
+      
+        <a href="https://lovefive.club/tag/ZrwwEXbRTbu/" class="badge success">
+          计算机算法与设计
+        </a>
+      
+        <a href="https://lovefive.club/tag/Kdjc_B3jc05/" class="badge secondary">
+          众数问题
+        </a>
+      
+        <a href="https://lovefive.club/tag/94sI2mJi5te/" class="badge secondary">
+          最大间隙
+        </a>
+      
+        <a href="https://lovefive.club/tag/plI_1fG2i0p/" class="badge secondary">
+          C++格式化输出
+        </a>
+      
+        <a href="https://lovefive.club/tag/IWFcV2SultH/" class="badge secondary">
+          金币阵列
+        </a>
+      
+        <a href="https://lovefive.club/tag/jzq2iaqLzN2/" class="badge warning">
+          First
+        </a>
+      
+        <a href="https://lovefive.club/tag/nzvsVfxhes6/" class="badge secondary">
+          Second
+        </a>
+      
+        <a href="https://lovefive.club/tag/twT9S8IvPOZ/" class="badge success">
+          格式化输入
+        </a>
+      
+        <a href="https://lovefive.club/tag/O2qybu5WBdH/" class="badge success">
+          分割字符串
+        </a>
+      
+        <a href="https://lovefive.club/tag/lcULjQG1fzy/" class="badge success">
+          网站
+        </a>
+      
+        <a href="https://lovefive.club/tag/2mR3tc70IC-/" class="badge warning">
+          实用工具
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    <svg viewBox="0 0 105 36" role="img" width="105px" height="41px" aria-hidden="true"><path fill="#222222" d="M11.679 26.754h2.353v6.423h4.111v2.06H11.68v-8.483zM20.58 31.02v-.024c0-2.436 1.965-4.412 4.584-4.412 2.62 0 4.56 1.951 4.56 4.387v.025c0 2.436-1.965 4.41-4.584 4.41-2.618 0-4.56-1.95-4.56-4.386zm6.743 0v-.024c0-1.223-.885-2.291-2.183-2.291-1.285 0-2.147 1.042-2.147 2.266v.025c0 1.222.886 2.29 2.171 2.29 1.298 0 2.159-1.042 2.159-2.266zM32.604 31.517v-4.763h2.389v4.714c0 1.223.618 1.806 1.564 1.806.946 0 1.564-.557 1.564-1.745v-4.775h2.39v4.7c0 2.74-1.564 3.939-3.978 3.939s-3.93-1.223-3.93-3.878M44.112 26.755h3.274c3.032 0 4.79 1.744 4.79 4.192v.025c0 2.447-1.782 4.265-4.838 4.265h-3.226v-8.483zm3.31 6.397c1.408 0 2.34-.775 2.34-2.146v-.024c0-1.357-.932-2.145-2.34-2.145h-.958v4.316l.959-.001zM55.596 26.754h6.791v2.06h-4.438v1.442h4.014v1.951h-4.014v3.03h-2.353v-8.483zM65.661 26.754h2.353v6.423h4.111v2.06h-6.464v-8.483zM78.273 26.693h2.268l3.614 8.544h-2.522l-.62-1.515H77.74l-.606 1.515h-2.474l3.614-8.544zm2.062 5.2l-.946-2.413-.959 2.412h1.905zM87.186 26.754H91.2c1.298 0 2.195.34 2.765.921.498.485.752 1.14.752 1.976v.024c0 1.296-.693 2.156-1.746 2.605l2.025 2.957H92.28l-1.71-2.57h-1.03v2.57h-2.353v-8.483zm3.905 4.072c.8 0 1.262-.388 1.262-1.006v-.024c0-.667-.486-1.006-1.275-1.006h-1.54v2.038l1.553-.002zM98.112 26.754h6.827v2h-4.498v1.284h4.075v1.854h-4.075v1.346H105v1.999h-6.888v-8.483zM6.528 32.014c-.33.744-1.023 1.272-1.944 1.272-1.286 0-2.171-1.067-2.171-2.29v-.025c0-1.223.86-2.266 2.146-2.266.97 0 1.708.595 2.02 1.406h2.48c-.398-2.02-2.173-3.526-4.475-3.526-2.62 0-4.584 1.977-4.584 4.41v.024c0 2.436 1.94 4.388 4.56 4.388 2.24 0 3.991-1.45 4.453-3.393H6.528z"></path><path d="M89.012 22.355l.257-.887c.306-1.056.192-2.031-.321-2.748-.472-.66-1.259-1.049-2.214-1.094l-18.096-.229a.358.358 0 01-.285-.151.367.367 0 01-.04-.326.481.481 0 01.42-.321l18.263-.232c2.166-.099 4.512-1.856 5.333-3.998L93.37 9.65a.659.659 0 00.028-.36C92.216 3.975 87.468 0 81.792 0c-5.23 0-9.67 3.373-11.263 8.061a5.34 5.34 0 00-3.756-1.039 5.356 5.356 0 00-4.637 6.644c-4.099.12-7.386 3.475-7.386 7.6 0 .368.028.735.082 1.1a.354.354 0 00.348.305l33.408.004h.009a.44.44 0 00.415-.32z" fill="#F6821F"></path><path d="M95.04 9.847c-.167 0-.334.004-.5.013a.28.28 0 00-.079.017.285.285 0 00-.182.192l-.712 2.456c-.305 1.055-.192 2.03.322 2.746.471.661 1.258 1.05 2.213 1.094l3.858.232a.351.351 0 01.275.149.365.365 0 01.041.328.484.484 0 01-.42.32l-4.008.232c-2.176.1-4.521 1.856-5.342 3.998l-.29.756a.212.212 0 00.095.262c.03.017.062.027.096.028h13.802a.366.366 0 00.356-.265 9.846 9.846 0 00.367-2.677c-.001-5.457-4.429-9.88-9.891-9.88z" fill="#FBAD41"></path></svg> | <a class="rss" href="https://lovefive.club/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+
+  </body>
+</html>

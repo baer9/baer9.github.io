@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Java web 的form表单问题 | Bear</title>
+<meta name="description" content="有志者，事竟成">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://lovefive.club/favicon.ico?v=1661931557503">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://lovefive.club/styles/main.css">
+
+
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://lovefive.club">Bear</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>Java web 的form表单问题</h1>
+            <p class="article-meta">
+              2019-12-19
+              
+            </p>
+            
+              <img src="https://lovefive.club/post-images/JAVA Web的form表单问题.jpg" alt="Java web 的form表单问题">
+            
+            <div class="post-content" v-pre>
+              <p>QHQ-【问题描述】今天做Java web项目的时候，里面一个功能让我form表单里面套表单了，但是里面的form 提交action中参数无效。直接action外层form，所以就记录下form表单的一些问题。</p>
+<!-- more -->
+<hr>
+<h3 id="form表单提交数据java-web">Form表单提交数据（Java web）</h3>
+<p>java web 两个表单form怎么设置两个提交？也可以是一表单form，多提交。Acton只能有一个submit提交，在设置一个submit还是action外层form。</p>
+<p>所以怎么来用两个submit来指向不同的响应呢？</p>
+<h4 id="一-使用formmethod和formaction属性">一、使用formmethod和formaction属性</h4>
+<p>在使用<input></input>里面使用type=&quot;submit&quot; formmethod=&quot;get&quot; formaction=&quot;&quot;即可。具体如下：</p>
+<pre><code class="language-java">&lt;form action=&quot;query.do&quot; method=&quot;post&quot; align=&quot;center&quot;&gt;
+		&lt;table border=&quot;1&quot; align=&quot;center&quot; text-align:center&quot;&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;%=book.getBookName()%&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;%=book.getPrice()%&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;%=book.getAuthor()%&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;%=book.getBr()%&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;%=book.getCounts()%&gt;&lt;/td&gt;
+				&lt;td&gt;
+					&lt;form action=&quot;edit.do?Id=&lt;%=book.getId()%&gt;&quot; method=&quot;get&quot;&gt;
+						&lt;input type=&quot;text&quot; id=&quot;counts&quot; name=&quot;counts&quot;width:50px&quot; &gt;
+						&lt;input type=&quot;hidden&quot; id=&quot;Id&quot; name=&quot;Id&quot; value=&quot;&lt;%=book.getId()%&gt;&quot;
+							style=&quot;width: 0px&quot;&gt; &lt;input type=&quot;submit&quot;
+							formmethod=&quot;get&quot; formaction=&quot;edit.do?Id=&lt;%=book.getId()%&gt;&quot;
+							value=&quot;修改&quot;&gt;//调用edit方法，方式为get，（也可以修改为post，看自己需要）
+					&lt;/form&gt;
+					&lt;tr&gt;
+				&lt;td colspan=&quot;7&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;查询&quot; /&gt;&lt;/td&gt;//调用qurry方法，方式为GET
+			&lt;/tr&gt;
+		&lt;/table&gt;
+	&lt;/form&gt;
+</code></pre>
+<h4 id="二-设置不同函数使用onclick属性">二、设置不同函数，使用onclick属性</h4>
+<h5 id="1-表单中设置两个提交按钮加密-解密点击后分别调用不同的方法">1、表单中设置两个提交按钮：加密、解密；点击后分别调用不同的方法</h5>
+<pre><code class="language-java">&lt;s:form id=&quot;Form&quot; action=&quot;&quot; namespace=&quot;/&quot;&gt;
+  &lt;button onclick=&quot;encrypt()&quot;&gt;加密&lt;button&gt;
+  &lt;button onclick=&quot;decrypt()&quot;&gt;解密&lt;/button&gt;
+&lt;s:form&gt;
+</code></pre>
+<h5 id="2-在不同的函数中设置要提交的地址">2、在不同的函数中设置要提交的地址</h5>
+<pre><code class="language-html">&lt;script&gt;
+//点击加密按钮调用此方法
+function encrypt(){
+  //跳转到encrypt.aciton
+  document.getElementById(&quot;Form&quot;)
+ .action=&quot;${pageContext.request.contextPath}/enAndDeAction_encrypt.action?&quot;;
+  document.getElementById(&quot;Form&quot;).submit;
+ }
+  //点击加密按钮调用此方法
+function decrypt(){
+document.getElementById(&quot;Form&quot;)
+.action=&quot;${pageContext.request.contextPath}/enAndDeAction_decrypt.action?&quot;;
+document.getElementById(&quot;Form&quot;).submit;
+ }
+&lt;/script&gt;
+</code></pre>
+<h4 id="三-form的action路径问题">三、Form的Action路径问题</h4>
+<blockquote>
+<p>页面通过表单（form）想服务器提交数据的时候有两种形式，一个是POST,另一个是GET。两种的一个区别是GET会直接把数据附加在url的后面，而POST发送的数据放置在http包中。form的action属性就是提交数据的url地址，method属性可以指定是GET或POST。</p>
+</blockquote>
+<blockquote>
+<p>需要注意的是如果采用GET方式，那么action url中参数都会被丢弃，提交时候只会把form中的数据拼接在url向服务器提交；但是POST的方式则不会这样，它会按照action指定的url进行提交数据，包含url后面跟着的参数和参数值</p>
+</blockquote>
+<p>我遇到的是Form表单提交到servelet处理时遇到的问题：</p>
+<pre><code class="language-java">（1）&lt;form action=&quot;①？&quot; method=&quot;②？&quot;&gt; 
+      //表单的内容 
+     &lt;/form&gt;
+</code></pre>
+<p>（2）对应的处理用户请求的servlet类为Servlet.java，其中查询方法如下：</p>
+<pre><code class="language-java">private void query(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO 自动生成的方法存根
+		req.setCharacterEncoding(&quot;UTF-8&quot;);// 解决POST方法的中文乱码问题
+		t = req.getParameter(&quot;counts&quot;);
+		// 1.调用CustomerDAO的getAll()方法
+		List&lt;User&gt; books = bd.findAll();
+		System.out.println(books);
+		// 2.将Customer的集合放入request中
+		req.setAttribute(&quot;books&quot;, books);
+		// 3.转发页面到index.jsp(不能使用重定向)
+		req.getRequestDispatcher(&quot;/book.jsp&quot;).forward(req, resp);
+	}
+</code></pre>
+<p>（3）配置web.xml文件：</p>
+<pre><code class="language-html">&lt;servlet&gt;
+		&lt;display-name&gt;③Servlet&lt;/display-name&gt;
+		&lt;servlet-name&gt;Servlet&lt;/servlet-name&gt;
+		&lt;servlet-class&gt;com.qhq.servlet.Servlet&lt;/servlet-class&gt;
+&lt;/servlet&gt;
+&lt;servlet-mapping&gt;
+	&lt;servlet-name&gt;③Servlet&lt;/servlet-name&gt;
+	&lt;url-pattern&gt;①*.do&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;
+</code></pre>
+<p>然后在query.jsp中应该是：</p>
+<pre><code class="language-java">&lt;form action=&quot;①query.do&quot; method=&quot;②Post&quot;&gt;
+</code></pre>
+<p>这样的话query.jsp的url是http://localhost:8080/jsp/query.do</p>
+<p>而Servlet.java的url是http://localhost:8080/jsp/Servlet</p>
+<p>注:web.xml中③对应的两个servlet-name要一致；①中的url-pattern要与form表单中的action属性值一致。</p>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+<div class="aplayer" data-id="32957955" data-server="netease" data-type="song" data-mode="random" data-autoplay="true"></div>
+<p>参考连接如下：</p>
+<p><a href="https://www.jb51.net/article/67279.htm">参考1</a></p>
+<p><a href="https://blog.csdn.net/qq_40774600/article/details/88888215">参考2</a></p>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                👉🏻下一篇
+              </div>
+              <a href="https://lovefive.club/post/Win10无限刷新/">
+                <h3 class="post-title">
+                  Win10无限刷新
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://lovefive.club/images/avatar.png?v=1661931557503" class="no-responsive avatar">
+    <div class="text-muted">有志者，事竟成</div>
+    <div class="social-container">
+      
+        
+          <a href="https://github.com/baer9" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+          <a href="https://weibo.com/u/6360347403" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/sui-bi-2022626/"> 随笔「2022.6.26」</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/Gallery/">Gallery</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/Git常见错误/">Git常见错误</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/幸会-1988/">幸会-1988</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/网页版Github更改文件夹名/">网页版Github更改文件夹名</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/【转载】关于三次握手，四次挥手！/">【转载】关于三次握手，四次挥手！</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/Bat批量修改文件名/">Bat批量修改文件名</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/【转载补充】48个实用的HTML特效代码！！！（推荐初学者使用）/">【转载补充】48个实用的HTML特效代码！！！（推荐初学者使用）</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/【转载】Malloc-Free与New-Delete/">【转载】Malloc Free与New Delete</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/Just/">Just as they say</a>
+            </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://lovefive.club/tag/80P7hqz46/" class="badge ">
+          Novel
+        </a>
+      
+        <a href="https://lovefive.club/tag/KHS9yk3xI/" class="badge secondary">
+          Win10
+        </a>
+      
+        <a href="https://lovefive.club/tag/igVDxxD69q/" class="badge secondary">
+          默认应用
+        </a>
+      
+        <a href="https://lovefive.club/tag/e7cHt0UFL4/" class="badge ">
+          html
+        </a>
+      
+        <a href="https://lovefive.club/tag/NzoHsqk9yc/" class="badge success">
+          注册表
+        </a>
+      
+        <a href="https://lovefive.club/tag/nW5LRN1JIb/" class="badge secondary">
+          无限刷新
+        </a>
+      
+        <a href="https://lovefive.club/tag/3GnvH0q6gL/" class="badge secondary">
+          奶牛快传
+        </a>
+      
+        <a href="https://lovefive.club/tag/YfvZxyXHhf/" class="badge secondary">
+          百度云
+        </a>
+      
+        <a href="https://lovefive.club/tag/yfIJtF9jG6/" class="badge secondary">
+          IDM
+        </a>
+      
+        <a href="https://lovefive.club/tag/OBLbFizWxC/" class="badge warning">
+          Negibox
+        </a>
+      
+        <a href="https://lovefive.club/tag/y9CYY4OkG8/" class="badge warning">
+          Aria2
+        </a>
+      
+        <a href="https://lovefive.club/tag/dWEJPbinIG/" class="badge secondary">
+          在人间凑数的日子
+        </a>
+      
+        <a href="https://lovefive.club/tag/sl6tJ-gW3w/" class="badge warning">
+          bat
+        </a>
+      
+        <a href="https://lovefive.club/tag/zvAoOevyqq/" class="badge secondary">
+          文件后缀名修改
+        </a>
+      
+        <a href="https://lovefive.club/tag/vwJcfxXtyS/" class="badge secondary">
+          显示文件后缀名
+        </a>
+      
+        <a href="https://lovefive.club/tag/rXPKO-I9xm/" class="badge ">
+          C++
+        </a>
+      
+        <a href="https://lovefive.club/tag/-GhOrM6RKT/" class="badge warning">
+          半数集问题
+        </a>
+      
+        <a href="https://lovefive.club/tag/ZrwwEXbRTbu/" class="badge secondary">
+          计算机算法与设计
+        </a>
+      
+        <a href="https://lovefive.club/tag/Kdjc_B3jc05/" class="badge warning">
+          众数问题
+        </a>
+      
+        <a href="https://lovefive.club/tag/94sI2mJi5te/" class="badge secondary">
+          最大间隙
+        </a>
+      
+        <a href="https://lovefive.club/tag/plI_1fG2i0p/" class="badge success">
+          C++格式化输出
+        </a>
+      
+        <a href="https://lovefive.club/tag/IWFcV2SultH/" class="badge ">
+          金币阵列
+        </a>
+      
+        <a href="https://lovefive.club/tag/jzq2iaqLzN2/" class="badge success">
+          First
+        </a>
+      
+        <a href="https://lovefive.club/tag/nzvsVfxhes6/" class="badge secondary">
+          Second
+        </a>
+      
+        <a href="https://lovefive.club/tag/twT9S8IvPOZ/" class="badge warning">
+          格式化输入
+        </a>
+      
+        <a href="https://lovefive.club/tag/O2qybu5WBdH/" class="badge success">
+          分割字符串
+        </a>
+      
+        <a href="https://lovefive.club/tag/lcULjQG1fzy/" class="badge secondary">
+          网站
+        </a>
+      
+        <a href="https://lovefive.club/tag/2mR3tc70IC-/" class="badge secondary">
+          实用工具
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    <svg viewBox="0 0 105 36" role="img" width="105px" height="41px" aria-hidden="true"><path fill="#222222" d="M11.679 26.754h2.353v6.423h4.111v2.06H11.68v-8.483zM20.58 31.02v-.024c0-2.436 1.965-4.412 4.584-4.412 2.62 0 4.56 1.951 4.56 4.387v.025c0 2.436-1.965 4.41-4.584 4.41-2.618 0-4.56-1.95-4.56-4.386zm6.743 0v-.024c0-1.223-.885-2.291-2.183-2.291-1.285 0-2.147 1.042-2.147 2.266v.025c0 1.222.886 2.29 2.171 2.29 1.298 0 2.159-1.042 2.159-2.266zM32.604 31.517v-4.763h2.389v4.714c0 1.223.618 1.806 1.564 1.806.946 0 1.564-.557 1.564-1.745v-4.775h2.39v4.7c0 2.74-1.564 3.939-3.978 3.939s-3.93-1.223-3.93-3.878M44.112 26.755h3.274c3.032 0 4.79 1.744 4.79 4.192v.025c0 2.447-1.782 4.265-4.838 4.265h-3.226v-8.483zm3.31 6.397c1.408 0 2.34-.775 2.34-2.146v-.024c0-1.357-.932-2.145-2.34-2.145h-.958v4.316l.959-.001zM55.596 26.754h6.791v2.06h-4.438v1.442h4.014v1.951h-4.014v3.03h-2.353v-8.483zM65.661 26.754h2.353v6.423h4.111v2.06h-6.464v-8.483zM78.273 26.693h2.268l3.614 8.544h-2.522l-.62-1.515H77.74l-.606 1.515h-2.474l3.614-8.544zm2.062 5.2l-.946-2.413-.959 2.412h1.905zM87.186 26.754H91.2c1.298 0 2.195.34 2.765.921.498.485.752 1.14.752 1.976v.024c0 1.296-.693 2.156-1.746 2.605l2.025 2.957H92.28l-1.71-2.57h-1.03v2.57h-2.353v-8.483zm3.905 4.072c.8 0 1.262-.388 1.262-1.006v-.024c0-.667-.486-1.006-1.275-1.006h-1.54v2.038l1.553-.002zM98.112 26.754h6.827v2h-4.498v1.284h4.075v1.854h-4.075v1.346H105v1.999h-6.888v-8.483zM6.528 32.014c-.33.744-1.023 1.272-1.944 1.272-1.286 0-2.171-1.067-2.171-2.29v-.025c0-1.223.86-2.266 2.146-2.266.97 0 1.708.595 2.02 1.406h2.48c-.398-2.02-2.173-3.526-4.475-3.526-2.62 0-4.584 1.977-4.584 4.41v.024c0 2.436 1.94 4.388 4.56 4.388 2.24 0 3.991-1.45 4.453-3.393H6.528z"></path><path d="M89.012 22.355l.257-.887c.306-1.056.192-2.031-.321-2.748-.472-.66-1.259-1.049-2.214-1.094l-18.096-.229a.358.358 0 01-.285-.151.367.367 0 01-.04-.326.481.481 0 01.42-.321l18.263-.232c2.166-.099 4.512-1.856 5.333-3.998L93.37 9.65a.659.659 0 00.028-.36C92.216 3.975 87.468 0 81.792 0c-5.23 0-9.67 3.373-11.263 8.061a5.34 5.34 0 00-3.756-1.039 5.356 5.356 0 00-4.637 6.644c-4.099.12-7.386 3.475-7.386 7.6 0 .368.028.735.082 1.1a.354.354 0 00.348.305l33.408.004h.009a.44.44 0 00.415-.32z" fill="#F6821F"></path><path d="M95.04 9.847c-.167 0-.334.004-.5.013a.28.28 0 00-.079.017.285.285 0 00-.182.192l-.712 2.456c-.305 1.055-.192 2.03.322 2.746.471.661 1.258 1.05 2.213 1.094l3.858.232a.351.351 0 01.275.149.365.365 0 01.041.328.484.484 0 01-.42.32l-4.008.232c-2.176.1-4.521 1.856-5.342 3.998l-.29.756a.212.212 0 00.095.262c.03.017.062.027.096.028h13.802a.366.366 0 00.356-.265 9.846 9.846 0 00.367-2.677c-.001-5.457-4.429-9.88-9.891-9.88z" fill="#FBAD41"></path></svg> | <a class="rss" href="https://lovefive.club/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+
+  </body>
+</html>

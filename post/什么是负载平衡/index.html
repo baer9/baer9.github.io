@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>什么是负载平衡？ | Bear</title>
+<meta name="description" content="有志者，事竟成">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://lovefive.club/favicon.ico?v=1661931557503">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://lovefive.club/styles/main.css">
+
+
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://lovefive.club">Bear</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>什么是负载平衡？</h1>
+            <p class="article-meta">
+              2020-02-15
+              
+            </p>
+            
+              <img src="https://lovefive.club/post-images/什么是负载平衡.jpg" alt="什么是负载平衡？">
+            
+            <div class="post-content" v-pre>
+              <p>QHQ-【问题描述】</p>
+<p>什么是负载平衡？负载平衡有什么用？具体功能有什么？具体应用有？未来趋势会怎样？</p>
+<!-- more -->
+<hr>
+<h3 id="概述">概述</h3>
+<p>随着网络的出现，人们便开始频频使用各种智能设备进行各种精神享受，然而面对庞大的数据流量，各网站的访问十分集中，以致于网络服务器变得很拥挤、速度很慢。面对网络服务器岌岌可危的状况，相关科研人员针对该现象发明了负载均衡器，那么负载均衡器究竟有什么作用呢?接下来就让我们一起来了解关于负载均衡器的问题吧!</p>
+<h4 id="什么是负载均衡器">什么是负载均衡器</h4>
+<blockquote>
+<p>顾名思义，负载均衡器主要采取高端技术――负载均衡技术，它可以利用该技术进行各种灵活的分配计算将全部的网络请求均衡地分布到其他服务器上，通过合理管理每天的网上数据流量来减轻单个服务器上的负担，力求达到使网络访问者享受最佳的联网体验。</p>
+</blockquote>
+<blockquote>
+<p>通俗的说： 负载均衡是高可用网络基础架构的关键组件，通常用于将工作负载分布到多个服务器来提高网站、应用、数据库或其他服务的性能和可靠性。</p>
+</blockquote>
+<ul>
+<li>一个没有负载均衡的 web 架构类似下面这样：</li>
+</ul>
+<figure data-type="image" tabindex="1"><img src="https://tvax3.sinaimg.cn/large/006WrmUrly1gbxdym0oznj30j605uzko.jpg" alt="1" loading="lazy"></figure>
+<blockquote>
+<p>​	在这里用户是直连到 web 服务器，如果这个服务器宕机了，那么用户自然也就没办法访问了。另外，如果同时有很多用户试图访问服务器，超过了其能处理的极限，就会出现加载速度缓慢或根本无法连接的情况。</p>
+<p>而通过在后端引入一个负载均衡器和至少一个额外的 web 服务器，可以缓解这个故障。通常情况下，所有的后端服务器会保证提供相同的内容，以便用户无论哪个服务器响应，都能收到一致的内容。</p>
+</blockquote>
+<img src="https://tvax3.sinaimg.cn/large/006WrmUrly1gbxe0cwsk2j30zc0usjtl.jpg" alt="2" style="zoom:60%;" />
+<p>​		 从图里可以看到，用户访问负载均衡器，再由负载均衡器将请求转发给后端服务器。在这种情况下，单点故障现在转移到负载均衡器上了。这里又可以通过引入第二个负载均衡器来缓解。</p>
+<h4 id="负载均衡器的形式">负载均衡器的形式</h4>
+<p>负载均衡器的形式可谓是多种多样，除了单纯作为负载均衡器外，有些负载均衡器还可在交换设备中置于网络服务器和互联网之间，而还有的负载均衡器则利用网络适配器将该功能集成至PC当中。</p>
+<h4 id="负载均衡器的功能">负载均衡器的功能</h4>
+<ol>
+<li>负载均衡器具有提供服务一致性的功能，负载均衡器通过读取客户端所发出请求内的信息，进行重写报头程序然后将请求发送至合适的服务器上，该服务器会维护着该客户端信息。在http通信当中，负载均衡器提供服务一致性的功能就得到了很好的发挥，但提供该服务的途径并不是非常安全。但若将消息加密后，负载均衡器就无法读取隐藏其中的信息了。</li>
+<li>当服务集群中的某个节点无法成功处理请求时，那么该请求就会被发往其他节点上去，当请求成功发至另一节点后，原节点上的请求信息就会自动消失了。</li>
+<li>由于所有的客户端请求都会先经过负载均衡器，所以负载均衡器具有统计计量的功能，利用该功能负载均衡器就可以准确统计出各阶段各种流量流动以及各项目进行的次数等，从而网络就可以适当调整系统性能了。</li>
+</ol>
+<h5 id="负载均衡器可以处理什么样的请求"><strong>负载均衡器可以处理什么样的请求？</strong></h5>
+<p>负载均衡器的管理员能主要为下面四种主要类型的请求设置转发规则：</p>
+<ul>
+<li>HTTP</li>
+<li>HTTPS</li>
+<li>TCP</li>
+<li>UDP</li>
+</ul>
+<h5 id="负载均衡器如何选择要转发的后端服务器"><strong>负载均衡器如何选择要转发的后端服务器？</strong></h5>
+<p>负载均衡器一般根据两个因素来决定要将请求转发到哪个服务器。首先，确保所选择的服务器能够对请求做出响应，然后根据预先配置的规则从健康服务器池（healthy pool）中进行选择。</p>
+<p>因为，负载均衡器应当只选择能正常做出响应的后端服务器，因此就需要有一种判断后端服务器是否「健康」的方法。为了监视后台服务器的运行状况，运行状态检查服务会定期尝试使用转发规则定义的协议和端口去连接后端服务器。如果，服务器无法通过健康检查，就会从池中剔除，保证流量不会被转发到该服务器，直到其再次通过健康检查为止。</p>
+<h5 id="负载均衡算法"><strong>负载均衡算法</strong></h5>
+<p>负载均衡算法决定了后端的哪些健康服务器会被选中。几个常用的算法：</p>
+<ul>
+<li>**Round Robin（轮询）：**为第一个请求选择列表中的第一个服务器，然后按顺序向下移动列表直到结尾，然后循环。</li>
+<li>**Least Connections（最小连接）：**优先选择连接数最少的服务器，在普遍会话较长的情况下推荐使用。</li>
+<li>**Source：**根据请求源的 IP 的散列（hash）来选择要转发的服务器。这种方式可以一定程度上保证特定用户能连接到相同的服务器。</li>
+</ul>
+<h4 id="负载均衡器的应用">负载均衡器的应用</h4>
+<p>对于网络各个核心部分数据流量增长迅速等问题，单一设备根本承担不住，所以为了加强处理能力，同时也为了提高资源利用，如今很多企业纷纷采取负载均衡技术，简单快捷，为自己的企业减掉很多不必要的麻烦。 如果你的应用需要处理状态而要求用户能连接到和之前相同的服务器。可以通过 Source 算法基于客户端的 IP 信息创建关联，或者使用粘性会话（sticky sessions）。</p>
+<ul>
+<li>最后，想要解决负载均衡器的单点故障问题，可以将第二个负载均衡器连接到第一个上，从而形成一个集群。</li>
+</ul>
+<img src="https://tvax2.sinaimg.cn/large/006WrmUrly1gbxe4pus89j311u0okq4y.jpg" alt="3" style="zoom:60%;" />
+<p>当主负载均衡器发生了故障，就需要将用户请求转到第二个负载均衡器。因为 DNS 更改通常会较长的时间才能生效，因此需要能灵活解决 IP 地址重新映射的方法，比如浮动 IP（floating IP）。这样域名可以保持和相同的 IP 相关联，而 IP 本身则能在服务器之间移动。</p>
+<ul>
+<li>一个使用浮动 IP 的负载均衡架构示意图：</li>
+</ul>
+<figure data-type="image" tabindex="2"><img src="https://tva4.sinaimg.cn/large/006WrmUrly1gbxeqvsxg7g30k009m0z8.gif" alt="4" loading="lazy"></figure>
+<h4 id="负载均衡器的未来走势">负载均衡器的未来走势</h4>
+<p>时代发展的速度我们有目共睹，谁能猜想得到将来的事情呢?但是，随着科技越来越高端，网络数据必定呈上升趋势，所以负载均衡器在未来的生活中一定是必不可少的一种设备!</p>
+<p><a href="https://product.pconline.com.cn/itbk/software/dnyw/1707/9605721.html">参考一</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/32841479">参考二</a></p>
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+<div class="aplayer" data-id="515376752" data-server="netease" data-type="playlist" data-mode="random" data-autoplay="true"></div>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                👉🏻下一篇
+              </div>
+              <a href="https://lovefive.club/post/Windows下使用Everything搜索/">
+                <h3 class="post-title">
+                  Windows下使用Everything搜索
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://lovefive.club/images/avatar.png?v=1661931557503" class="no-responsive avatar">
+    <div class="text-muted">有志者，事竟成</div>
+    <div class="social-container">
+      
+        
+          <a href="https://github.com/baer9" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+          <a href="https://weibo.com/u/6360347403" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/sui-bi-2022626/"> 随笔「2022.6.26」</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/Gallery/">Gallery</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/Git常见错误/">Git常见错误</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/幸会-1988/">幸会-1988</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/网页版Github更改文件夹名/">网页版Github更改文件夹名</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/【转载】关于三次握手，四次挥手！/">【转载】关于三次握手，四次挥手！</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/Bat批量修改文件名/">Bat批量修改文件名</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/【转载补充】48个实用的HTML特效代码！！！（推荐初学者使用）/">【转载补充】48个实用的HTML特效代码！！！（推荐初学者使用）</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/【转载】Malloc-Free与New-Delete/">【转载】Malloc Free与New Delete</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/Just/">Just as they say</a>
+            </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://lovefive.club/tag/80P7hqz46/" class="badge warning">
+          Novel
+        </a>
+      
+        <a href="https://lovefive.club/tag/KHS9yk3xI/" class="badge ">
+          Win10
+        </a>
+      
+        <a href="https://lovefive.club/tag/igVDxxD69q/" class="badge ">
+          默认应用
+        </a>
+      
+        <a href="https://lovefive.club/tag/e7cHt0UFL4/" class="badge secondary">
+          html
+        </a>
+      
+        <a href="https://lovefive.club/tag/NzoHsqk9yc/" class="badge secondary">
+          注册表
+        </a>
+      
+        <a href="https://lovefive.club/tag/nW5LRN1JIb/" class="badge success">
+          无限刷新
+        </a>
+      
+        <a href="https://lovefive.club/tag/3GnvH0q6gL/" class="badge ">
+          奶牛快传
+        </a>
+      
+        <a href="https://lovefive.club/tag/YfvZxyXHhf/" class="badge ">
+          百度云
+        </a>
+      
+        <a href="https://lovefive.club/tag/yfIJtF9jG6/" class="badge success">
+          IDM
+        </a>
+      
+        <a href="https://lovefive.club/tag/OBLbFizWxC/" class="badge secondary">
+          Negibox
+        </a>
+      
+        <a href="https://lovefive.club/tag/y9CYY4OkG8/" class="badge success">
+          Aria2
+        </a>
+      
+        <a href="https://lovefive.club/tag/dWEJPbinIG/" class="badge secondary">
+          在人间凑数的日子
+        </a>
+      
+        <a href="https://lovefive.club/tag/sl6tJ-gW3w/" class="badge warning">
+          bat
+        </a>
+      
+        <a href="https://lovefive.club/tag/zvAoOevyqq/" class="badge secondary">
+          文件后缀名修改
+        </a>
+      
+        <a href="https://lovefive.club/tag/vwJcfxXtyS/" class="badge success">
+          显示文件后缀名
+        </a>
+      
+        <a href="https://lovefive.club/tag/rXPKO-I9xm/" class="badge warning">
+          C++
+        </a>
+      
+        <a href="https://lovefive.club/tag/-GhOrM6RKT/" class="badge ">
+          半数集问题
+        </a>
+      
+        <a href="https://lovefive.club/tag/ZrwwEXbRTbu/" class="badge warning">
+          计算机算法与设计
+        </a>
+      
+        <a href="https://lovefive.club/tag/Kdjc_B3jc05/" class="badge secondary">
+          众数问题
+        </a>
+      
+        <a href="https://lovefive.club/tag/94sI2mJi5te/" class="badge secondary">
+          最大间隙
+        </a>
+      
+        <a href="https://lovefive.club/tag/plI_1fG2i0p/" class="badge success">
+          C++格式化输出
+        </a>
+      
+        <a href="https://lovefive.club/tag/IWFcV2SultH/" class="badge ">
+          金币阵列
+        </a>
+      
+        <a href="https://lovefive.club/tag/jzq2iaqLzN2/" class="badge secondary">
+          First
+        </a>
+      
+        <a href="https://lovefive.club/tag/nzvsVfxhes6/" class="badge success">
+          Second
+        </a>
+      
+        <a href="https://lovefive.club/tag/twT9S8IvPOZ/" class="badge secondary">
+          格式化输入
+        </a>
+      
+        <a href="https://lovefive.club/tag/O2qybu5WBdH/" class="badge ">
+          分割字符串
+        </a>
+      
+        <a href="https://lovefive.club/tag/lcULjQG1fzy/" class="badge ">
+          网站
+        </a>
+      
+        <a href="https://lovefive.club/tag/2mR3tc70IC-/" class="badge secondary">
+          实用工具
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    <svg viewBox="0 0 105 36" role="img" width="105px" height="41px" aria-hidden="true"><path fill="#222222" d="M11.679 26.754h2.353v6.423h4.111v2.06H11.68v-8.483zM20.58 31.02v-.024c0-2.436 1.965-4.412 4.584-4.412 2.62 0 4.56 1.951 4.56 4.387v.025c0 2.436-1.965 4.41-4.584 4.41-2.618 0-4.56-1.95-4.56-4.386zm6.743 0v-.024c0-1.223-.885-2.291-2.183-2.291-1.285 0-2.147 1.042-2.147 2.266v.025c0 1.222.886 2.29 2.171 2.29 1.298 0 2.159-1.042 2.159-2.266zM32.604 31.517v-4.763h2.389v4.714c0 1.223.618 1.806 1.564 1.806.946 0 1.564-.557 1.564-1.745v-4.775h2.39v4.7c0 2.74-1.564 3.939-3.978 3.939s-3.93-1.223-3.93-3.878M44.112 26.755h3.274c3.032 0 4.79 1.744 4.79 4.192v.025c0 2.447-1.782 4.265-4.838 4.265h-3.226v-8.483zm3.31 6.397c1.408 0 2.34-.775 2.34-2.146v-.024c0-1.357-.932-2.145-2.34-2.145h-.958v4.316l.959-.001zM55.596 26.754h6.791v2.06h-4.438v1.442h4.014v1.951h-4.014v3.03h-2.353v-8.483zM65.661 26.754h2.353v6.423h4.111v2.06h-6.464v-8.483zM78.273 26.693h2.268l3.614 8.544h-2.522l-.62-1.515H77.74l-.606 1.515h-2.474l3.614-8.544zm2.062 5.2l-.946-2.413-.959 2.412h1.905zM87.186 26.754H91.2c1.298 0 2.195.34 2.765.921.498.485.752 1.14.752 1.976v.024c0 1.296-.693 2.156-1.746 2.605l2.025 2.957H92.28l-1.71-2.57h-1.03v2.57h-2.353v-8.483zm3.905 4.072c.8 0 1.262-.388 1.262-1.006v-.024c0-.667-.486-1.006-1.275-1.006h-1.54v2.038l1.553-.002zM98.112 26.754h6.827v2h-4.498v1.284h4.075v1.854h-4.075v1.346H105v1.999h-6.888v-8.483zM6.528 32.014c-.33.744-1.023 1.272-1.944 1.272-1.286 0-2.171-1.067-2.171-2.29v-.025c0-1.223.86-2.266 2.146-2.266.97 0 1.708.595 2.02 1.406h2.48c-.398-2.02-2.173-3.526-4.475-3.526-2.62 0-4.584 1.977-4.584 4.41v.024c0 2.436 1.94 4.388 4.56 4.388 2.24 0 3.991-1.45 4.453-3.393H6.528z"></path><path d="M89.012 22.355l.257-.887c.306-1.056.192-2.031-.321-2.748-.472-.66-1.259-1.049-2.214-1.094l-18.096-.229a.358.358 0 01-.285-.151.367.367 0 01-.04-.326.481.481 0 01.42-.321l18.263-.232c2.166-.099 4.512-1.856 5.333-3.998L93.37 9.65a.659.659 0 00.028-.36C92.216 3.975 87.468 0 81.792 0c-5.23 0-9.67 3.373-11.263 8.061a5.34 5.34 0 00-3.756-1.039 5.356 5.356 0 00-4.637 6.644c-4.099.12-7.386 3.475-7.386 7.6 0 .368.028.735.082 1.1a.354.354 0 00.348.305l33.408.004h.009a.44.44 0 00.415-.32z" fill="#F6821F"></path><path d="M95.04 9.847c-.167 0-.334.004-.5.013a.28.28 0 00-.079.017.285.285 0 00-.182.192l-.712 2.456c-.305 1.055-.192 2.03.322 2.746.471.661 1.258 1.05 2.213 1.094l3.858.232a.351.351 0 01.275.149.365.365 0 01.041.328.484.484 0 01-.42.32l-4.008.232c-2.176.1-4.521 1.856-5.342 3.998l-.29.756a.212.212 0 00.095.262c.03.017.062.027.096.028h13.802a.366.366 0 00.356-.265 9.846 9.846 0 00.367-2.677c-.001-5.457-4.429-9.88-9.891-9.88z" fill="#FBAD41"></path></svg> | <a class="rss" href="https://lovefive.club/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+
+  </body>
+</html>

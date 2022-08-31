@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>【转载补充】48个实用的HTML特效代码！！！（推荐初学者使用） | Bear</title>
+<meta name="description" content="有志者，事竟成">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://lovefive.club/favicon.ico?v=1661931557503">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://lovefive.club/styles/main.css">
+
+
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://lovefive.club">Bear</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>【转载补充】48个实用的HTML特效代码！！！（推荐初学者使用）</h1>
+            <p class="article-meta">
+              2020-11-20
+              
+            </p>
+            
+              <img src="https://lovefive.club/post-images/【转载补充】48个实用的HTML特效代码！！！（推荐初学者使用）.jpg" alt="【转载补充】48个实用的HTML特效代码！！！（推荐初学者使用）">
+            
+            <div class="post-content" v-pre>
+              <p>1.忽视右键</p>
+<pre><code>&lt;body&gt;
+　 或
+&lt;body style=&quot;overflow-y:hidden&quot;&gt;
+</code></pre>
+<p>2.加入背景音乐</p>
+<pre><code>　 IE:&lt;bgsound src=&quot;*.mid&quot; loop=infinite&gt;
+　 NS:&lt;embed src=&quot;*.mid&quot; autostart=true hidden=true loop=true&gt;
+　 &lt;/embed&gt;
+　 *.mid你的背景音乐的midi格式文件
+</code></pre>
+<p>3.简单的window.open方法</p>
+<pre><code>　 &lt;a href=&quot;#&quot;&gt;文字或图片&lt;/a&gt;
+　 参数解释：
+　 &lt;SCRIPT LANGUAGE=&quot;javascript&quot;&gt; js脚本开始；
+　 window.open 弹出新窗口的命令；
+　 文件路径/文件名 弹出窗口的文件名；
+　 newwindow 弹出窗口的名字（不是文件名），非必须，可用空代替；
+　 width=400 窗口宽度；
+　 height=300 窗口高度；
+　 top=0 窗口距离屏幕上方的象素值；
+　 left=0 窗口距离屏幕左侧的象素值；
+　 toolbar=no 是否显示工具栏，yes为显示；
+　 menubar，scrollbars 表示菜单栏和滚动栏。
+　 resizable=no 是否允许改变窗口大小，yes为允许；
+　 location=no 是否显示地址栏，yes为允许；
+　 status=no 是否显示状态栏内的信息（通常是文件已经打开），yes为允许；
+　 &lt;/SCRIPT&gt; js脚本结束
+</code></pre>
+<p>4.简单的页面加密</p>
+<pre><code>　 &lt;script LANGUAGE=&quot;javascript&quot;&gt;
+　 &lt;!--
+　 function loopy(){
+　　 var sWord =&quot;&quot;;
+　　 while(sWord!=&quot;login&quot;){sWord=prompt(&quot;请输入你的登陆密码&quot;);}
+　　 alert(&quot;登陆成功！&quot;);
+　 }
+　 loopy()
+　 //--&gt;
+　 &lt;/script&gt;
+</code></pre>
+<p>5.拉动页面时背景图不动</p>
+<pre><code>　 &lt;style&gt;
+　 body{background-image:url(logo.gif);
+　 background-repeat:no-repeat;background-position:center}
+　 &lt;/style&gt;
+</code></pre>
+<p>6.让浏览器在保存页面时保存失败</p>
+<pre><code>　 &lt;NOSCRIPT&gt;&lt;iframe src=&quot;*.html&quot;&gt;&lt;/iframe&gt;&lt;/NOSCRIPT&gt;
+</code></pre>
+<p>7.随机替换图片</p>
+<pre><code>　 &lt;script&gt;
+　 document.write(&lt;img src=&quot;img/+parseInt(Math.random()*(5))
+　 +.gif&quot;height=&quot;40&quot; width=&quot;50&quot;&gt;
+　 &lt;/script&gt;
+　 图片文件名为0.gif 1.gif 2.gif 3.gif 4.gif
+</code></pre>
+<p>8.窗口定时关闭</p>
+<pre><code>　 先将如下代码网页文件的区：
+　 &lt;script language=&quot;javascript&quot;&gt;
+　 function closeit() { setTimeout(&quot;self.close()&quot;,10000) //毫秒 }
+　 &lt;/script&gt;
+　 然后再在&lt;body&gt;标内加入如：&lt;body&gt;
+</code></pre>
+<p>9.网页自动关闭</p>
+<pre><code>　 &lt;html&gt;
+　 &lt;head&gt;
+　 &lt;object id=closes type=&quot;application/x-oleobject&quot;
+　 classid=&quot;clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11&quot;&gt;
+　 &lt;param name=&quot;Command&quot; value=&quot;Close&quot;&gt;
+　 &lt;/object&gt;
+　 &lt;/head&gt;
+　 &lt;body&gt;
+　 这个窗口会在10秒过后自动关闭,而且不会出现提示.
+　 &lt;/body&gt;
+　 &lt;/html&gt;
+</code></pre>
+<p>10.网页自动刷新</p>
+<pre><code>　 在head部记入
+　 &lt;META HTTP-EQUIV=&quot;Refresh&quot; content=&quot;20&quot;&gt;
+　 其中20为20秒后自动刷新，你可以更改为任意值。
+</code></pre>
+<p>11.网页自动转页</p>
+<pre><code>　 &lt;META HTTP-EQUIV=&quot;Refresh&quot; CONTENT=&quot;时间(秒);URL=地址&quot;&gt;
+</code></pre>
+<p>12.保持layer在最前面，而不被Iframe、Object所覆盖</p>
+<pre><code>　 在Layer中再插Iframe 或 Object 设z-Index值
+　 &lt;div z-Index:2&gt;&lt;object xxx&gt;&lt;/object&gt; ＃ 前面
+　 &lt;div z-Index:1&gt;&lt;object xxx&gt;&lt;/object&gt; ＃ 后面
+　 &lt;div id=&quot;Layer2&quot; style=&quot;position:absolute; top:40;width:400px;
+　 height:95px;z-index:2&quot;&gt; height=100% width=100%&gt;
+　 &lt;iframe width=0 height=0&gt;&lt;/iframe&gt;
+　 &lt;/div&gt;
+　 &lt;div id=&quot;Layer1&quot; style=&quot;position:absolute; top:50;width:200px;
+　 height:115px;z-index:1&quot;&gt;
+　 &lt;iframe height=100% width=100%&gt;&lt;/iframe&gt;
+　 &lt;/div&gt;
+</code></pre>
+<p>13.返回上一页</p>
+<pre><code>　 &lt;a href=javascript:history.back(1)&gt;『返回上一页』&lt;/a&gt;
+</code></pre>
+<p>14.关闭窗口</p>
+<pre><code>　 &lt;a href=javascript:self.close()&gt;『关闭窗口』&lt;/a&gt;
+</code></pre>
+<p>15.关于iframe的透明背景</p>
+<pre><code>　 &lt;IFRAME ID=&quot;iFrame1&quot; SRC=&quot;iframe.htm&quot;
+　 allowTransparency=&quot;true&quot;
+　 style=&quot;background-color: green&quot;&gt;&lt;/IFRAME&gt;
+</code></pre>
+<p>16.彻底屏蔽鼠标右键</p>
+<pre><code>oncontextmenu=&quot;window.event.returnValue=false&quot; 将彻底屏蔽鼠标右键
+&lt;table border oncontextmenu=return(false)&gt;&lt;td&gt;no&lt;/table&gt; 可用于Table
+</code></pre>
+<p>17.取消选取、防止复制</p>
+<pre><code> &lt;body onselectstart=&quot;return false&quot;&gt; 
+</code></pre>
+<p>18.不准粘贴</p>
+<pre><code>onpaste=&quot;return false&quot;
+</code></pre>
+<ol>
+<li>防止复制</li>
+</ol>
+<pre><code>oncopy=&quot;return false;&quot;
+</code></pre>
+<ol start="20">
+<li>IE地址栏前换成自己的图标</li>
+</ol>
+<pre><code>&lt;link rel=&quot;Shortcut Icon&quot; href=&quot;favicon.ico&quot;&gt;
+</code></pre>
+<ol start="21">
+<li>可以在收藏夹中显示出你的图标</li>
+</ol>
+<pre><code>&lt;link rel=&quot;Bookmark&quot; href=&quot;favicon.ico&quot;&gt;
+</code></pre>
+<ol start="22">
+<li>关闭输入法</li>
+</ol>
+<pre><code>&lt;input style=&quot;ime-mode:disabled&quot;&gt;
+</code></pre>
+<ol start="23">
+<li>永远都会带着框架</li>
+</ol>
+<pre><code>&lt;script language=&quot;JavaScript&quot;&gt;&lt;!--
+if (window == top)top.location.href = &quot;frames.htm&quot;; //frames.htm为框架网页
+// --&gt;&lt;/script&gt;
+</code></pre>
+<ol start="24">
+<li>防止被人frame</li>
+</ol>
+<pre><code>&lt;SCRIPT LANGUAGE=JAVASCRIPT&gt;&lt;!--
+if (top.location != self.location)top.location=self.location;
+// --&gt;&lt;/SCRIPT&gt;
+</code></pre>
+<ol start="25">
+<li>网页将不能被另存为</li>
+</ol>
+<pre><code>&lt;noscript&gt;&lt;iframe src=*.html&gt;&lt;/iframe&gt;&lt;/noscript&gt;
+</code></pre>
+<ol start="26">
+<li>查看网页源代码</li>
+</ol>
+<pre><code>&lt;input type=button value=查看网页源代码view-source:&quot;+ &quot;http://www.pconline.com.cn&quot;&quot;&gt;
+</code></pre>
+<p>27.删除时确认</p>
+<pre><code>&lt;a href=&quot;javascript:if(confirm(&quot;确实要删除吗?&quot;))location=&quot;boos.asp? &amp;areyou=删除&amp;page=1&quot;&quot;&gt;删除&lt;/a&gt;
+</code></pre>
+<p>28.屏蔽功能键Shift,Alt,Ctrl</p>
+<pre><code>&lt;script&gt;
+function look(){
+if(event.shiftKey)
+alert(&quot;禁止按Shift键!&quot;); //可以换成ALT　CTRL
+}
+document.onkeydown=look;
+&lt;/script&gt;
+</code></pre>
+<ol start="29">
+<li>网页不会被缓存</li>
+</ol>
+<pre><code>&lt;META HTTP-EQUIV=&quot;pragma&quot; CONTENT=&quot;no-cache&quot;&gt;
+&lt;META HTTP-EQUIV=&quot;Cache-Control&quot; CONTENT=&quot;no-cache, must-revalidate&quot;&gt;
+&lt;META HTTP-EQUIV=&quot;expires&quot; CONTENT=&quot;Wed, 26 Feb 1997 08:21:57 GMT&quot;&gt;
+或者&lt;META HTTP-EQUIV=&quot;expires&quot; CONTENT=&quot;0&quot;&gt;
+</code></pre>
+<p>30.怎样让表单没有凹凸感？</p>
+<pre><code>&lt;input type=text style=&quot;border:1 solid #000000&quot;&gt;
+或 &lt;input type=text style=&quot;border-left:none; border-right:none; border -top:none; border-bottom: 1 solid #000000&quot;&gt;&lt;/textarea&gt;
+</code></pre>
+<p>31.不要滚动条?</p>
+<pre><code>让竖条没有:
+&lt;body style=&quot;overflow:scroll;overflow-y:hidden&quot;&gt;
+&lt;/body&gt;
+让横条没有:
+&lt;body style=&quot;overflow:scroll;overflow-x:hidden&quot;&gt;
+&lt;/body&gt;
+两个都去掉？更简单了
+&lt;body scroll=&quot;no&quot;&gt;
+&lt;/body&gt;
+</code></pre>
+<p>32.怎样去掉图片链接点击后，图片周围的虚线？</p>
+<pre><code>&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;logo.jpg&quot; border=0&gt;&lt;/a&gt;
+</code></pre>
+<p>33.电子邮件处理提交表单</p>
+<pre><code>&lt;form name=&quot;form1&quot; method=&quot;post&quot; action=&quot;mailt****@***.com&quot; enctype=&quot;text/plain&quot;&gt;
+&lt;input type=submit&gt;
+&lt;/form&gt;
+</code></pre>
+<p>34.在打开的子窗口刷新父窗口的代码里如何写？</p>
+<pre><code>window.opener.location.reload()
+
+35.如何设定打开页面的大小
+</code></pre>
+<body οnlοad="top.resizeTo(300,200);">
+打开页面的位置<body οnlοad="top.moveBy(300,200);">
+```
+36.在页面中如何加入不是满铺的背景图片,拉动页面时背景图不动
+```
+<STYLE>
+body
+{background-image:url(logo.gif); background-repeat:no-repeat;
+background-position:center;background-attachment: fixed}
+</STYLE>
+```
+37. 检查一段字符串是否全由数字组成
+```
+<script language="Javascript"><!--
+function checkNum(str){return str.match(//D/)==null}
+alert(checkNum("1232142141"))
+alert(checkNum("123214214a1"))
+// --></script>
+```
+38. 获得一个窗口的大小
+```
+document.body.clientWidth; document.body.clientHeight
+```
+39. 怎么判断是否是字符
+<pre><code>if (/[^/x00-/xff]/g.test(s)) alert(&quot;含有汉字&quot;);
+else alert(&quot;全是字符&quot;);
+</code></pre>
+<p>40.TEXTAREA自适应文字行数的多少</p>
+<pre><code>&lt;textarea rows=1 name=s1 cols=27&gt;
+&lt;/textarea&gt;
+</code></pre>
+<ol start="41">
+<li>日期减去天数等于第二个日期</li>
+</ol>
+<pre><code>&lt;script language=Javascript&gt;
+function cc(dd,dadd)
+{
+//可以加上错误处理
+var a = new Date(dd)
+a = a.valueOf()
+a = a - dadd * 24 * 60 * 60 * 1000
+a = new Date(a)
+alert(a.getFullYear() + &quot;年&quot; + (a.getMonth() + 1) + &quot;月&quot; + a.getDate() + &quot;日&quot;)
+} cc(&quot;12/23/2002&quot;,2)
+&lt;/script&gt;
+</code></pre>
+<ol start="42">
+<li>选择了哪一个Radio</li>
+</ol>
+<pre><code>&lt;HTML&gt;&lt;script language=&quot;vbscript&quot;&gt;
+function checkme()
+for each ob in radio1
+if ob.checked then window.alert ob.value
+next
+end function
+&lt;/script&gt;&lt;BODY&gt;
+&lt;INPUT name=&quot;radio1&quot; type=&quot;radio&quot; value=&quot;style&quot; checked&gt;Style
+&lt;INPUT name=&quot;radio1&quot; type=&quot;radio&quot; value=&quot;barcode&quot;&gt;Barcode
+&lt;INPUT type=&quot;button&quot; value=&quot;check&quot;&gt;
+&lt;/BODY&gt;&lt;/HTML&gt;
+</code></pre>
+<p>43.脚本永不出错</p>
+<pre><code>&lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+&lt;!-- Hide function killErrors(){return true;} window.onerror = killErrors; // --&gt;
+&lt;/SCRIPT&gt;
+</code></pre>
+<p>44.ENTER键可以让光标移到下一个输入框</p>
+<pre><code>    &lt;script type=&quot;text/javascript&quot;&gt;
+      function focusNextInput(thisInput){
+          var inputs = document.getElementsByTagName(&quot;input&quot;);
+          for(var i = 0;i&lt;inputs.length;i++){
+            // 如果是最后一个，则焦点回到第一个
+            if(i==(inputs.length-1)){
+              inputs[0].focus();
+              break;
+            }else if(thisInput == inputs[i]){
+              inputs[i+1].focus();
+              break;
+            }
+          }
+      }  
+    &lt;/script&gt;
+
+</code></pre>
+<ol start="45">
+<li>检测某个网站的链接速度：</li>
+</ol>
+<pre><code>把如下代码加入&lt;body&gt;区域中:
+&lt;script language=Javascript&gt;
+tim=1
+setInterval(&quot;tim++&quot;,100)
+b=1
+var autourl=new Array()
+autourl[1]=&quot;www.njcatv.net&quot;
+autourl[2]=&quot;javacool.3322.net&quot;
+autourl[3]=&quot;www.sina.com.cn&quot;
+autourl[4]=&quot;www.nuaa.edu.cn&quot;
+autourl[5]=&quot;www.cctv.com&quot;
+function butt(){
+document.write(&quot;&lt;form name=autof&gt;&quot;)
+for(var i=1;i&lt;autourl.length;i++)
+document.write(&quot;&lt;input type=text name=txt&quot;+i+&quot; size=10 value=测试中
+
+……&gt; =》&lt;input type=text
+name=url&quot;+i+&quot; size=40&gt; =》&lt;input type=button value=GO
+
+onclick=window.open(this.form.url&quot;+i+&quot;.value)&gt;&lt;br&gt;&quot;)
+document.write(&quot;&lt;input type=submit value=刷新&gt;&lt;/form&gt;&quot;)
+}
+butt()
+function auto(url){
+document.forms[0][&quot;url&quot;+b].value=url
+if(tim&gt;200)
+{document.forms[0][&quot;txt&quot;+b].value=&quot;链接超时&quot;}
+else
+{document.forms[0][&quot;txt&quot;+b].value=&quot;时间&quot;+tim/10+&quot;秒&quot;} b++ }
+function run(){for(var i=1;i&lt;autourl.length;i++)document.write(&quot;&lt;img src=http://&quot;+autourl+&quot;/&quot;+Math.random()+&quot; width=1 height=1 nerror=auto(&quot;http://&quot;+autourl+&quot;&quot;)&gt;&quot;)}
+run()&lt;/script&gt;
+</code></pre>
+<ol start="46">
+<li>各种样式的光标</li>
+</ol>
+<pre><code>move ：移动标
+auto：是系统自动的效果
+hand：是大家所熟悉的手型。
+crosshair：是十字型，就是小乌龟首页所用的样式。
+text：是平时鼠标移动到文本上的样式。
+wait：是等待的效果。
+no-drop ：不可拖动光标
+not-allowed ：无效光标
+all-scroll ：三角方向标
+default：是默认的那种效果。
+help：是带问号的鼠标样式。
+e-resize：是向右的箭头。
+ne-resize：是向右上方的箭头。
+n-resize：是向上的箭头。
+nw-resize：是向左上方的箭头。
+w-resize：是向左的箭关。
+sw-resize：是向左下的箭头。
+s-resize：是向下的箭头。
+se-resize：是向右下方的箭头。
+vertical-text ：水平I形光标
+</code></pre>
+<p>47、禁止鼠标右键，把Demo的图片全都设为表格的背景，表格的大小与图片的大小一样。这样做看起来是一样的，主要是防止鼠标经过图片时会出现另存的按钮。禁止鼠标右键的代码很简单：</p>
+<pre><code>&lt;script LANGUAGE=&quot;JavaScript&quot;&gt;
+function click() { if (event.button==2)
+{alert(呵呵，不好意思，你甭想使用右键下载图片：）); } } document.onmousedown=click
+&lt;/script&gt;
+</code></pre>
+<p>48、在网页的Head部分加入如下代码，这段代码的主要功能是屏蔽PrintScreen键，不断清空剪贴版，防止图片被用文件——另存为菜单另存。</p>
+<pre><code>&lt;script language=&quot;javascript&quot;&gt;
+&lt;!--
+function testclip(){
+try {
+if(clipboardData.getData(&quot;Text&quot;)||clipboardData.getData(&quot;HTML&quot;)||clipboardData.getData(&quot;URL&quot;))
+{
+null;
+}
+}
+catch(e){
+clipboardData.setData(&quot;Text&quot;,&quot;&quot;)
+}
+setTimeout(&quot;testclip()&quot;,500)
+}
+testclip();
+//--&gt;
+&lt;/script&gt;
+</code></pre>
+<p><a href="https://www.cnblogs.com/qiuh/archive/2013/04/23/3038338.html">转载地址</a></p>
+<pre><code></code></pre>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                👉🏻下一篇
+              </div>
+              <a href="https://lovefive.club/post/【转载】Malloc-Free与New-Delete/">
+                <h3 class="post-title">
+                  【转载】Malloc Free与New Delete
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://lovefive.club/images/avatar.png?v=1661931557503" class="no-responsive avatar">
+    <div class="text-muted">有志者，事竟成</div>
+    <div class="social-container">
+      
+        
+          <a href="https://github.com/baer9" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+          <a href="https://weibo.com/u/6360347403" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/sui-bi-2022626/"> 随笔「2022.6.26」</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/Gallery/">Gallery</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/Git常见错误/">Git常见错误</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/幸会-1988/">幸会-1988</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/网页版Github更改文件夹名/">网页版Github更改文件夹名</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/【转载】关于三次握手，四次挥手！/">【转载】关于三次握手，四次挥手！</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/Bat批量修改文件名/">Bat批量修改文件名</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/【转载补充】48个实用的HTML特效代码！！！（推荐初学者使用）/">【转载补充】48个实用的HTML特效代码！！！（推荐初学者使用）</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/【转载】Malloc-Free与New-Delete/">【转载】Malloc Free与New Delete</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/Just/">Just as they say</a>
+            </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://lovefive.club/tag/80P7hqz46/" class="badge warning">
+          Novel
+        </a>
+      
+        <a href="https://lovefive.club/tag/KHS9yk3xI/" class="badge secondary">
+          Win10
+        </a>
+      
+        <a href="https://lovefive.club/tag/igVDxxD69q/" class="badge secondary">
+          默认应用
+        </a>
+      
+        <a href="https://lovefive.club/tag/e7cHt0UFL4/" class="badge secondary">
+          html
+        </a>
+      
+        <a href="https://lovefive.club/tag/NzoHsqk9yc/" class="badge success">
+          注册表
+        </a>
+      
+        <a href="https://lovefive.club/tag/nW5LRN1JIb/" class="badge success">
+          无限刷新
+        </a>
+      
+        <a href="https://lovefive.club/tag/3GnvH0q6gL/" class="badge secondary">
+          奶牛快传
+        </a>
+      
+        <a href="https://lovefive.club/tag/YfvZxyXHhf/" class="badge ">
+          百度云
+        </a>
+      
+        <a href="https://lovefive.club/tag/yfIJtF9jG6/" class="badge warning">
+          IDM
+        </a>
+      
+        <a href="https://lovefive.club/tag/OBLbFizWxC/" class="badge ">
+          Negibox
+        </a>
+      
+        <a href="https://lovefive.club/tag/y9CYY4OkG8/" class="badge warning">
+          Aria2
+        </a>
+      
+        <a href="https://lovefive.club/tag/dWEJPbinIG/" class="badge secondary">
+          在人间凑数的日子
+        </a>
+      
+        <a href="https://lovefive.club/tag/sl6tJ-gW3w/" class="badge success">
+          bat
+        </a>
+      
+        <a href="https://lovefive.club/tag/zvAoOevyqq/" class="badge secondary">
+          文件后缀名修改
+        </a>
+      
+        <a href="https://lovefive.club/tag/vwJcfxXtyS/" class="badge secondary">
+          显示文件后缀名
+        </a>
+      
+        <a href="https://lovefive.club/tag/rXPKO-I9xm/" class="badge success">
+          C++
+        </a>
+      
+        <a href="https://lovefive.club/tag/-GhOrM6RKT/" class="badge ">
+          半数集问题
+        </a>
+      
+        <a href="https://lovefive.club/tag/ZrwwEXbRTbu/" class="badge secondary">
+          计算机算法与设计
+        </a>
+      
+        <a href="https://lovefive.club/tag/Kdjc_B3jc05/" class="badge secondary">
+          众数问题
+        </a>
+      
+        <a href="https://lovefive.club/tag/94sI2mJi5te/" class="badge ">
+          最大间隙
+        </a>
+      
+        <a href="https://lovefive.club/tag/plI_1fG2i0p/" class="badge secondary">
+          C++格式化输出
+        </a>
+      
+        <a href="https://lovefive.club/tag/IWFcV2SultH/" class="badge secondary">
+          金币阵列
+        </a>
+      
+        <a href="https://lovefive.club/tag/jzq2iaqLzN2/" class="badge secondary">
+          First
+        </a>
+      
+        <a href="https://lovefive.club/tag/nzvsVfxhes6/" class="badge secondary">
+          Second
+        </a>
+      
+        <a href="https://lovefive.club/tag/twT9S8IvPOZ/" class="badge secondary">
+          格式化输入
+        </a>
+      
+        <a href="https://lovefive.club/tag/O2qybu5WBdH/" class="badge warning">
+          分割字符串
+        </a>
+      
+        <a href="https://lovefive.club/tag/lcULjQG1fzy/" class="badge secondary">
+          网站
+        </a>
+      
+        <a href="https://lovefive.club/tag/2mR3tc70IC-/" class="badge secondary">
+          实用工具
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    <svg viewBox="0 0 105 36" role="img" width="105px" height="41px" aria-hidden="true"><path fill="#222222" d="M11.679 26.754h2.353v6.423h4.111v2.06H11.68v-8.483zM20.58 31.02v-.024c0-2.436 1.965-4.412 4.584-4.412 2.62 0 4.56 1.951 4.56 4.387v.025c0 2.436-1.965 4.41-4.584 4.41-2.618 0-4.56-1.95-4.56-4.386zm6.743 0v-.024c0-1.223-.885-2.291-2.183-2.291-1.285 0-2.147 1.042-2.147 2.266v.025c0 1.222.886 2.29 2.171 2.29 1.298 0 2.159-1.042 2.159-2.266zM32.604 31.517v-4.763h2.389v4.714c0 1.223.618 1.806 1.564 1.806.946 0 1.564-.557 1.564-1.745v-4.775h2.39v4.7c0 2.74-1.564 3.939-3.978 3.939s-3.93-1.223-3.93-3.878M44.112 26.755h3.274c3.032 0 4.79 1.744 4.79 4.192v.025c0 2.447-1.782 4.265-4.838 4.265h-3.226v-8.483zm3.31 6.397c1.408 0 2.34-.775 2.34-2.146v-.024c0-1.357-.932-2.145-2.34-2.145h-.958v4.316l.959-.001zM55.596 26.754h6.791v2.06h-4.438v1.442h4.014v1.951h-4.014v3.03h-2.353v-8.483zM65.661 26.754h2.353v6.423h4.111v2.06h-6.464v-8.483zM78.273 26.693h2.268l3.614 8.544h-2.522l-.62-1.515H77.74l-.606 1.515h-2.474l3.614-8.544zm2.062 5.2l-.946-2.413-.959 2.412h1.905zM87.186 26.754H91.2c1.298 0 2.195.34 2.765.921.498.485.752 1.14.752 1.976v.024c0 1.296-.693 2.156-1.746 2.605l2.025 2.957H92.28l-1.71-2.57h-1.03v2.57h-2.353v-8.483zm3.905 4.072c.8 0 1.262-.388 1.262-1.006v-.024c0-.667-.486-1.006-1.275-1.006h-1.54v2.038l1.553-.002zM98.112 26.754h6.827v2h-4.498v1.284h4.075v1.854h-4.075v1.346H105v1.999h-6.888v-8.483zM6.528 32.014c-.33.744-1.023 1.272-1.944 1.272-1.286 0-2.171-1.067-2.171-2.29v-.025c0-1.223.86-2.266 2.146-2.266.97 0 1.708.595 2.02 1.406h2.48c-.398-2.02-2.173-3.526-4.475-3.526-2.62 0-4.584 1.977-4.584 4.41v.024c0 2.436 1.94 4.388 4.56 4.388 2.24 0 3.991-1.45 4.453-3.393H6.528z"></path><path d="M89.012 22.355l.257-.887c.306-1.056.192-2.031-.321-2.748-.472-.66-1.259-1.049-2.214-1.094l-18.096-.229a.358.358 0 01-.285-.151.367.367 0 01-.04-.326.481.481 0 01.42-.321l18.263-.232c2.166-.099 4.512-1.856 5.333-3.998L93.37 9.65a.659.659 0 00.028-.36C92.216 3.975 87.468 0 81.792 0c-5.23 0-9.67 3.373-11.263 8.061a5.34 5.34 0 00-3.756-1.039 5.356 5.356 0 00-4.637 6.644c-4.099.12-7.386 3.475-7.386 7.6 0 .368.028.735.082 1.1a.354.354 0 00.348.305l33.408.004h.009a.44.44 0 00.415-.32z" fill="#F6821F"></path><path d="M95.04 9.847c-.167 0-.334.004-.5.013a.28.28 0 00-.079.017.285.285 0 00-.182.192l-.712 2.456c-.305 1.055-.192 2.03.322 2.746.471.661 1.258 1.05 2.213 1.094l3.858.232a.351.351 0 01.275.149.365.365 0 01.041.328.484.484 0 01-.42.32l-4.008.232c-2.176.1-4.521 1.856-5.342 3.998l-.29.756a.212.212 0 00.095.262c.03.017.062.027.096.028h13.802a.366.366 0 00.356-.265 9.846 9.846 0 00.367-2.677c-.001-5.457-4.429-9.88-9.891-9.88z" fill="#FBAD41"></path></svg> | <a class="rss" href="https://lovefive.club/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+
+  </body>
+</html>

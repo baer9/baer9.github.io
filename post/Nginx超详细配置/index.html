@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Nginx超详细配置及中文解释 | Bear</title>
+<meta name="description" content="有志者，事竟成">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://lovefive.club/favicon.ico?v=1661931557503">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://lovefive.club/styles/main.css">
+
+
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://lovefive.club">Bear</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>Nginx超详细配置及中文解释</h1>
+            <p class="article-meta">
+              2020-02-15
+              
+            </p>
+            
+              <img src="https://lovefive.club/post-images/Nginx超详细配置.jpg" alt="Nginx超详细配置及中文解释">
+            
+            <div class="post-content" v-pre>
+              <p>QHQ-【问题描述】</p>
+<p>Nginx的配置文件详解（超详细）</p>
+<!-- more -->
+<hr>
+<p><strong>1、安装Nginx</strong></p>
+<p>在安装Nginx之前，需确保系统已经安装了gcc、 openssl-devel、 pcre-devel和zlib-devel软件库。<br>
+下面是Nginx安装过程：</p>
+<pre><code class="language-shell">wget http://nginx.org/download/nginx-1.0.14.tar.gztar zxvf nginx-1.0.14.tar.gz./configure --with-http_stub_status_module --prefix=/opt/nginxcd nginx-1.0.14makemake installwget http://nginx.org/download/nginx-1.0.14.tar.gz
+tar zxvf nginx-1.0.14.tar.gz
+./configure --with-http_stub_status_module --prefix=/opt/nginx
+cd nginx-1.0.14
+make
+make install
+</code></pre>
+<p>其中， –with-http_stub_status_module 可以用来启用 Nginx 的 NginxStatus 功能，以监控 Nginx 的运行状态。<br>
+想要了解更多的模块的情况可以通过 ./configure –help 选项查看。</p>
+<p><strong>2、Nginx的配置文件结构</strong></p>
+<p>Nginx的配置文件nginx.conf位于其安装目录的conf目录下。<br>
+nginx.conf由多个块组成，最外面的块是main，main包含Events和HTTP，HTTP包含upstream和多个Server，Server又包含多个location：</p>
+<p>main（全局设置）、server（主机设置）、upstream（负载均衡服务器设置）和 location（URL匹配特定位置的设置）。</p>
+<ul>
+<li>main块设置的指令将影响其他所有设置；</li>
+<li>server块的指令主要用于指定主机和端口；</li>
+<li>upstream指令主要用于负载均衡，设置一系列的后端服务器；</li>
+<li>location块用于匹配网页位置。</li>
+</ul>
+<p>这四者之间的关系式：server继承main，location继承server，upstream既不会继承其他设置也不会被继承。<br>
+在这四个部分当中，每个部分都包含若干指令，这些指令主要包含Nginx的主模块指令、事件模块指令、HTTP核心模块指令，同时每个部分还可以使用其他HTTP模块指令，例如Http SSL模块、HttpGzip Static模块和Http Addition模块等。</p>
+<p><strong>2.1 Nginx的全局配置</strong></p>
+<p>代码如下：</p>
+<pre><code class="language-java">user nobody nobody;
+worker_processes 2;
+error_log logs/error.log notice;
+pid logs/nginx.pid;
+worker_rlimit_nofile 65535;
+
+events{
+use epoll;
+worker_connections 65536;
+}
+</code></pre>
+<p>每个配置选项的含义解释如下：</p>
+<ul>
+<li>user是个主模块指令，指定Nginx Worker进程运行用户以及用户组，默认由nobody账号运行。</li>
+<li>worker_processes是个主模块指令，指定了Nginx要开启的进程数。每个Nginx进程平均耗费10M~12M内存。建议指定和CPU的数量一致即可。</li>
+<li>error_log是个主模块指令，用来定义全局错误日志文件。日志输出级别有debug、info、notice、warn、error、crit可供选择，其中，debug输出日志最为最详细，而crit输出日志最少。</li>
+<li>pid是个主模块指令，用来指定进程pid的存储文件位置。</li>
+<li>worker_rlimit_nofile用于绑定worker进程和CPU， Linux内核2.4以上可用。</li>
+</ul>
+<p>events事件指令是设定Nginx的工作模式及连接数上限：<br>
+use是个事件模块指令，用来指定Nginx的工作模式。Nginx支持的工作模式有select、poll、kqueue、epoll、rtsig和/dev/poll。其中select和poll都是标准的工作模式，kqueue和epoll是高效的工作模式，不同的是epoll用在Linux平台上，而kqueue用在BSD系统中。对于Linux系统，<strong>epoll工作模式是首选。</strong><br>
+worker_connections也是个事件模块指令，用于定义Nginx每个进程的最大连接数，默认是1024。最大客户端连接数由worker_processes和worker_connections决定，即Max_client=worker_processes*worker_connections。<br>
+在作为反向代理时，max_clients变为：max_clients = worker_processes * worker_connections/4。<br>
+进程的最大连接数受Linux系统进程的最大打开文件数限制，在执行操作系统命令“ulimit -n 65536”后worker_connections的设置才能生效</p>
+<p><strong>2.2 HTTP服务器配置</strong></p>
+<p>Nginx对HTTP服务器相关属性的配置代码如下：</p>
+<pre><code>http{
+include conf/mime.types;
+default_type application/octet-stream;
+log_format main '$remote_addr - $remote_user [$time_local] '
+'&quot;$request&quot; $status $bytes_sent '
+'&quot;$http_referer&quot; &quot;$http_user_agent&quot; '
+'&quot;$gzip_ratio&quot;';
+log_format download '$remote_addr - $remote_user [$time_local] '
+'&quot;$request&quot; $status $bytes_sent '
+'&quot;$http_referer&quot; &quot;$http_user_agent&quot; '
+'&quot;$http_range&quot; &quot;$sent_http_content_range&quot;';
+client_max_body_size 20m;
+client_header_buffer_size 32K;
+large_client_header_buffers 4 32k;
+Sendfile on;
+tcp_nopush on;
+tcp_nodelay on;
+keepalive_timeout 60;
+client_header_timeout 10;
+client_body_timeout 10;
+send_timeout 10;
+</code></pre>
+<p>下面详细介绍下这段代码中每个配置选项的含义。<br>
+include是个主模块指令，实现对配置文件所包含的文件的设定，可以减少主配置文件的复杂度。类似于Apache中的include方法。<br>
+default_type属于HTTP核心模块指令，这里设定默认类型为二进制流，也就是当文件类型未定义时使用这种方式，例如在没有配置PHP环境时，Nginx是不予解析的，此时，用浏览器访问PHP文件就会出现下载窗口。</p>
+<p>下面的代码实现对日志格式的设定：</p>
+<pre><code class="language-java">log_format main '$remote_addr - $remote_user [$time_local] '
+'&quot;$request&quot; $status $bytes_sent '
+'&quot;$http_referer&quot; &quot;$http_user_agent&quot; '
+'&quot;$gzip_ratio&quot;';
+log_format download '$remote_addr - $remote_user [$time_local] '
+'&quot;$request&quot; $status $bytes_sent '
+'&quot;$http_referer&quot; &quot;$http_user_agent&quot; '
+'&quot;$http_range&quot; &quot;$sent_http_content_range&quot;';
+</code></pre>
+<p>log_format是Nginx的HttpLog模块指令，用于指定Nginx日志的输出格式。main为此日志输出格式的名称，可以在下面的access_log指令中引用。</p>
+<ul>
+<li>client_max_body_size用来设置允许客户端请求的最大的单个文件字节数；</li>
+<li>client_header_buffer_size用于指定来自客户端请求头的headerbuffer大小。对于大多数请求，1K的缓冲区大小已经足够，如果自定义了消息头或有更大的Cookie，可以增加缓冲区大小。这里设置为32K；</li>
+<li>large_client_header_buffers用来指定客户端请求中较大的消息头的缓存最大数量和大小， “4”为个数，“128K”为大小，最大缓存量为4个128K；</li>
+<li>sendfile参数用于开启高效文件传输模式。将tcp_nopush和tcp_nodelay两个指令设置为on用于防止网络阻塞；</li>
+<li>keepalive_timeout设置客户端连接保持活动的超时时间。在超过这个时间之后，服务器会关闭该连接；</li>
+<li>client_header_timeout设置客户端请求头读取超时时间。如果超过这个时间，客户端还没有发送任何数据，Nginx将返回“Request time out（408）”错误；</li>
+<li>client_body_timeout设置客户端请求主体读取超时时间。如果超过这个时间，客户端还没有发送任何数据，Nginx将返回“Request time out（408）”错误，默认值是60；</li>
+<li>send_timeout指定响应客户端的超时时间。这个超时仅限于两个连接活动之间的时间，如果超过这个时间，客户端没有任何活动，Nginx将会关闭连接。</li>
+</ul>
+<p><strong>2.3 HttpGzip模块配置</strong><br>
+下面配置Nginx的HttpGzip模块。这个模块支持在线实时压缩输出数据流。<br>
+看是否安装了HttpGzip模块：</p>
+<pre><code class="language-shell">[root@qi ~]# /opt/nginx/sbin/nginx  -V   （注意V是大写）
+nginx version: nginx/1.0.14
+built by gcc 4.4.6 20110731 (Red Hat 4.4.6-3) (GCC)
+configure arguments: --with-http_stub_status_module --with-http_gzip_static_module --prefix=/opt/nginx
+</code></pre>
+<p>通过/opt/nginx/sbin/nginx -V命令可以查看安装Nginx时的编译选项，由输出可知，我们已经安装了HttpGzip模块。</p>
+<p>下面是HttpGzip模块在Nginx配置中的相关属性设置：</p>
+<pre><code class="language-java">gzip on;
+gzip_min_length 1k;
+gzip_buffers 4 16k;
+gzip_http_version 1.1;
+gzip_comp_level 2;
+gzip_types text/plain application/x-javascript text/css application/xml;
+gzip_vary on;
+</code></pre>
+<ul>
+<li>gzip用于设置开启或者关闭gzip模块，“gzip on”表示开启GZIP压缩，实时压缩输出数据流；</li>
+<li>gzip_min_length设置允许压缩的页面最小字节数，页面字节数从header头的Content-Length中获取。默认值是0，不管页面多大都进行压缩。建议设置成大于1K的字节数，小于1K可能会越压越大；</li>
+<li>gzip_buffers表示申请4个单位为16K的内存作为压缩结果流缓存，默认值是申请与原始数据大小相同的内存空间来存储gzip压缩结果；</li>
+<li>gzip_http_version用于设置识别HTTP协议版本，默认是1.1，目前大部分浏览器已经支持GZIP解压，使用默认即可；</li>
+<li>gzip_comp_level用来指定GZIP压缩比，1 压缩比最小，处理速度最快；9 压缩比最大，传输速度快，但处理最慢，也比较消耗cpu资源；</li>
+<li>gzip_types用来指定压缩的类型，无论是否指定，“text/html”类型总是会被压缩的；</li>
+<li>gzip_vary选项可以让前端的缓存服务器缓存经过GZIP压缩的页面，例如用Squid缓存经过Nginx压缩的数据。</li>
+</ul>
+<p><strong>2.4 负载均衡配置</strong>     <em><strong><a href="https://www.lovefive.club/archives/%E4%BB%80%E4%B9%88%E6%98%AF%E8%B4%9F%E8%BD%BD%E5%B9%B3%E8%A1%A1">负载均衡</a></strong></em><br>
+下面设定负载均衡的服务器列表：</p>
+<pre><code class="language-java">upstream cszhi.com{
+ip_hash;
+server 192.168.8.11:80;
+server 192.168.8.12:80 down;
+server 192.168.8.13:8009 max_fails=3 fail_timeout=20s;
+server 192.168.8.146:8080;
+}
+</code></pre>
+<p>upstream是Nginx的HTTP Upstream模块，这个模块通过一个简单的调度算法来实现客户端IP到后端服务器的负载均衡。<br>
+在上面的设定中，通过upstream指令指定了一个负载均衡器的名称cszhi.com。这个名称可以任意指定，在后面需要的地方直接调用即可。</p>
+<p>Nginx的负载均衡模块目前支持4种调度算法，下面进行分别介绍，其中后两项属于第三方的调度方法。</p>
+<ul>
+<li>轮询（默认）：每个请求按时间顺序逐一分配到不同的后端服务器，如果后端某台服务器宕机，故障系统被自动剔除，使用户访问不受影响；</li>
+<li>Weight：指定轮询权值，Weight值越大，分配到的访问机率越高，主要用于后端每个服务器性能不均的情况下；</li>
+<li>ip_hash：每个请求按访问IP的hash结果分配，这样来自同一个IP的访客固定访问一个后端服务器，有效解决了动态网页存在的session共享问题；</li>
+<li>fair：比上面两个更加智能的负载均衡算法。此种算法可以依据页面大小和加载时间长短智能地进行负载均衡，也就是根据后端服务器的响应时间来分配请求，响应时间短的优先分配。Nginx本身是不支持fair的，如果需要使用这种调度算法，必须下载Nginx的upstream_fair模块；</li>
+<li>url_hash：按访问url的hash结果来分配请求，使每个url定向到同一个后端服务器，可以进一步提高后端缓存服务器的效率。Nginx本身是不支持url_hash的，如果需要使用这种调度算法，必须安装Nginx 的hash软件包。</li>
+</ul>
+<p>在HTTP Upstream模块中，可以通过server指令指定后端服务器的IP地址和端口，同时还可以设定每个后端服务器在负载均衡调度中的状态。常用的状态有：</p>
+<ul>
+<li>down：表示当前的server暂时不参与负载均衡；</li>
+<li>backup：预留的备份机器。当其他所有的非backup机器出现故障或者忙的时候，才会请求backup机器，因此这台机器的压力最轻；</li>
+<li>max_fails：允许请求失败的次数，默认为1。当超过最大次数时，返回proxy_next_upstream 模块定义的错误；</li>
+<li>fail_timeout：在经历了max_fails次失败后，暂停服务的时间。max_fails可以和fail_timeout一起使用。</li>
+</ul>
+<p>注意，当负载调度算法为ip_hash时，后端服务器在负载均衡调度中的状态不能是weight和backup。</p>
+<p><strong>2.5 server虚拟主机配置</strong><br>
+下面介绍对虚拟主机的配置。<br>
+建议将对虚拟主机进行配置的内容写进另外一个文件，然后通过include指令包含进来，这样更便于维护和管理。</p>
+<pre><code class="language-java">server{
+listen 80;
+server_name www.lovefive.club lovefive.club;
+index index.html index.htm index.php;
+root /www/www.lovefive.club
+charset gb2312;
+access_log logs/www.ixdba.net.access.log main;
+</code></pre>
+<p>server标志定义虚拟主机开始，listen用于指定虚拟主机的服务端口，server_name用来指定IP地址或者域名，多个域名之间用空格分 开。index用于设定访问的默认首页地址，root指令用于指定虚拟主机的网页根目录，这个目录可以是相对路径，也可以是绝对路径。Charset用于 设置网页的默认编码格式。access_log用来指定此虚拟主机的访问日志存放路径，最后的main用于指定访问日志的输出格式。</p>
+<p><strong>2.6 location URL匹配配置</strong><br>
+URL地址匹配是进行Nginx配置中最灵活的部分。 location支持正则表达式匹配，也支持条件判断匹配，用户可以通过location指令实现Nginx对动、静态网页进行过滤处理。使用location URL匹配配置还可以实现反向代理，用于实现PHP动态解析或者负载负载均衡。<br>
+以下这段设置是通过location指令来对网页URL进行分析处理，所有扩展名以.gif、.jpg、.jpeg、.png、.bmp、.swf结尾的静态文件都交给nginx处理，而expires用来指定静态文件的过期时间，这里是30天。</p>
+<pre><code class="language-java">location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$ {
+root /web/www/www.lovefive.club;
+expires 30d;
+}
+</code></pre>
+<p>以下这段设置是将upload和html下的所有文件都交给nginx来处理，当然，upload和html目录包含在/web/www/www.lovefive.club目录中。</p>
+<pre><code class="language-java">location ~ ^/(upload|html)/ {
+root /web/www/www.lovefive.club;
+expires 30d;
+}
+</code></pre>
+<p>在最后这段设置中，location是对此虚拟主机下动态网页的过滤处理，也就是将所有以.jsp为后缀的文件都交给本机的8080端口处理。</p>
+<pre><code class="language-java">location ~ .*.php$ {
+index index.php;
+proxy_pass http://localhost:8080;
+}
+</code></pre>
+<p><strong>2.7 StubStatus模块配置</strong><br>
+StubStatus模块能够获取Nginx自上次启动以来的工作状态，此模块非核心模块，需要在Nginx编译安装时手工指定才能使用此功能。<br>
+以下指令实指定启用获取Nginx工作状态的功能。</p>
+<ol>
+<li>
+<pre><code class="language-java">location /NginxStatus {
+stub_status on;
+access_log logs/NginxStatus.log;
+auth_basic &quot;NginxStatus&quot;;
+auth_basic_user_file ../htpasswd;
+}
+</code></pre>
+</li>
+</ol>
+<p>stub_status设置为“on”表示启用StubStatus的工作状态统计功能。access_log 用来指定StubStatus模块的访问日志文件。auth_basic是Nginx的一种认证机制。auth_basic_user_file用来指定认证的密码文件，由于Nginx的auth_basic认证采用的是与Apache兼容的密码文件，因此需要用Apache的htpasswd命令来生成密码文件，例如要添加一个test用户，可以使用下面方式生成密码文件：</p>
+<pre><code class="language-shell">/usr/local/apache/bin/htpasswd -c  /opt/nginx/conf/htpasswd test
+</code></pre>
+<p>然后输入两次密码后确认之后添加用户成功。</p>
+<p>要查看Nginx的运行状态，可以输入http://ip/NginxStatus，输入创建的用户名和密码就可以看到Nginx的运行状态：</p>
+<pre><code class="language-shell">Active connections: 1
+server accepts handled requests
+34561 35731 354399
+Reading: 0 Writing: 3 Waiting: 0
+</code></pre>
+<p>Active connections表示当前活跃的连接数，第三行的三个数字表示 Nginx当前总共处理了34561个连接， 成功创建次握手， 总共处理了354399个请求。最后一行的Reading表示Nginx读取到客户端Header信息数， Writing表示Nginx返回给客户端的Header信息数<br>
+，“Waiting”表示Nginx已经处理完，正在等候下一次请求指令时的驻留连接数。</p>
+<p>在最后这段设置中，设置了虚拟主机的错误信息返回页面，通过error_page指令可以定制各种错误信息的返回页面。在默认情况下，Nginx会在主目录的html目录中查找指定的返回页面，特别需要注意的是，这些错误信息的返回页面大小一定要超过512K，否者会被ie浏览器替换为ie默认的错误页面。</p>
+<pre><code class="language-java">error_page 404 /404.html;
+error_page 500 502 503 504 /50x.html;
+location = /50x.html {
+root html;
+}
+</code></pre>
+<p><a href="https://blog.csdn.net/wangbin_0729/article/details/82109693">参考一</a></p>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                👉🏻下一篇
+              </div>
+              <a href="https://lovefive.club/post/照片要启动gzip吗？/">
+                <h3 class="post-title">
+                  照片要启动gzip吗？
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://lovefive.club/images/avatar.png?v=1661931557503" class="no-responsive avatar">
+    <div class="text-muted">有志者，事竟成</div>
+    <div class="social-container">
+      
+        
+          <a href="https://github.com/baer9" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+          <a href="https://weibo.com/u/6360347403" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/sui-bi-2022626/"> 随笔「2022.6.26」</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/Gallery/">Gallery</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/Git常见错误/">Git常见错误</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/幸会-1988/">幸会-1988</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/网页版Github更改文件夹名/">网页版Github更改文件夹名</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/【转载】关于三次握手，四次挥手！/">【转载】关于三次握手，四次挥手！</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/Bat批量修改文件名/">Bat批量修改文件名</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/【转载补充】48个实用的HTML特效代码！！！（推荐初学者使用）/">【转载补充】48个实用的HTML特效代码！！！（推荐初学者使用）</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/【转载】Malloc-Free与New-Delete/">【转载】Malloc Free与New Delete</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://lovefive.club/post/Just/">Just as they say</a>
+            </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://lovefive.club/tag/80P7hqz46/" class="badge secondary">
+          Novel
+        </a>
+      
+        <a href="https://lovefive.club/tag/KHS9yk3xI/" class="badge warning">
+          Win10
+        </a>
+      
+        <a href="https://lovefive.club/tag/igVDxxD69q/" class="badge secondary">
+          默认应用
+        </a>
+      
+        <a href="https://lovefive.club/tag/e7cHt0UFL4/" class="badge ">
+          html
+        </a>
+      
+        <a href="https://lovefive.club/tag/NzoHsqk9yc/" class="badge secondary">
+          注册表
+        </a>
+      
+        <a href="https://lovefive.club/tag/nW5LRN1JIb/" class="badge secondary">
+          无限刷新
+        </a>
+      
+        <a href="https://lovefive.club/tag/3GnvH0q6gL/" class="badge secondary">
+          奶牛快传
+        </a>
+      
+        <a href="https://lovefive.club/tag/YfvZxyXHhf/" class="badge warning">
+          百度云
+        </a>
+      
+        <a href="https://lovefive.club/tag/yfIJtF9jG6/" class="badge secondary">
+          IDM
+        </a>
+      
+        <a href="https://lovefive.club/tag/OBLbFizWxC/" class="badge warning">
+          Negibox
+        </a>
+      
+        <a href="https://lovefive.club/tag/y9CYY4OkG8/" class="badge secondary">
+          Aria2
+        </a>
+      
+        <a href="https://lovefive.club/tag/dWEJPbinIG/" class="badge success">
+          在人间凑数的日子
+        </a>
+      
+        <a href="https://lovefive.club/tag/sl6tJ-gW3w/" class="badge secondary">
+          bat
+        </a>
+      
+        <a href="https://lovefive.club/tag/zvAoOevyqq/" class="badge secondary">
+          文件后缀名修改
+        </a>
+      
+        <a href="https://lovefive.club/tag/vwJcfxXtyS/" class="badge warning">
+          显示文件后缀名
+        </a>
+      
+        <a href="https://lovefive.club/tag/rXPKO-I9xm/" class="badge secondary">
+          C++
+        </a>
+      
+        <a href="https://lovefive.club/tag/-GhOrM6RKT/" class="badge secondary">
+          半数集问题
+        </a>
+      
+        <a href="https://lovefive.club/tag/ZrwwEXbRTbu/" class="badge success">
+          计算机算法与设计
+        </a>
+      
+        <a href="https://lovefive.club/tag/Kdjc_B3jc05/" class="badge secondary">
+          众数问题
+        </a>
+      
+        <a href="https://lovefive.club/tag/94sI2mJi5te/" class="badge secondary">
+          最大间隙
+        </a>
+      
+        <a href="https://lovefive.club/tag/plI_1fG2i0p/" class="badge ">
+          C++格式化输出
+        </a>
+      
+        <a href="https://lovefive.club/tag/IWFcV2SultH/" class="badge secondary">
+          金币阵列
+        </a>
+      
+        <a href="https://lovefive.club/tag/jzq2iaqLzN2/" class="badge ">
+          First
+        </a>
+      
+        <a href="https://lovefive.club/tag/nzvsVfxhes6/" class="badge secondary">
+          Second
+        </a>
+      
+        <a href="https://lovefive.club/tag/twT9S8IvPOZ/" class="badge secondary">
+          格式化输入
+        </a>
+      
+        <a href="https://lovefive.club/tag/O2qybu5WBdH/" class="badge warning">
+          分割字符串
+        </a>
+      
+        <a href="https://lovefive.club/tag/lcULjQG1fzy/" class="badge secondary">
+          网站
+        </a>
+      
+        <a href="https://lovefive.club/tag/2mR3tc70IC-/" class="badge secondary">
+          实用工具
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    <svg viewBox="0 0 105 36" role="img" width="105px" height="41px" aria-hidden="true"><path fill="#222222" d="M11.679 26.754h2.353v6.423h4.111v2.06H11.68v-8.483zM20.58 31.02v-.024c0-2.436 1.965-4.412 4.584-4.412 2.62 0 4.56 1.951 4.56 4.387v.025c0 2.436-1.965 4.41-4.584 4.41-2.618 0-4.56-1.95-4.56-4.386zm6.743 0v-.024c0-1.223-.885-2.291-2.183-2.291-1.285 0-2.147 1.042-2.147 2.266v.025c0 1.222.886 2.29 2.171 2.29 1.298 0 2.159-1.042 2.159-2.266zM32.604 31.517v-4.763h2.389v4.714c0 1.223.618 1.806 1.564 1.806.946 0 1.564-.557 1.564-1.745v-4.775h2.39v4.7c0 2.74-1.564 3.939-3.978 3.939s-3.93-1.223-3.93-3.878M44.112 26.755h3.274c3.032 0 4.79 1.744 4.79 4.192v.025c0 2.447-1.782 4.265-4.838 4.265h-3.226v-8.483zm3.31 6.397c1.408 0 2.34-.775 2.34-2.146v-.024c0-1.357-.932-2.145-2.34-2.145h-.958v4.316l.959-.001zM55.596 26.754h6.791v2.06h-4.438v1.442h4.014v1.951h-4.014v3.03h-2.353v-8.483zM65.661 26.754h2.353v6.423h4.111v2.06h-6.464v-8.483zM78.273 26.693h2.268l3.614 8.544h-2.522l-.62-1.515H77.74l-.606 1.515h-2.474l3.614-8.544zm2.062 5.2l-.946-2.413-.959 2.412h1.905zM87.186 26.754H91.2c1.298 0 2.195.34 2.765.921.498.485.752 1.14.752 1.976v.024c0 1.296-.693 2.156-1.746 2.605l2.025 2.957H92.28l-1.71-2.57h-1.03v2.57h-2.353v-8.483zm3.905 4.072c.8 0 1.262-.388 1.262-1.006v-.024c0-.667-.486-1.006-1.275-1.006h-1.54v2.038l1.553-.002zM98.112 26.754h6.827v2h-4.498v1.284h4.075v1.854h-4.075v1.346H105v1.999h-6.888v-8.483zM6.528 32.014c-.33.744-1.023 1.272-1.944 1.272-1.286 0-2.171-1.067-2.171-2.29v-.025c0-1.223.86-2.266 2.146-2.266.97 0 1.708.595 2.02 1.406h2.48c-.398-2.02-2.173-3.526-4.475-3.526-2.62 0-4.584 1.977-4.584 4.41v.024c0 2.436 1.94 4.388 4.56 4.388 2.24 0 3.991-1.45 4.453-3.393H6.528z"></path><path d="M89.012 22.355l.257-.887c.306-1.056.192-2.031-.321-2.748-.472-.66-1.259-1.049-2.214-1.094l-18.096-.229a.358.358 0 01-.285-.151.367.367 0 01-.04-.326.481.481 0 01.42-.321l18.263-.232c2.166-.099 4.512-1.856 5.333-3.998L93.37 9.65a.659.659 0 00.028-.36C92.216 3.975 87.468 0 81.792 0c-5.23 0-9.67 3.373-11.263 8.061a5.34 5.34 0 00-3.756-1.039 5.356 5.356 0 00-4.637 6.644c-4.099.12-7.386 3.475-7.386 7.6 0 .368.028.735.082 1.1a.354.354 0 00.348.305l33.408.004h.009a.44.44 0 00.415-.32z" fill="#F6821F"></path><path d="M95.04 9.847c-.167 0-.334.004-.5.013a.28.28 0 00-.079.017.285.285 0 00-.182.192l-.712 2.456c-.305 1.055-.192 2.03.322 2.746.471.661 1.258 1.05 2.213 1.094l3.858.232a.351.351 0 01.275.149.365.365 0 01.041.328.484.484 0 01-.42.32l-4.008.232c-2.176.1-4.521 1.856-5.342 3.998l-.29.756a.212.212 0 00.095.262c.03.017.062.027.096.028h13.802a.366.366 0 00.356-.265 9.846 9.846 0 00.367-2.677c-.001-5.457-4.429-9.88-9.891-9.88z" fill="#FBAD41"></path></svg> | <a class="rss" href="https://lovefive.club/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+
+  </body>
+</html>
